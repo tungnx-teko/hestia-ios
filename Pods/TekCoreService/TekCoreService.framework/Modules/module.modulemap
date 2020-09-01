@@ -1,0 +1,11 @@
+framework module TekCoreService {
+  umbrella header "TekCoreService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekCoreService.Swift {
+    header "TekCoreService-Swift.h"
+    requires objc
+}

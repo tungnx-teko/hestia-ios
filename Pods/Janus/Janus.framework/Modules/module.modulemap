@@ -1,0 +1,11 @@
+framework module Janus {
+  umbrella header "Janus.h"
+
+  export *
+  module * { export * }
+}
+
+module Janus.Swift {
+    header "Janus-Swift.h"
+    requires objc
+}

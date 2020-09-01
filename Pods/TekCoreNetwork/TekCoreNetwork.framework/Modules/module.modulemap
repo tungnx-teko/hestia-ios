@@ -1,0 +1,11 @@
+framework module TekCoreNetwork {
+  umbrella header "TekCoreNetwork.h"
+
+  export *
+  module * { export * }
+}
+
+module TekCoreNetwork.Swift {
+    header "TekCoreNetwork-Swift.h"
+    requires objc
+}

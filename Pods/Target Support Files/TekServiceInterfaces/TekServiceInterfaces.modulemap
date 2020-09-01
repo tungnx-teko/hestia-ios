@@ -1,0 +1,6 @@
+framework module TekServiceInterfaces {
+  umbrella header "TekServiceInterfaces-umbrella.h"
+
+  export *
+  module * { export * }
+}

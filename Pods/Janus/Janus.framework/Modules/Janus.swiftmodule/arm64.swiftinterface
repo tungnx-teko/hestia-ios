@@ -1,0 +1,250 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name Janus
+import AuthenticationServices
+import FacebookCore
+import FacebookLogin
+import Foundation
+import GoogleSignIn
+@_exported import Janus
+import Security
+import Swift
+import SwiftyJSON
+import TekCoreNetwork
+import TekCoreService
+import UIKit
+public enum LoginType : Swift.String {
+  case facebook
+  case google
+  case apple
+  case phone
+  case userPassword
+  public static func initialize(type: Swift.String?) -> Janus.LoginType?
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol AuthLoginDelegate : AnyObject {
+  func loginSuccess(accessToken: Swift.String, refreshToken: Swift.String)
+  func loginFail(message: Swift.String?)
+}
+public protocol IAuthCredential {
+  var accessToken: Swift.String? { get }
+  var refreshToken: Swift.String? { get }
+  var tokenExpiredSec: Swift.Int { get }
+  var tokenType: Janus.TokenType? { get }
+  var data: Foundation.Data? { get }
+}
+public protocol AuthLoginMethod {
+  func register()
+}
+public struct GoogleLoginMethod : Janus.AuthLoginMethod {
+  public var clientId: Swift.String
+  public init(clientId: Swift.String)
+  public func register()
+}
+@_hasMissingDesignatedInitializers public class PhoneAuthProvider {
+  public static var shared: Janus.PhoneAuthProvider
+  public func requestOTP(phone: Swift.String, completion: @escaping ((Swift.Bool) -> Swift.Void))
+  public func createPasswordlessLogin(pin: Swift.String, delegate: Janus.AuthLoginDelegate?) -> Janus.PasswordlessLogin?
+  @objc deinit
+}
+public enum KeychainSwiftAccessOptions {
+  case accessibleWhenUnlocked
+  case accessibleWhenUnlockedThisDeviceOnly
+  case accessibleAfterFirstUnlock
+  case accessibleAfterFirstUnlockThisDeviceOnly
+  case accessibleWhenPasscodeSetThisDeviceOnly
+  public static func == (a: Janus.KeychainSwiftAccessOptions, b: Janus.KeychainSwiftAccessOptions) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public class FacebookLogin {
+  weak public var delegate: Janus.AuthLoginDelegate?
+  public var type: Janus.LoginType {
+    get
+  }
+  public init(presentViewController: UIKit.UIViewController, delegate: Janus.AuthLoginDelegate?)
+  public func execute() throws
+  @objc deinit
+}
+public protocol AuthLogin : AnyObject {
+  var delegate: Janus.AuthLoginDelegate? { get set }
+  var type: Janus.LoginType { get }
+  func execute() throws
+}
+public class GoogleLogin {
+  weak public var delegate: Janus.AuthLoginDelegate?
+  public var type: Janus.LoginType {
+    get
+  }
+  public init(presentViewController: UIKit.UIViewController, delegate: Janus.AuthLoginDelegate?)
+  public func execute() throws
+  @objc deinit
+}
+public struct PasswordlessLoginMethod : Janus.AuthLoginMethod {
+  public init(passwordlessServiceUrl url: Foundation.URL)
+  public func register()
+}
+@available(iOS 13.0, *)
+public class AppleLogin {
+  weak public var delegate: Janus.AuthLoginDelegate?
+  public var type: Janus.LoginType {
+    get
+  }
+  public init(presentViewController: AuthenticationServices.ASAuthorizationControllerPresentationContextProviding, delegate: Janus.AuthLoginDelegate?)
+  public func execute() throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AuthLoginManager {
+  public static var shared: Janus.AuthLoginManager
+  public func login(_ login: Janus.AuthLogin) throws
+  public func logout()
+  @objc deinit
+}
+public struct JanusConfig {
+  public var oauthUrl: Swift.String
+  public var identityUrl: Swift.String
+  public var clientId: Swift.String
+  public var scope: Swift.String
+  public var googleAppId: Swift.String?
+  public var googleAppSecret: Swift.String?
+  public var facebookAppId: Swift.String?
+  public var appleBundleId: Swift.String?
+  public init(oauthUrl: Swift.String, identityUrl: Swift.String, clientId: Swift.String, scope: Swift.String, googleAppId: Swift.String?, googleAppSecret: Swift.String?, facebookAppId: Swift.String?, appleBundleId: Swift.String?)
+}
+@_hasMissingDesignatedInitializers public class Janus {
+  public static var shared: Janus.Janus
+  public func initialize(config: Janus.JanusConfig)
+  public func application(for application: UIKit.UIApplication, didFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  public func application(_ app: UIKit.UIApplication, open url: Foundation.URL, options: [UIKit.UIApplication.OpenURLOptionsKey : Any] = [:]) -> Swift.Bool
+  @objc deinit
+}
+public struct KeychainSwiftConstants {
+  public static var accessGroup: Swift.String {
+    get
+  }
+  public static var accessible: Swift.String {
+    get
+  }
+  public static var attrAccount: Swift.String {
+    get
+  }
+  public static var attrSynchronizable: Swift.String {
+    get
+  }
+  public static var klass: Swift.String {
+    get
+  }
+  public static var matchLimit: Swift.String {
+    get
+  }
+  public static var returnData: Swift.String {
+    get
+  }
+  public static var valueData: Swift.String {
+    get
+  }
+  public static var returnReference: Swift.String {
+    get
+  }
+  public static var returnAttributes: Swift.String {
+    get
+  }
+  public static var secMatchLimitAll: Swift.String {
+    get
+  }
+}
+open class KeychainSwift {
+  open var lastResultCode: Darwin.OSStatus
+  open var accessGroup: Swift.String?
+  open var synchronizable: Swift.Bool
+  public init()
+  public init(keyPrefix: Swift.String)
+  @discardableResult
+  open func set(_ value: Swift.String, forKey key: Swift.String, withAccess access: Janus.KeychainSwiftAccessOptions? = nil) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Foundation.Data, forKey key: Swift.String, withAccess access: Janus.KeychainSwiftAccessOptions? = nil) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Swift.Bool, forKey key: Swift.String, withAccess access: Janus.KeychainSwiftAccessOptions? = nil) -> Swift.Bool
+  open func get(_ key: Swift.String) -> Swift.String?
+  open func getData(_ key: Swift.String, asReference: Swift.Bool = false) -> Foundation.Data?
+  open func getBool(_ key: Swift.String) -> Swift.Bool?
+  @discardableResult
+  open func delete(_ key: Swift.String) -> Swift.Bool
+  public var allKeys: [Swift.String] {
+    get
+  }
+  @discardableResult
+  open func clear() -> Swift.Bool
+  @objc deinit
+}
+public class PasswordlessLogin : Janus.AuthLogin {
+  weak public var delegate: Janus.AuthLoginDelegate?
+  public var type: Janus.LoginType {
+    get
+  }
+  public init(phone: Swift.String, pin: Swift.String, delegate: Janus.AuthLoginDelegate?)
+  public func execute() throws
+  @objc deinit
+}
+public typealias OAuthLoginHandler = (Swift.Bool, Swift.String?) -> ()
+public enum TokenType {
+  case bearer
+  public static func == (a: Janus.TokenType, b: Janus.TokenType) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public protocol AuthManagerProtocol {
+  var credential: Janus.IAuthCredential? { get }
+  var isLoggedIn: Swift.Bool { get }
+  var authorizationToken: Swift.String? { get }
+  func prepareNewSession(completion: ((Swift.Bool) -> Swift.Void)?)
+  func refreshSession(completion: Janus.OAuthLoginHandler?)
+}
+public class AuthManager : Janus.AuthManagerProtocol {
+  public static var shared: Janus.AuthManager
+  public static var expiredTimeSecDefault: Swift.Int
+  public var authorizationToken: Swift.String? {
+    get
+  }
+  public var isLoggedIn: Swift.Bool {
+    get
+  }
+  public var credential: Janus.IAuthCredential?
+  public init()
+  @objc deinit
+}
+extension AuthManager {
+  public func prepareNewSession(completion: ((Swift.Bool) -> Swift.Void)?)
+  public func refreshSession(completion: Janus.OAuthLoginHandler?)
+}
+public struct AppleLoginMethod : Janus.AuthLoginMethod {
+  public var bundleId: Swift.String
+  public init(bundleId: Swift.String)
+  public func register()
+}
+public class UserPasswordLogin : Janus.AuthLogin {
+  weak public var delegate: Janus.AuthLoginDelegate?
+  public var type: Janus.LoginType {
+    get
+  }
+  public init(user: Swift.String, password: Swift.String, delegate: Janus.AuthLoginDelegate?)
+  public func execute() throws
+  @objc deinit
+}
+public struct FacebookLoginMethod : Janus.AuthLoginMethod {
+  public var appId: Swift.String
+  public init(appId: Swift.String)
+  public func register()
+}
+extension Janus.FacebookLogin : Janus.AuthLogin {}
+extension Janus.GoogleLogin : Janus.AuthLogin {}
+@available(iOS 13.0, *)
+extension Janus.AppleLogin : Janus.AuthLogin {}
