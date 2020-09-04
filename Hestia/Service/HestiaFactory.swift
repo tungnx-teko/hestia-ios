@@ -15,11 +15,15 @@ public class HestiaFactory: ServiceBuildable, ServiceConfigAttachable {
     public var config: ServiceConfig?
     public var clientId: String?
     public var application: UIApplication!
+    public var urlString: String?
     
-    required public init() {}
+    required public init() {
+        _ = Runtime.classes(conformTo: AppLauncherDelegateFactory.self)
+    }
+    
+    public static var sharedHestia: Hestia?
     
     public func createService() throws -> AnyService {
-        let urlString: String? = nil
         guard let rawUrl = urlString, let url = URL(string: rawUrl) else {
             throw ServiceError.invalidURL
         }
@@ -32,7 +36,9 @@ public class HestiaFactory: ServiceBuildable, ServiceConfigAttachable {
             // FIXME: Missing client id
             throw ServiceError.missingUserConfig
         }
-        return AnyService(Hestia(application: application, url: url, clientId: clientId))
+        let instance = Hestia(application: application, url: url, clientId: clientId)
+        HestiaFactory.sharedHestia = instance
+        return AnyService(instance)
     }
     
     public func withConfig(_ config: ServiceConfig) {

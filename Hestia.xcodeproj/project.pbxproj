@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0ED7BA8D71C0D6E64BA62293 /* Pods_Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA78B842470F59862625970F /* Pods_Hestia.framework */; };
+		13E109E8EAE38187505F8814 /* Pods_HestiaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1C697378E6A024CCCA0C95 /* Pods_HestiaIOS.framework */; };
 		1A14D72424FE334A0012CF0C /* Decodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D72324FE334A0012CF0C /* Decodable+.swift */; };
 		1A14D72724FE338A0012CF0C /* HestiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D72624FE338A0012CF0C /* HestiaApp.swift */; };
 		1A14D72924FE33990012CF0C /* HestiaAppManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D72824FE33990012CF0C /* HestiaAppManifest.swift */; };
@@ -37,19 +37,134 @@
 		1A14D74224FE3A270012CF0C /* HestiaListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D74124FE3A270012CF0C /* HestiaListRequest.swift */; };
 		1A14D74424FE3F640012CF0C /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D74324FE3F640012CF0C /* String+.swift */; };
 		1A14D74E24FE41CF0012CF0C /* HestiaIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A14D74C24FE41CF0012CF0C /* HestiaIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A14D75424FE41F50012CF0C /* IOSAppLauncherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D75324FE41F50012CF0C /* IOSAppLauncherDelegate.swift */; };
+		1A14D75424FE41F50012CF0C /* NativeAppLauncherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D75324FE41F50012CF0C /* NativeAppLauncherDelegate.swift */; };
 		1A14D75624FE5AFF0012CF0C /* AppLauncherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D75524FE5AFF0012CF0C /* AppLauncherData.swift */; };
+		1A65BF33250212A700A8A7BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF32250212A700A8A7BA /* AppDelegate.swift */; };
+		1A65BF37250212A700A8A7BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF36250212A700A8A7BA /* ViewController.swift */; };
+		1A65BF3A250212A700A8A7BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A65BF38250212A700A8A7BA /* Main.storyboard */; };
+		1A65BF3C250212AA00A8A7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A65BF3B250212AA00A8A7BA /* Assets.xcassets */; };
+		1A65BF3F250212AA00A8A7BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A65BF3D250212AA00A8A7BA /* LaunchScreen.storyboard */; };
+		1A65BF44250212EA00A8A7BA /* Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; };
+		1A65BF45250212EA00A8A7BA /* Hestia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A65BF4A250212F800A8A7BA /* MiniAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF49250212F800A8A7BA /* MiniAppLauncher.swift */; };
+		1A65BF4C2502137100A8A7BA /* IOSAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF4B2502137100A8A7BA /* IOSAppLauncher.swift */; };
+		1A65BF4E2502139A00A8A7BA /* MiniAppSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF4D2502139A00A8A7BA /* MiniAppSdk.swift */; };
+		1A65BF58250216CA00A8A7BA /* MiniAppSdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A65BF56250216CA00A8A7BA /* MiniAppSdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A65BF5B250216CA00A8A7BA /* MiniAppSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A65BF54250216CA00A8A7BA /* MiniAppSdk.framework */; };
+		1A65BF5C250216CA00A8A7BA /* MiniAppSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A65BF54250216CA00A8A7BA /* MiniAppSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A65BF60250216E300A8A7BA /* Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; };
+		1A65BF61250216E300A8A7BA /* Hestia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A65BF652502170100A8A7BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF36250212A700A8A7BA /* ViewController.swift */; };
+		1A65BF662502170100A8A7BA /* MiniAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF49250212F800A8A7BA /* MiniAppLauncher.swift */; };
+		1A65BF672502170100A8A7BA /* MiniAppSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF4D2502139A00A8A7BA /* MiniAppSdk.swift */; };
+		1A65BF682502171A00A8A7BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A65BF38250212A700A8A7BA /* Main.storyboard */; };
+		1A65BF692502171A00A8A7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A65BF3B250212AA00A8A7BA /* Assets.xcassets */; };
+		1A65BF6A2502171A00A8A7BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A65BF3D250212AA00A8A7BA /* LaunchScreen.storyboard */; };
+		1A65BF6D25021FA600A8A7BA /* HestiaAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF6C25021FA600A8A7BA /* HestiaAppDelegate.swift */; };
 		1A80E84124E6743400A5A3A3 /* Hestia.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A80E83F24E6743400A5A3A3 /* Hestia.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A80E84F24E674C800A5A3A3 /* HestiaRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E84E24E674C800A5A3A3 /* HestiaRoot.swift */; };
+		1A80E84F24E674C800A5A3A3 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E84E24E674C800A5A3A3 /* AppViewController.swift */; };
 		1A80E86024EA267A00A5A3A3 /* AppType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E85F24EA267900A5A3A3 /* AppType.swift */; };
-		1A80E86324EA284000A5A3A3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E86224EA284000A5A3A3 /* Utils.swift */; };
 		1A80E86B24EA302700A5A3A3 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E86A24EA302700A5A3A3 /* UIApplication+.swift */; };
 		1A80E86D24EA307300A5A3A3 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E86C24EA307300A5A3A3 /* UIViewController+.swift */; };
-		95CFD81CB03BC207590F3E12 /* Pods_HestiaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90FC5618A0CD2FCD40DC88A /* Pods_HestiaIOS.framework */; };
+		1ABADEEF2500916B0091385D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADEEE2500916B0091385D /* AppDelegate.swift */; };
+		1ABADEF32500916B0091385D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADEF22500916B0091385D /* ViewController.swift */; };
+		1ABADEF62500916B0091385D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABADEF42500916B0091385D /* Main.storyboard */; };
+		1ABADEF82500916E0091385D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABADEF72500916E0091385D /* Assets.xcassets */; };
+		1ABADEFB2500916E0091385D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABADEF92500916E0091385D /* LaunchScreen.storyboard */; };
+		1ABADF03250093D60091385D /* MiniAppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF02250093D60091385D /* MiniAppListView.swift */; };
+		1ABADF08250094A80091385D /* MiniAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF06250094A80091385D /* MiniAppCell.swift */; };
+		1ABADF09250094A80091385D /* MiniAppCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABADF07250094A80091385D /* MiniAppCell.xib */; };
+		1ABADF0A250098760091385D /* Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; };
+		1ABADF0B250098760091385D /* Hestia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1ABADF0F2500990A0091385D /* HestiaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A14D74A24FE41CF0012CF0C /* HestiaIOS.framework */; };
+		1ABADF102500990A0091385D /* HestiaIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A14D74A24FE41CF0012CF0C /* HestiaIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1ABADF1525009C600091385D /* HestiaBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF1425009C600091385D /* HestiaBundle.swift */; };
+		1ABADF172500A1FA0091385D /* Hestia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABADF162500A1FA0091385D /* Hestia.xcassets */; };
+		1ABADF192500E1BA0091385D /* HestiaCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF182500E1BA0091385D /* HestiaCode.swift */; };
+		1ABADF1B2500E51C0091385D /* NativeAppLauncherDelegateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF1A2500E51C0091385D /* NativeAppLauncherDelegateFactory.swift */; };
+		1ABADF1D2500E9130091385D /* AnyHestiaAppManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF1C2500E9130091385D /* AnyHestiaAppManifest.swift */; };
+		1ABADF1F2500ED6B0091385D /* IOSNativeManifestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF1E2500ED6B0091385D /* IOSNativeManifestData.swift */; };
+		42F10DA906A83FDDAD779F55 /* Pods_Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CFF555F4C56D7A2AA2710E /* Pods_Hestia.framework */; };
+		60E732E6952145646DC09585 /* Pods_SuperAppTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2B4A0CCEDE442D988542DE /* Pods_SuperAppTemplate.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1A65BF46250212EA00A8A7BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A80E83B24E6743400A5A3A3;
+			remoteInfo = Hestia;
+		};
+		1A65BF59250216CA00A8A7BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A65BF53250216CA00A8A7BA;
+			remoteInfo = MiniAppSdk;
+		};
+		1A65BF62250216E300A8A7BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A80E83B24E6743400A5A3A3;
+			remoteInfo = Hestia;
+		};
+		1ABADF0C250098760091385D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A80E83B24E6743400A5A3A3;
+			remoteInfo = Hestia;
+		};
+		1ABADF112500990A0091385D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A14D74924FE41CF0012CF0C;
+			remoteInfo = HestiaIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1A65BF48250212EA00A8A7BA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1A65BF45250212EA00A8A7BA /* Hestia.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A65BF64250216E300A8A7BA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1A65BF61250216E300A8A7BA /* Hestia.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ABADF0E250098760091385D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1ABADF102500990A0091385D /* HestiaIOS.framework in Embed Frameworks */,
+				1ABADF0B250098760091385D /* Hestia.framework in Embed Frameworks */,
+				1A65BF5C250216CA00A8A7BA /* MiniAppSdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		09FB946DCE92E01F70C8B75D /* Pods-HestiaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.debug.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		1A14D72324FE334A0012CF0C /* Decodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+.swift"; sourceTree = "<group>"; };
 		1A14D72624FE338A0012CF0C /* HestiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaApp.swift; sourceTree = "<group>"; };
 		1A14D72824FE33990012CF0C /* HestiaAppManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaAppManifest.swift; sourceTree = "<group>"; };
@@ -67,21 +182,54 @@
 		1A14D74A24FE41CF0012CF0C /* HestiaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HestiaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A14D74C24FE41CF0012CF0C /* HestiaIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HestiaIOS.h; sourceTree = "<group>"; };
 		1A14D74D24FE41CF0012CF0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A14D75324FE41F50012CF0C /* IOSAppLauncherDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSAppLauncherDelegate.swift; sourceTree = "<group>"; };
+		1A14D75324FE41F50012CF0C /* NativeAppLauncherDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAppLauncherDelegate.swift; sourceTree = "<group>"; };
 		1A14D75524FE5AFF0012CF0C /* AppLauncherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncherData.swift; sourceTree = "<group>"; };
+		1A65BF30250212A700A8A7BA /* MiniApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A65BF32250212A700A8A7BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A65BF36250212A700A8A7BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A65BF39250212A700A8A7BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A65BF3B250212AA00A8A7BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A65BF3E250212AA00A8A7BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A65BF40250212AA00A8A7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A65BF49250212F800A8A7BA /* MiniAppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppLauncher.swift; sourceTree = "<group>"; };
+		1A65BF4B2502137100A8A7BA /* IOSAppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSAppLauncher.swift; sourceTree = "<group>"; };
+		1A65BF4D2502139A00A8A7BA /* MiniAppSdk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppSdk.swift; sourceTree = "<group>"; };
+		1A65BF54250216CA00A8A7BA /* MiniAppSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MiniAppSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A65BF56250216CA00A8A7BA /* MiniAppSdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiniAppSdk.h; sourceTree = "<group>"; };
+		1A65BF57250216CA00A8A7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A65BF6C25021FA600A8A7BA /* HestiaAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaAppDelegate.swift; sourceTree = "<group>"; };
 		1A80E83C24E6743400A5A3A3 /* Hestia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hestia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A80E83F24E6743400A5A3A3 /* Hestia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hestia.h; sourceTree = "<group>"; };
 		1A80E84024E6743400A5A3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A80E84E24E674C800A5A3A3 /* HestiaRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaRoot.swift; sourceTree = "<group>"; };
+		1A80E84E24E674C800A5A3A3 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		1A80E85F24EA267900A5A3A3 /* AppType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppType.swift; sourceTree = "<group>"; };
-		1A80E86224EA284000A5A3A3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1A80E86A24EA302700A5A3A3 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		1A80E86C24EA307300A5A3A3 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
-		B140AD7A6F1E5CF576286036 /* Pods-HestiaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.release.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.release.xcconfig"; sourceTree = "<group>"; };
-		BA78B842470F59862625970F /* Pods_Hestia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hestia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFF8FCE49F956BC6A4361D62 /* Pods-Hestia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.debug.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.debug.xcconfig"; sourceTree = "<group>"; };
-		F5B59666289C27ECF764D3D7 /* Pods-Hestia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.release.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.release.xcconfig"; sourceTree = "<group>"; };
-		F90FC5618A0CD2FCD40DC88A /* Pods_HestiaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HestiaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ABADEEC2500916B0091385D /* SuperAppTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperAppTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ABADEEE2500916B0091385D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1ABADEF22500916B0091385D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1ABADEF52500916B0091385D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1ABADEF72500916E0091385D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1ABADEFA2500916E0091385D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1ABADEFC2500916E0091385D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ABADF02250093D60091385D /* MiniAppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppListView.swift; sourceTree = "<group>"; };
+		1ABADF06250094A80091385D /* MiniAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppCell.swift; sourceTree = "<group>"; };
+		1ABADF07250094A80091385D /* MiniAppCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniAppCell.xib; sourceTree = "<group>"; };
+		1ABADF1425009C600091385D /* HestiaBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaBundle.swift; sourceTree = "<group>"; };
+		1ABADF162500A1FA0091385D /* Hestia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Hestia.xcassets; sourceTree = "<group>"; };
+		1ABADF182500E1BA0091385D /* HestiaCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaCode.swift; sourceTree = "<group>"; };
+		1ABADF1A2500E51C0091385D /* NativeAppLauncherDelegateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAppLauncherDelegateFactory.swift; sourceTree = "<group>"; };
+		1ABADF1C2500E9130091385D /* AnyHestiaAppManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyHestiaAppManifest.swift; sourceTree = "<group>"; };
+		1ABADF1E2500ED6B0091385D /* IOSNativeManifestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSNativeManifestData.swift; sourceTree = "<group>"; };
+		1ACC143FB832FD38EDBE7468 /* Pods-SuperAppTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		2C1C697378E6A024CCCA0C95 /* Pods_HestiaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HestiaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CF25368FEF85DCBB3163AA /* Pods-SuperAppTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.release.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.release.xcconfig"; sourceTree = "<group>"; };
+		9339897CC71868DCFAC770D6 /* Pods-HestiaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.debug.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B4DC9A05D3B30D478B362485 /* Pods-Hestia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.debug.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.debug.xcconfig"; sourceTree = "<group>"; };
+		BE27EAD72EC45D715D805103 /* Pods-HestiaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.release.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.release.xcconfig"; sourceTree = "<group>"; };
+		BF2B4A0CCEDE442D988542DE /* Pods_SuperAppTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperAppTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4011C2B2DFABD4C966BFE95 /* Pods-Hestia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.release.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.release.xcconfig"; sourceTree = "<group>"; };
+		E5CFF555F4C56D7A2AA2710E /* Pods_Hestia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hestia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +237,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CFD81CB03BC207590F3E12 /* Pods_HestiaIOS.framework in Frameworks */,
+				13E109E8EAE38187505F8814 /* Pods_HestiaIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A65BF2D250212A700A8A7BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A65BF44250212EA00A8A7BA /* Hestia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A65BF51250216CA00A8A7BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A65BF60250216E300A8A7BA /* Hestia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +261,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ED7BA8D71C0D6E64BA62293 /* Pods_Hestia.framework in Frameworks */,
+				42F10DA906A83FDDAD779F55 /* Pods_Hestia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ABADEE92500916B0091385D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A65BF5B250216CA00A8A7BA /* MiniAppSdk.framework in Frameworks */,
+				1ABADF0F2500990A0091385D /* HestiaIOS.framework in Frameworks */,
+				1ABADF0A250098760091385D /* Hestia.framework in Frameworks */,
+				60E732E6952145646DC09585 /* Pods_SuperAppTemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +282,6 @@
 		1A14D72524FE337B0012CF0C /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				1A14D72E24FE33E40012CF0C /* Hestia.swift */,
 				1A14D73424FE34230012CF0C /* HestiaFactory.swift */,
 			);
 			path = Service;
@@ -136,6 +310,7 @@
 			children = (
 				1A14D73B24FE361A0012CF0C /* HestiaAppListResponse.swift */,
 				1A14D73F24FE382B0012CF0C /* HestiaAppDetailResponse.swift */,
+				1ABADF182500E1BA0091385D /* HestiaCode.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -143,7 +318,6 @@
 		1A14D74B24FE41CF0012CF0C /* HestiaIOS */ = {
 			isa = PBXGroup;
 			children = (
-				1A14D75724FE5C2B0012CF0C /* Extensions */,
 				1A14D75224FE41D50012CF0C /* Delegate */,
 				1A14D74C24FE41CF0012CF0C /* HestiaIOS.h */,
 				1A14D74D24FE41CF0012CF0C /* Info.plist */,
@@ -154,16 +328,11 @@
 		1A14D75224FE41D50012CF0C /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				1A14D75324FE41F50012CF0C /* IOSAppLauncherDelegate.swift */,
+				1A14D75324FE41F50012CF0C /* NativeAppLauncherDelegate.swift */,
+				1ABADF1A2500E51C0091385D /* NativeAppLauncherDelegateFactory.swift */,
+				1A65BF4B2502137100A8A7BA /* IOSAppLauncher.swift */,
 			);
 			path = Delegate;
-			sourceTree = "<group>";
-		};
-		1A14D75724FE5C2B0012CF0C /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1A14D75824FE62010012CF0C /* HestiaWebApp */ = {
@@ -173,15 +342,42 @@
 			path = HestiaWebApp;
 			sourceTree = "<group>";
 		};
+		1A65BF31250212A700A8A7BA /* MiniApp */ = {
+			isa = PBXGroup;
+			children = (
+				1A65BF32250212A700A8A7BA /* AppDelegate.swift */,
+				1A65BF36250212A700A8A7BA /* ViewController.swift */,
+				1A65BF38250212A700A8A7BA /* Main.storyboard */,
+				1A65BF3B250212AA00A8A7BA /* Assets.xcassets */,
+				1A65BF3D250212AA00A8A7BA /* LaunchScreen.storyboard */,
+				1A65BF40250212AA00A8A7BA /* Info.plist */,
+				1A65BF49250212F800A8A7BA /* MiniAppLauncher.swift */,
+				1A65BF4D2502139A00A8A7BA /* MiniAppSdk.swift */,
+			);
+			path = MiniApp;
+			sourceTree = "<group>";
+		};
+		1A65BF55250216CA00A8A7BA /* MiniAppSdk */ = {
+			isa = PBXGroup;
+			children = (
+				1A65BF56250216CA00A8A7BA /* MiniAppSdk.h */,
+				1A65BF57250216CA00A8A7BA /* Info.plist */,
+			);
+			path = MiniAppSdk;
+			sourceTree = "<group>";
+		};
 		1A80E83224E6743400A5A3A3 = {
 			isa = PBXGroup;
 			children = (
 				1A80E83E24E6743400A5A3A3 /* Hestia */,
-				1A14D74B24FE41CF0012CF0C /* HestiaIOS */,
 				1A14D75824FE62010012CF0C /* HestiaWebApp */,
+				1A14D74B24FE41CF0012CF0C /* HestiaIOS */,
+				1ABADEED2500916B0091385D /* SuperAppTemplate */,
+				1A65BF31250212A700A8A7BA /* MiniApp */,
+				1A65BF55250216CA00A8A7BA /* MiniAppSdk */,
 				1A80E83D24E6743400A5A3A3 /* Products */,
 				863CD1DABD3D63EA47315899 /* Pods */,
-				4485D89BA84E2F131298E449 /* Frameworks */,
+				C0CF4F9F3FC4D19C39502EA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,6 +386,9 @@
 			children = (
 				1A80E83C24E6743400A5A3A3 /* Hestia.framework */,
 				1A14D74A24FE41CF0012CF0C /* HestiaIOS.framework */,
+				1ABADEEC2500916B0091385D /* SuperAppTemplate.app */,
+				1A65BF30250212A700A8A7BA /* MiniApp.app */,
+				1A65BF54250216CA00A8A7BA /* MiniAppSdk.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +396,8 @@
 		1A80E83E24E6743400A5A3A3 /* Hestia */ = {
 			isa = PBXGroup;
 			children = (
+				1ABADF1325009C500091385D /* SDK */,
+				1ABADF00250093BB0091385D /* UI */,
 				1A14D73824FE35AC0012CF0C /* Networking */,
 				1A14D72524FE337B0012CF0C /* Service */,
 				1A80E86924EA301B00A5A3A3 /* Extensions */,
@@ -213,10 +414,9 @@
 		1A80E84B24E6747200A5A3A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1ABADF202500ED8E0091385D /* Manifest */,
 				1A14D73224FE34090012CF0C /* HestiaError.swift */,
 				1A14D72624FE338A0012CF0C /* HestiaApp.swift */,
-				1A14D72824FE33990012CF0C /* HestiaAppManifest.swift */,
-				1A14D73024FE33F60012CF0C /* HestiaManifestData.swift */,
 				1A80E85F24EA267900A5A3A3 /* AppType.swift */,
 				1A14D75524FE5AFF0012CF0C /* AppLauncherData.swift */,
 			);
@@ -226,7 +426,7 @@
 		1A80E85024E6753800A5A3A3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				1A80E84E24E674C800A5A3A3 /* HestiaRoot.swift */,
+				1A80E84E24E674C800A5A3A3 /* AppViewController.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -234,7 +434,6 @@
 		1A80E86124EA282900A5A3A3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				1A80E86224EA284000A5A3A3 /* Utils.swift */,
 				1A14D72C24FE33C90012CF0C /* Runtime.swift */,
 			);
 			path = Utils;
@@ -244,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				1A14D72A24FE33B40012CF0C /* AppLauncherDelegate.swift */,
+				1A65BF6C25021FA600A8A7BA /* HestiaAppDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -259,24 +459,79 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4485D89BA84E2F131298E449 /* Frameworks */ = {
+		1ABADEED2500916B0091385D /* SuperAppTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				BA78B842470F59862625970F /* Pods_Hestia.framework */,
-				F90FC5618A0CD2FCD40DC88A /* Pods_HestiaIOS.framework */,
+				1ABADEEE2500916B0091385D /* AppDelegate.swift */,
+				1ABADEF22500916B0091385D /* ViewController.swift */,
+				1ABADEF42500916B0091385D /* Main.storyboard */,
+				1ABADEF72500916E0091385D /* Assets.xcassets */,
+				1ABADEF92500916E0091385D /* LaunchScreen.storyboard */,
+				1ABADEFC2500916E0091385D /* Info.plist */,
 			);
-			name = Frameworks;
+			path = SuperAppTemplate;
+			sourceTree = "<group>";
+		};
+		1ABADF00250093BB0091385D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1ABADF01250093C20091385D /* MiniAppList */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1ABADF01250093C20091385D /* MiniAppList */ = {
+			isa = PBXGroup;
+			children = (
+				1ABADF02250093D60091385D /* MiniAppListView.swift */,
+				1ABADF06250094A80091385D /* MiniAppCell.swift */,
+				1ABADF07250094A80091385D /* MiniAppCell.xib */,
+			);
+			path = MiniAppList;
+			sourceTree = "<group>";
+		};
+		1ABADF1325009C500091385D /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				1A14D72E24FE33E40012CF0C /* Hestia.swift */,
+				1ABADF1425009C600091385D /* HestiaBundle.swift */,
+				1ABADF162500A1FA0091385D /* Hestia.xcassets */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		1ABADF202500ED8E0091385D /* Manifest */ = {
+			isa = PBXGroup;
+			children = (
+				1A14D72824FE33990012CF0C /* HestiaAppManifest.swift */,
+				1A14D73024FE33F60012CF0C /* HestiaManifestData.swift */,
+				1ABADF1C2500E9130091385D /* AnyHestiaAppManifest.swift */,
+				1ABADF1E2500ED6B0091385D /* IOSNativeManifestData.swift */,
+			);
+			path = Manifest;
 			sourceTree = "<group>";
 		};
 		863CD1DABD3D63EA47315899 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DFF8FCE49F956BC6A4361D62 /* Pods-Hestia.debug.xcconfig */,
-				F5B59666289C27ECF764D3D7 /* Pods-Hestia.release.xcconfig */,
-				09FB946DCE92E01F70C8B75D /* Pods-HestiaIOS.debug.xcconfig */,
-				B140AD7A6F1E5CF576286036 /* Pods-HestiaIOS.release.xcconfig */,
+				B4DC9A05D3B30D478B362485 /* Pods-Hestia.debug.xcconfig */,
+				C4011C2B2DFABD4C966BFE95 /* Pods-Hestia.release.xcconfig */,
+				9339897CC71868DCFAC770D6 /* Pods-HestiaIOS.debug.xcconfig */,
+				BE27EAD72EC45D715D805103 /* Pods-HestiaIOS.release.xcconfig */,
+				1ACC143FB832FD38EDBE7468 /* Pods-SuperAppTemplate.debug.xcconfig */,
+				85CF25368FEF85DCBB3163AA /* Pods-SuperAppTemplate.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C0CF4F9F3FC4D19C39502EA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5CFF555F4C56D7A2AA2710E /* Pods_Hestia.framework */,
+				2C1C697378E6A024CCCA0C95 /* Pods_HestiaIOS.framework */,
+				BF2B4A0CCEDE442D988542DE /* Pods_SuperAppTemplate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +542,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A14D74E24FE41CF0012CF0C /* HestiaIOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A65BF4F250216CA00A8A7BA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A65BF58250216CA00A8A7BA /* MiniAppSdk.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,12 +568,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A14D74F24FE41CF0012CF0C /* Build configuration list for PBXNativeTarget "HestiaIOS" */;
 			buildPhases = (
-				7D9601927A66B2EFEF7F164D /* [CP] Check Pods Manifest.lock */,
+				44C024DBC97ECF494E2D35ED /* [CP] Check Pods Manifest.lock */,
 				1A14D74524FE41CF0012CF0C /* Headers */,
 				1A14D74624FE41CF0012CF0C /* Sources */,
 				1A14D74724FE41CF0012CF0C /* Frameworks */,
 				1A14D74824FE41CF0012CF0C /* Resources */,
-				63DCA9C23F7DD0D100AF0E3F /* [CP] Copy Pods Resources */,
+				1FEE2DD128E907B502227B3B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,16 +584,55 @@
 			productReference = 1A14D74A24FE41CF0012CF0C /* HestiaIOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		1A65BF2F250212A700A8A7BA /* MiniApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A65BF43250212AA00A8A7BA /* Build configuration list for PBXNativeTarget "MiniApp" */;
+			buildPhases = (
+				1A65BF2C250212A700A8A7BA /* Sources */,
+				1A65BF2D250212A700A8A7BA /* Frameworks */,
+				1A65BF2E250212A700A8A7BA /* Resources */,
+				1A65BF48250212EA00A8A7BA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A65BF47250212EA00A8A7BA /* PBXTargetDependency */,
+			);
+			name = MiniApp;
+			productName = MiniApp;
+			productReference = 1A65BF30250212A700A8A7BA /* MiniApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A65BF53250216CA00A8A7BA /* MiniAppSdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A65BF5D250216CA00A8A7BA /* Build configuration list for PBXNativeTarget "MiniAppSdk" */;
+			buildPhases = (
+				1A65BF4F250216CA00A8A7BA /* Headers */,
+				1A65BF50250216CA00A8A7BA /* Sources */,
+				1A65BF51250216CA00A8A7BA /* Frameworks */,
+				1A65BF52250216CA00A8A7BA /* Resources */,
+				1A65BF64250216E300A8A7BA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A65BF63250216E300A8A7BA /* PBXTargetDependency */,
+			);
+			name = MiniAppSdk;
+			productName = MiniAppSdk;
+			productReference = 1A65BF54250216CA00A8A7BA /* MiniAppSdk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		1A80E83B24E6743400A5A3A3 /* Hestia */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A80E84424E6743400A5A3A3 /* Build configuration list for PBXNativeTarget "Hestia" */;
 			buildPhases = (
-				021C6301C1075FB0ED836A4F /* [CP] Check Pods Manifest.lock */,
+				D07EF8296500F199E1FEEFCC /* [CP] Check Pods Manifest.lock */,
 				1A80E83724E6743400A5A3A3 /* Headers */,
 				1A80E83824E6743400A5A3A3 /* Sources */,
 				1A80E83924E6743400A5A3A3 /* Frameworks */,
 				1A80E83A24E6743400A5A3A3 /* Resources */,
-				BA09707204E38581B25DE4DF /* [CP] Copy Pods Resources */,
+				AA319DF48A25E1DB2CD0A274 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,12 +643,37 @@
 			productReference = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		1ABADEEB2500916B0091385D /* SuperAppTemplate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ABADEFD2500916E0091385D /* Build configuration list for PBXNativeTarget "SuperAppTemplate" */;
+			buildPhases = (
+				F26D57BB310134A701BE491E /* [CP] Check Pods Manifest.lock */,
+				1ABADEE82500916B0091385D /* Sources */,
+				1ABADEE92500916B0091385D /* Frameworks */,
+				1ABADEEA2500916B0091385D /* Resources */,
+				1ABADF0E250098760091385D /* Embed Frameworks */,
+				7FFED5F1A938C19F92FD5322 /* [CP] Embed Pods Frameworks */,
+				09EA49F68E874D7A10398430 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ABADF0D250098760091385D /* PBXTargetDependency */,
+				1ABADF122500990A0091385D /* PBXTargetDependency */,
+				1A65BF5A250216CA00A8A7BA /* PBXTargetDependency */,
+			);
+			name = SuperAppTemplate;
+			productName = SuperAppTemplate;
+			productReference = 1ABADEEC2500916B0091385D /* SuperAppTemplate.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1A80E83324E6743400A5A3A3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Tung Nguyen";
 				TargetAttributes = {
@@ -354,11 +681,20 @@
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
 					};
+					1A65BF2F250212A700A8A7BA = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					1A65BF53250216CA00A8A7BA = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					1A80E83B24E6743400A5A3A3 = {
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
 					};
 					1A80E87324EA5BA900A5A3A3 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					1ABADEEB2500916B0091385D = {
 						CreatedOnToolsVersion = 11.6;
 					};
 				};
@@ -379,6 +715,9 @@
 				1A80E83B24E6743400A5A3A3 /* Hestia */,
 				1A80E87324EA5BA900A5A3A3 /* Hestia-Universal */,
 				1A14D74924FE41CF0012CF0C /* HestiaIOS */,
+				1ABADEEB2500916B0091385D /* SuperAppTemplate */,
+				1A65BF2F250212A700A8A7BA /* MiniApp */,
+				1A65BF53250216CA00A8A7BA /* MiniAppSdk */,
 			);
 		};
 /* End PBXProject section */
@@ -391,36 +730,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1A65BF2E250212A700A8A7BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A65BF3F250212AA00A8A7BA /* LaunchScreen.storyboard in Resources */,
+				1A65BF3C250212AA00A8A7BA /* Assets.xcassets in Resources */,
+				1A65BF3A250212A700A8A7BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A65BF52250216CA00A8A7BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A65BF682502171A00A8A7BA /* Main.storyboard in Resources */,
+				1A65BF692502171A00A8A7BA /* Assets.xcassets in Resources */,
+				1A65BF6A2502171A00A8A7BA /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1A80E83A24E6743400A5A3A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABADF09250094A80091385D /* MiniAppCell.xib in Resources */,
+				1ABADF172500A1FA0091385D /* Hestia.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ABADEEA2500916B0091385D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ABADEFB2500916E0091385D /* LaunchScreen.storyboard in Resources */,
+				1ABADEF82500916E0091385D /* Assets.xcassets in Resources */,
+				1ABADEF62500916B0091385D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		021C6301C1075FB0ED836A4F /* [CP] Check Pods Manifest.lock */ = {
+		09EA49F68E874D7A10398430 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hestia-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1A80E87724EA5BB000A5A3A3 /* Build Fat */ = {
@@ -441,7 +807,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# build fat framework script\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nWORKSPACE=\"Hestia.xcworkspace\"\nNAME_OUTPUT_FOLDER=\"Outputs\"\nOUTPUT_FOLDER=\"${PROJECT_DIR}/${NAME_OUTPUT_FOLDER}/\"\n\nSDK_TARGET_NAME=\"Hestia\"\n#ZIP_NAME=\"${SDK_TARGET_NAME}.zip\"\n\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\nmkdir -p \"${OUTPUT_FOLDER}\"\n\n# Build Device and Simulator versions\nxcodebuild -workspace \"${WORKSPACE}\" -scheme \"${SDK_TARGET_NAME}\" -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" ONLY_ACTIVE_ARCH=NO BUILD_ROOT=\"${BUILD_ROOT}\" OBJROOT=\"${OBJROOT}/DependentBuilds\"\nxcodebuild -workspace \"${WORKSPACE}\" -scheme \"${SDK_TARGET_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ARCHS=x86_64 ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OBJROOT=\"${OBJROOT}/DependentBuilds\"\n\n# make fat framework\n\"${PROJECT_DIR}/build-phases/make-fat-framework.sh\" \"${UNIVERSAL_OUTPUTFOLDER}\" \"${SDK_TARGET_NAME}\" \"${OUTPUT_FOLDER}\"\n\n# Open the project's directory in Finder\nopen \"${OUTPUT_FOLDER}\"\n\n# Zip file\n#zip -r \"${ZIP_NAME}\" ./\"${NAME_OUTPUT_FOLDER}\"\n";
 		};
-		63DCA9C23F7DD0D100AF0E3F /* [CP] Copy Pods Resources */ = {
+		1FEE2DD128E907B502227B3B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -458,7 +824,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7D9601927A66B2EFEF7F164D /* [CP] Check Pods Manifest.lock */ = {
+		44C024DBC97ECF494E2D35ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -480,7 +846,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BA09707204E38581B25DE4DF /* [CP] Copy Pods Resources */ = {
+		7FFED5F1A938C19F92FD5322 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA319DF48A25E1DB2CD0A274 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -497,6 +880,50 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hestia/Pods-Hestia-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D07EF8296500F199E1FEEFCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hestia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F26D57BB310134A701BE491E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SuperAppTemplate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -504,7 +931,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A14D75424FE41F50012CF0C /* IOSAppLauncherDelegate.swift in Sources */,
+				1ABADF1B2500E51C0091385D /* NativeAppLauncherDelegateFactory.swift in Sources */,
+				1A65BF4C2502137100A8A7BA /* IOSAppLauncher.swift in Sources */,
+				1A14D75424FE41F50012CF0C /* NativeAppLauncherDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A65BF2C250212A700A8A7BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A65BF4A250212F800A8A7BA /* MiniAppLauncher.swift in Sources */,
+				1A65BF37250212A700A8A7BA /* ViewController.swift in Sources */,
+				1A65BF33250212A700A8A7BA /* AppDelegate.swift in Sources */,
+				1A65BF4E2502139A00A8A7BA /* MiniAppSdk.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A65BF50250216CA00A8A7BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A65BF652502170100A8A7BA /* ViewController.swift in Sources */,
+				1A65BF662502170100A8A7BA /* MiniAppLauncher.swift in Sources */,
+				1A65BF672502170100A8A7BA /* MiniAppSdk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,35 +962,113 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A65BF6D25021FA600A8A7BA /* HestiaAppDelegate.swift in Sources */,
 				1A80E86024EA267A00A5A3A3 /* AppType.swift in Sources */,
 				1A14D74224FE3A270012CF0C /* HestiaListRequest.swift in Sources */,
 				1A14D73524FE34230012CF0C /* HestiaFactory.swift in Sources */,
+				1ABADF1D2500E9130091385D /* AnyHestiaAppManifest.swift in Sources */,
 				1A80E86D24EA307300A5A3A3 /* UIViewController+.swift in Sources */,
 				1A14D73A24FE35E40012CF0C /* HestiaGetRequest.swift in Sources */,
 				1A14D75624FE5AFF0012CF0C /* AppLauncherData.swift in Sources */,
 				1A14D73C24FE361A0012CF0C /* HestiaAppListResponse.swift in Sources */,
 				1A80E86B24EA302700A5A3A3 /* UIApplication+.swift in Sources */,
 				1A14D72B24FE33B40012CF0C /* AppLauncherDelegate.swift in Sources */,
+				1ABADF192500E1BA0091385D /* HestiaCode.swift in Sources */,
 				1A14D72924FE33990012CF0C /* HestiaAppManifest.swift in Sources */,
 				1A14D72F24FE33E40012CF0C /* Hestia.swift in Sources */,
 				1A14D74024FE382B0012CF0C /* HestiaAppDetailResponse.swift in Sources */,
+				1ABADF1F2500ED6B0091385D /* IOSNativeManifestData.swift in Sources */,
 				1A14D72724FE338A0012CF0C /* HestiaApp.swift in Sources */,
+				1ABADF03250093D60091385D /* MiniAppListView.swift in Sources */,
+				1ABADF08250094A80091385D /* MiniAppCell.swift in Sources */,
 				1A14D73324FE34090012CF0C /* HestiaError.swift in Sources */,
 				1A14D73124FE33F60012CF0C /* HestiaManifestData.swift in Sources */,
-				1A80E84F24E674C800A5A3A3 /* HestiaRoot.swift in Sources */,
-				1A80E86324EA284000A5A3A3 /* Utils.swift in Sources */,
+				1A80E84F24E674C800A5A3A3 /* AppViewController.swift in Sources */,
 				1A14D72D24FE33C90012CF0C /* Runtime.swift in Sources */,
+				1ABADF1525009C600091385D /* HestiaBundle.swift in Sources */,
 				1A14D74424FE3F640012CF0C /* String+.swift in Sources */,
 				1A14D72424FE334A0012CF0C /* Decodable+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ABADEE82500916B0091385D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ABADEF32500916B0091385D /* ViewController.swift in Sources */,
+				1ABADEEF2500916B0091385D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A65BF47250212EA00A8A7BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A80E83B24E6743400A5A3A3 /* Hestia */;
+			targetProxy = 1A65BF46250212EA00A8A7BA /* PBXContainerItemProxy */;
+		};
+		1A65BF5A250216CA00A8A7BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A65BF53250216CA00A8A7BA /* MiniAppSdk */;
+			targetProxy = 1A65BF59250216CA00A8A7BA /* PBXContainerItemProxy */;
+		};
+		1A65BF63250216E300A8A7BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A80E83B24E6743400A5A3A3 /* Hestia */;
+			targetProxy = 1A65BF62250216E300A8A7BA /* PBXContainerItemProxy */;
+		};
+		1ABADF0D250098760091385D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A80E83B24E6743400A5A3A3 /* Hestia */;
+			targetProxy = 1ABADF0C250098760091385D /* PBXContainerItemProxy */;
+		};
+		1ABADF122500990A0091385D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A14D74924FE41CF0012CF0C /* HestiaIOS */;
+			targetProxy = 1ABADF112500990A0091385D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1A65BF38250212A700A8A7BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A65BF39250212A700A8A7BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A65BF3D250212AA00A8A7BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A65BF3E250212AA00A8A7BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1ABADEF42500916B0091385D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABADEF52500916B0091385D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1ABADEF92500916E0091385D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABADEFA2500916E0091385D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1A14D75024FE41CF0012CF0C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09FB946DCE92E01F70C8B75D /* Pods-HestiaIOS.debug.xcconfig */;
+			baseConfigurationReference = 9339897CC71868DCFAC770D6 /* Pods-HestiaIOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +1078,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = HestiaIOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,6 +1087,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.minerva.HestiaIOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -566,7 +1096,7 @@
 		};
 		1A14D75124FE41CF0012CF0C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B140AD7A6F1E5CF576286036 /* Pods-HestiaIOS.release.xcconfig */;
+			baseConfigurationReference = BE27EAD72EC45D715D805103 /* Pods-HestiaIOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -576,6 +1106,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = HestiaIOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -584,6 +1115,95 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.minerva.HestiaIOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1A65BF41250212AA00A8A7BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.miniappdemo.MiniApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A65BF42250212AA00A8A7BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.miniappdemo.MiniApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1A65BF5E250216CA00A8A7BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2G2F7B8D22;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MiniAppSdk/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.miniappdemo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A65BF5F250216CA00A8A7BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2G2F7B8D22;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MiniAppSdk/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.miniappdemo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -711,7 +1331,7 @@
 		};
 		1A80E84524E6743400A5A3A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFF8FCE49F956BC6A4361D62 /* Pods-Hestia.debug.xcconfig */;
+			baseConfigurationReference = B4DC9A05D3B30D478B362485 /* Pods-Hestia.debug.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = marker;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -741,7 +1361,7 @@
 		};
 		1A80E84624E6743400A5A3A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5B59666289C27ECF764D3D7 /* Pods-Hestia.release.xcconfig */;
+			baseConfigurationReference = C4011C2B2DFABD4C966BFE95 /* Pods-Hestia.release.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -784,6 +1404,48 @@
 			};
 			name = Release;
 		};
+		1ABADEFE2500916E0091385D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ACC143FB832FD38EDBE7468 /* Pods-SuperAppTemplate.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G2F7B8D22;
+				INFOPLIST_FILE = SuperAppTemplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.superapptemplate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1ABADEFF2500916E0091385D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CF25368FEF85DCBB3163AA /* Pods-SuperAppTemplate.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G2F7B8D22;
+				INFOPLIST_FILE = SuperAppTemplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.superapptemplate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -792,6 +1454,24 @@
 			buildConfigurations = (
 				1A14D75024FE41CF0012CF0C /* Debug */,
 				1A14D75124FE41CF0012CF0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A65BF43250212AA00A8A7BA /* Build configuration list for PBXNativeTarget "MiniApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A65BF41250212AA00A8A7BA /* Debug */,
+				1A65BF42250212AA00A8A7BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A65BF5D250216CA00A8A7BA /* Build configuration list for PBXNativeTarget "MiniAppSdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A65BF5E250216CA00A8A7BA /* Debug */,
+				1A65BF5F250216CA00A8A7BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -819,6 +1499,15 @@
 			buildConfigurations = (
 				1A80E87424EA5BA900A5A3A3 /* Debug */,
 				1A80E87524EA5BA900A5A3A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ABADEFD2500916E0091385D /* Build configuration list for PBXNativeTarget "SuperAppTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ABADEFE2500916E0091385D /* Debug */,
+				1ABADEFF2500916E0091385D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

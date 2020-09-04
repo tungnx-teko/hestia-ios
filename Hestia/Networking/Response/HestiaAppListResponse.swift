@@ -9,7 +9,7 @@
 import Foundation
 import TekCoreNetwork
 
-class HestiaAppListResponse: BaseResponse<TekoIntCode> {
+class HestiaAppListResponse: BaseResponse<HestiaCode> {
     
     var data: [HestiaApp]
     

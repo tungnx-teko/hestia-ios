@@ -7,17 +7,32 @@
 		<key>Hestia-Universal.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>34</integer>
+			<integer>20</integer>
 		</dict>
 		<key>Hestia.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>35</integer>
+			<integer>24</integer>
 		</dict>
 		<key>HestiaIOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>33</integer>
+			<integer>22</integer>
+		</dict>
+		<key>MiniApp.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>23</integer>
+		</dict>
+		<key>MiniAppSdk.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>25</integer>
+		</dict>
+		<key>SuperAppTemplate.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>21</integer>
 		</dict>
 	</dict>
 </dict>

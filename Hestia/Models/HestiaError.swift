@@ -12,5 +12,6 @@ public enum HestiaError: Error {
     case invalidCode
     case appNotFound
     case unexpected
+    case exchangeTokenFailed
     case invalidManifestData
 }

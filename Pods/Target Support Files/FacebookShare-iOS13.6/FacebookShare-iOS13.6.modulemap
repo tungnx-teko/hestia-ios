@@ -1,6 +1,0 @@
-framework module FacebookShare {
-  umbrella header "FacebookShare-iOS13.6-umbrella.h"
-
-  export *
-  module * { export * }
-}
