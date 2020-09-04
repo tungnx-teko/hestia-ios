@@ -10,5 +10,5 @@ import UIKit
 
 public protocol AppViewController {
     init()
-    func setUp(launcherData: AppLauncherData?)
+    func setUp(launcherData: AppLauncherData?, application: HestiaApplication)
 }

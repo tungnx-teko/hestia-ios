@@ -14,7 +14,7 @@ public class HestiaFactory: ServiceBuildable, ServiceConfigAttachable {
     
     public var config: ServiceConfig?
     public var clientId: String?
-    public var application: UIApplication!
+    public var application: HestiaApplication!
     public var urlString: String?
     
     required public init() {
@@ -45,7 +45,7 @@ public class HestiaFactory: ServiceBuildable, ServiceConfigAttachable {
         self.config = config
     }
     
-    public func withApplication(_ application: UIApplication) {
+    public func withApplication(_ application: HestiaApplication) {
         self.application = application
     }
     

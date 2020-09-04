@@ -17,23 +17,23 @@ class ViewController: UIViewController, AppViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .red
+        
+        delegate?.onSuccess()
     }
-
+    
     func setUp(launcherData: AppLauncherData?) {
         
     }
-    
-    func setUp(launcherData: AppLauncherData?, delegate: HestiaAppDelegate?) {
-        print(launcherData?.extraConfig ?? [:])
+        
+    func setUp(launcherData: AppLauncherData?, application: HestiaApplication) {
+        self.delegate = application as? ViewControllerDelegate
     }
     
 }
+
+
 
 protocol ViewControllerDelegate {
     func onSuccess()
     func onFailure()
-}
-
-struct ViewControllerDelegateWrapper: HestiaAppDelegate {
-    var delegate: HestiaAppDelegate
 }

@@ -16,7 +16,7 @@ class MiniAppCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        backgroundColor = .red
         iconImageView.image = HestiaBundle.getImage(named: "app_icon")
     }
 

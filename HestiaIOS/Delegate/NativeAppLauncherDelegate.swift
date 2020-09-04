@@ -14,39 +14,28 @@ class NativeAppLauncherDelegate: AppLauncherDelegate {
     
     var appType: AppType = .native
     
-    func startApp(application: UIApplication, app: HestiaApp) throws {
+    func startApp(application: HestiaApplication, app: HestiaApp, delegate: HestiaDelegate?) throws {
         guard let data = (app.manifest?.base as? IOSAppManifest)?.data else {
             throw HestiaError.invalidManifestData
         }
         
-        let launcher = getAppLauncher(manifestData: data)
-        
-        guard let root = self.getAppViewController(manifestData: data) else {
-            throw HestiaError.invalidManifestData
-        }
-        
-        getMiniAppIdToken(manifestData: data, onSuccess: { idToken in
+        getMiniAppIdToken(manifestData: data, onSuccess: { [weak self] idToken in
             let launcherData = AppLauncherData(idToken: idToken, extraConfig: app.manifest?.extra ?? [:])
-            launcher?.initApp(application: application, launcherData: launcherData)
             
-            root.setUp(launcherData: launcherData)
+            let launcher = self?.getAppLauncher(data: data, launcherData: launcherData, delegate: delegate)
             
-            guard let rootViewController = root as? UIViewController else { return }
-            application.topViewController()?.present(rootViewController, animated: true)
+            launcher?.viewController.map { application.open($0) }
         }) { error in
             print(error)
         }
     }
     
-    private func getAppLauncher(manifestData: IOSNativeManifestData) -> IOSAppLauncher? {
-        guard let launcherClass = NSClassFromString(manifestData.initClass) as? IOSAppLauncher.Type else { return nil }
-        return launcherClass.init()
+    private func getAppLauncher(data: IOSNativeManifestData, launcherData: AppLauncherData, delegate: HestiaDelegate?) -> IOSAppLauncher? {
+        guard let launcherClass = NSClassFromString(data.initClass) as? IOSAppLauncher.Type else { return nil }
+        return launcherClass.init(className: data.mainClass, launcherData: launcherData, delegate: delegate)
     }
     
-    private func getAppViewController(manifestData: IOSNativeManifestData) -> AppViewController? {
-        guard let mainClass = NSClassFromString(manifestData.mainClass) as? AppViewController.Type else { return nil }
-        return mainClass.init()
-    }
+    
     
 }
 

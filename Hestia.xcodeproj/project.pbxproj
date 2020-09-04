@@ -61,6 +61,10 @@
 		1A65BF692502171A00A8A7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A65BF3B250212AA00A8A7BA /* Assets.xcassets */; };
 		1A65BF6A2502171A00A8A7BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A65BF3D250212AA00A8A7BA /* LaunchScreen.storyboard */; };
 		1A65BF6D25021FA600A8A7BA /* HestiaAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF6C25021FA600A8A7BA /* HestiaAppDelegate.swift */; };
+		1A65BF6F2502347500A8A7BA /* HestiaApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF6E2502347500A8A7BA /* HestiaApplication.swift */; };
+		1A65BF7125024B3200A8A7BA /* MiniAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF7025024B3200A8A7BA /* MiniAppViewModel.swift */; };
+		1A65BF7425024C0F00A8A7BA /* MiniAppList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A65BF7225024C0F00A8A7BA /* MiniAppList.swift */; };
+		1A65BF7525024C0F00A8A7BA /* MiniAppList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A65BF7325024C0F00A8A7BA /* MiniAppList.xib */; };
 		1A80E84124E6743400A5A3A3 /* Hestia.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A80E83F24E6743400A5A3A3 /* Hestia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A80E84F24E674C800A5A3A3 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E84E24E674C800A5A3A3 /* AppViewController.swift */; };
 		1A80E86024EA267A00A5A3A3 /* AppType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E85F24EA267900A5A3A3 /* AppType.swift */; };
@@ -198,6 +202,10 @@
 		1A65BF56250216CA00A8A7BA /* MiniAppSdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiniAppSdk.h; sourceTree = "<group>"; };
 		1A65BF57250216CA00A8A7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A65BF6C25021FA600A8A7BA /* HestiaAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaAppDelegate.swift; sourceTree = "<group>"; };
+		1A65BF6E2502347500A8A7BA /* HestiaApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaApplication.swift; sourceTree = "<group>"; };
+		1A65BF7025024B3200A8A7BA /* MiniAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppViewModel.swift; sourceTree = "<group>"; };
+		1A65BF7225024C0F00A8A7BA /* MiniAppList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppList.swift; sourceTree = "<group>"; };
+		1A65BF7325024C0F00A8A7BA /* MiniAppList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniAppList.xib; sourceTree = "<group>"; };
 		1A80E83C24E6743400A5A3A3 /* Hestia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hestia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A80E83F24E6743400A5A3A3 /* Hestia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hestia.h; sourceTree = "<group>"; };
 		1A80E84024E6743400A5A3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -427,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				1A80E84E24E674C800A5A3A3 /* AppViewController.swift */,
+				1A65BF6E2502347500A8A7BA /* HestiaApplication.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -486,6 +495,9 @@
 				1ABADF02250093D60091385D /* MiniAppListView.swift */,
 				1ABADF06250094A80091385D /* MiniAppCell.swift */,
 				1ABADF07250094A80091385D /* MiniAppCell.xib */,
+				1A65BF7025024B3200A8A7BA /* MiniAppViewModel.swift */,
+				1A65BF7225024C0F00A8A7BA /* MiniAppList.swift */,
+				1A65BF7325024C0F00A8A7BA /* MiniAppList.xib */,
 			);
 			path = MiniAppList;
 			sourceTree = "<group>";
@@ -755,6 +767,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ABADF09250094A80091385D /* MiniAppCell.xib in Resources */,
+				1A65BF7525024C0F00A8A7BA /* MiniAppList.xib in Resources */,
 				1ABADF172500A1FA0091385D /* Hestia.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -975,6 +988,7 @@
 				1A14D72B24FE33B40012CF0C /* AppLauncherDelegate.swift in Sources */,
 				1ABADF192500E1BA0091385D /* HestiaCode.swift in Sources */,
 				1A14D72924FE33990012CF0C /* HestiaAppManifest.swift in Sources */,
+				1A65BF6F2502347500A8A7BA /* HestiaApplication.swift in Sources */,
 				1A14D72F24FE33E40012CF0C /* Hestia.swift in Sources */,
 				1A14D74024FE382B0012CF0C /* HestiaAppDetailResponse.swift in Sources */,
 				1ABADF1F2500ED6B0091385D /* IOSNativeManifestData.swift in Sources */,
@@ -982,8 +996,10 @@
 				1ABADF03250093D60091385D /* MiniAppListView.swift in Sources */,
 				1ABADF08250094A80091385D /* MiniAppCell.swift in Sources */,
 				1A14D73324FE34090012CF0C /* HestiaError.swift in Sources */,
+				1A65BF7425024C0F00A8A7BA /* MiniAppList.swift in Sources */,
 				1A14D73124FE33F60012CF0C /* HestiaManifestData.swift in Sources */,
 				1A80E84F24E674C800A5A3A3 /* AppViewController.swift in Sources */,
+				1A65BF7125024B3200A8A7BA /* MiniAppViewModel.swift in Sources */,
 				1A14D72D24FE33C90012CF0C /* Runtime.swift in Sources */,
 				1ABADF1525009C600091385D /* HestiaBundle.swift in Sources */,
 				1A14D74424FE3F640012CF0C /* String+.swift in Sources */,

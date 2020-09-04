@@ -11,7 +11,7 @@ import UIKit
 
 public protocol AppLauncherDelegate {
     var appType: AppType { get }
-    func startApp(application: UIApplication, app: HestiaApp) throws
+    func startApp(application: HestiaApplication, app: HestiaApp, delegate: HestiaDelegate?) throws
 }
 
 public protocol AppLauncherDelegateFactory {

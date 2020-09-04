@@ -1,5 +1,5 @@
 //
-//  HestiaAppDelegate.swift
+//  MiniAppViewModel.swift
 //  Hestia
 //
 //  Created by Tung Nguyen on 9/4/20.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-public protocol HestiaDelegate {
-    func callback(data: [String: Any])
+class MiniAppViewModel {
+    
+//    var apps: [HestiaApp] 
+    
 }

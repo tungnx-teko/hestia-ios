@@ -13,12 +13,12 @@ import UIKit
 protocol HestiaInterface {
     func fetchApplicationList(completion: @escaping (Result<[HestiaApp], HestiaError>) -> ())
     func fetchApplicationManifest(appCode: String, completion: @escaping (Result<HestiaApp, HestiaError>) -> ())
-    func startApp(appCode: String) throws
+    func startApp(appCode: String, delegate: HestiaDelegate?) throws
 }
 
 public class Hestia: BaseService<APIManager> {
     
-    var application: UIApplication
+    var application: HestiaApplication
     var clientId: String
     var delegates: [AppType: AppLauncherDelegate] = [:]
     
@@ -26,7 +26,7 @@ public class Hestia: BaseService<APIManager> {
         return clientId.toBase64()
     }
     
-    public init(application: UIApplication, url: URL, clientId: String) {
+    public init(application: HestiaApplication, url: URL, clientId: String) {
         self.application = application
         self.clientId = clientId
         super.init(url: url)
@@ -60,12 +60,12 @@ extension Hestia: HestiaInterface {
         }
     }
     
-    func startApp(appCode: String) throws {
-        fetchApplicationManifest(appCode: appCode) { [weak self] result in
-            guard let self = self else { return }
+    func startApp(appCode: String, delegate: HestiaDelegate? = nil) throws {
+        fetchApplicationManifest(appCode: appCode) { result in
+//            guard let self = self else { return }
             switch result {
             case .success(let app):
-                try! self.delegates[app.type]?.startApp(application: self.application, app: app)
+                try? self.delegates[app.type]?.startApp(application: self.application, app: app, delegate: delegate)
             case .failure(let error):
                 print(error)
             }

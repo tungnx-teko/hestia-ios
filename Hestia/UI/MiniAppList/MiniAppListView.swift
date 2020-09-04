@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class MiniAppListView: UIView {
+public class MiniAppListView: UIView, HestiaDelegate {
     
     var apps: [HestiaApp] = [] {
         didSet {
@@ -39,9 +39,25 @@ public class MiniAppListView: UIView {
         addSubviews()
     }
     
-    public override func awakeFromNib() {
-        super.awakeFromNib()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//    public override func awakeFromNib() {
+//        super.awakeFromNib()
+//        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+//            HestiaFactory.sharedHestia?.fetchApplicationList(completion: { result in
+//                switch result {
+//                case .success(let apps):
+//                    self.apps = apps
+//                case .failure(let error):
+//                    print(error)
+//                }
+//            })
+//        }
+//        
+//    }
+    
+    public override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
             HestiaFactory.sharedHestia?.fetchApplicationList(completion: { result in
                 switch result {
                 case .success(let apps):
@@ -51,7 +67,6 @@ public class MiniAppListView: UIView {
                 }
             })
         }
-        
     }
     
     func addSubviews() {
@@ -66,6 +81,10 @@ public class MiniAppListView: UIView {
         
         addSubview(collectionView)
         collectionView.frame = self.bounds
+    }
+    
+    public func callback(data: [String : Any]) {
+        print(data)
     }
     
 }
@@ -99,7 +118,7 @@ extension MiniAppListView: UICollectionViewDelegateFlowLayout, UICollectionViewD
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        try? HestiaFactory.sharedHestia?.startApp(appCode: apps[indexPath.item].code)
+        try? HestiaFactory.sharedHestia?.startApp(appCode: apps[indexPath.item].code, delegate: self)
     }
     
 }

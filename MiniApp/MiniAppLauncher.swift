@@ -10,14 +10,30 @@ import UIKit
 import HestiaIOS
 import Hestia
 
-class MiniAppLauncher: IOSAppLauncher {
+class MiniAppLauncher: BaseAppLauncher, ViewControllerDelegate {
+
+//    var hestiaDelegate: HestiaDelegate?
     
-    required init() {
+//    required init(delegate: HestiaDelegate?) {
+//        self.hestiaDelegate = delegate
+//    }
+//
+//    func initApp(application: HestiaApplication, launcherData: AppLauncherData, viewController: UIViewController?) {
+//        MiniAppSdk.shared.token = launcherData.idToken
+//        (viewController as? ViewController)?.delegate = self
+//    }
+    required init(className: String, launcherData: AppLauncherData, delegate: HestiaDelegate? = nil) {
+        super.init(className: className, launcherData: launcherData, delegate: delegate)
         
+        (viewController as? ViewController)?.delegate = self
     }
     
-    func initApp(application: UIApplication, launcherData: AppLauncherData) {
-        MiniAppSdk.shared.token = launcherData.idToken
+    func onSuccess() {
+        hestiaDelegate?.callback(data: ["result": true])
+    }
+    
+    func onFailure() {
+        hestiaDelegate?.callback(data: ["result": false])
     }
     
 }
