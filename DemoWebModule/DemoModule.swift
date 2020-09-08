@@ -29,9 +29,7 @@ class DemoModule: NSObject, HestiaWebModule {
         default:
             print("Wrong func")
         }
-    }
-    
-    
+    }    
     
     @objc
     func test(requestString: String) {
