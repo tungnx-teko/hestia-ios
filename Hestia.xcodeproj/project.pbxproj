@@ -483,11 +483,11 @@
 			children = (
 				1A80E83E24E6743400A5A3A3 /* Hestia */,
 				1A14D74B24FE41CF0012CF0C /* HestiaIOS */,
+				1AB322722506213000D2EFA8 /* HestiaWebApp */,
+				1AB3229125062B7F00D2EFA8 /* HestiaWebModule */,
 				1ABADEED2500916B0091385D /* SuperAppTemplate */,
 				1A65BF31250212A700A8A7BA /* MiniApp */,
 				1A65BF55250216CA00A8A7BA /* MiniAppSdk */,
-				1AB322722506213000D2EFA8 /* HestiaWebApp */,
-				1AB3229125062B7F00D2EFA8 /* HestiaWebModule */,
 				1AB322A6250642EE00D2EFA8 /* DemoWebModule */,
 				1A80E83D24E6743400A5A3A3 /* Products */,
 				863CD1DABD3D63EA47315899 /* Pods */,
@@ -513,7 +513,7 @@
 		1A80E83E24E6743400A5A3A3 /* Hestia */ = {
 			isa = PBXGroup;
 			children = (
-				1ABADF1325009C500091385D /* SDK */,
+				1ABADF1325009C500091385D /* Core */,
 				1ABADF00250093BB0091385D /* UI */,
 				1A14D73824FE35AC0012CF0C /* Networking */,
 				1A14D72524FE337B0012CF0C /* Service */,
@@ -697,14 +697,14 @@
 			path = MiniAppList;
 			sourceTree = "<group>";
 		};
-		1ABADF1325009C500091385D /* SDK */ = {
+		1ABADF1325009C500091385D /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				1A14D72E24FE33E40012CF0C /* Hestia.swift */,
 				1ABADF1425009C600091385D /* HestiaBundle.swift */,
 				1ABADF162500A1FA0091385D /* Hestia.xcassets */,
 			);
-			path = SDK;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		1ABADF202500ED8E0091385D /* Manifest */ = {

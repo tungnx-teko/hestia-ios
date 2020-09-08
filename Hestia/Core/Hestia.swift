@@ -79,24 +79,7 @@ extension Hestia: HestiaInterface {
 
 extension Hestia {
     
-    func getDelegateClassNames() -> [String] {
-        return [
-            "Hestia.NativeAppLauncherDelegateFactory",
-            "Hestia.WebAppLauncherDelegateFactory",
-            "Hestia.ReactNativeAppLauncherDelegateFactory"
-        ]
-    }
-    
     func initDelegates() {
-//        let delegateClassNames = getDelegateClassNames()
-//        for className in delegateClassNames {
-//            guard let DelegateType = NSClassFromString(className) as? AppLauncherDelegateFactory.Type else { continue }
-//            let factory = DelegateType.init()
-//            let delegate = factory.create()
-//            delegates[delegate.appType] = delegate
-//        }
-        
-        
         let DelegateTypes = Runtime.allClasses().filter { $0 is AppLauncherDelegateFactory.Type }.compactMap { $0 as? AppLauncherDelegateFactory.Type }
         for DelegateType in DelegateTypes {
             let factory = DelegateType.init()

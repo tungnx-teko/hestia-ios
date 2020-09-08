@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        displayViewController(MiniAppList(nibName: "MiniAppList", bundle: Bundle(for: MiniAppList.self)), in: containerView)
+        displayViewController(MiniAppList(nibName: "MiniAppList", bundle: Bundle(for: MiniAppList.self)),
+                              in: containerView)
     }
 
     @IBAction func loginGoogleWasTapped(_ sender: Any) {
