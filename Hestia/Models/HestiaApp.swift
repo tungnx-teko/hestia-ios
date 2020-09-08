@@ -35,28 +35,45 @@ public class HestiaApp: Decodable {
         case .native:
             let iosAppManifest = try values.decodeIfPresent(IOSAppManifest.self, forKey: .manifest)
             self.manifest = iosAppManifest.map { AnyHestiaAppManifest($0) }
+        case .webView:
+            let webAppManifest = try values.decodeIfPresent(WebAppManifest.self, forKey: .manifest)
+            self.manifest = webAppManifest.map { AnyHestiaAppManifest($0) }
         default:
             self.manifest = nil
         }
     }
     
+    public init(name: String, manifest: WebAppManifest) {
+        self.name = name
+        self.manifest = AnyHestiaAppManifest(manifest)
+        self.icon = ""
+        self.description = ""
+        self.code = ""
+        self.platformCode = ""
+        self.version = ""
+        self.type = .webView
+    }
+    
 }
 
-public class IOSAppManifest: HestiaAppManifest, Decodable {
-    public typealias DataType = IOSNativeManifestData
-    
-    public let data: IOSNativeManifestData?
-    public let extra: [String: Any]?
-    
-    enum CodingKeys: String, CodingKey {
-        case data
-        case extra
-    }
-    
-    required public init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        data = try values.decodeIfPresent(IOSNativeManifestData.self, forKey: .data)
-        extra = try values.decodeIfPresent([String: Any].self, forKey: .extra)
-    }
-    
-}
+let mockApp: HestiaApp = {
+    let json = """
+        {
+            "name":"Tung Test",
+            "code":"web",
+            "description":"",
+            "platformCode":"web",
+            "version":"",
+            "manifest":{
+                "data": {
+                    "iamAudience": "",
+                    "@type":"web",
+                    "url":"https://nhan-vien-phong-vu-dev2.firebaseapp.com"
+                }
+            }
+        }
+        """
+    let data = json.data(using: .utf8)!
+    let app = try! JSONDecoder().decode(HestiaApp.self, from: data)
+    return app
+}()

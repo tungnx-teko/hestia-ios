@@ -1,8 +1,8 @@
 //
-//  Decodable+.swift
-//  Hestia
+//  Codable+.swift
+//  HestiaWebModule
 //
-//  Created by Tung Nguyen on 9/1/20.
+//  Created by Tung Nguyen on 9/7/20.
 //  Copyright © 2020 Tung Nguyen. All rights reserved.
 //
 

@@ -61,27 +61,33 @@ extension Hestia: HestiaInterface {
     }
     
     func startApp(appCode: String, delegate: HestiaDelegate? = nil) throws {
-        fetchApplicationManifest(appCode: appCode) { result in
-//            guard let self = self else { return }
-            switch result {
-            case .success(let app):
-                try? self.delegates[app.type]?.startApp(application: self.application, app: app, delegate: delegate)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        try? self.delegates[mockApp.type]?.startApp(application: self.application, app: mockApp, delegate: delegate)
+//        fetchApplicationManifest(appCode: appCode) { result in
+//            switch result {
+//            case .success(let app):
+//                try? self.delegates[app.type]?.startApp(application: self.application, app: app, delegate: delegate)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
 }
 
 extension Hestia {
     
-    func getDelegateTypes() -> [AppLauncherDelegateFactory.Type] {
-        return Runtime.allClasses().compactMap { $0 as? AppLauncherDelegateFactory.Type }
+    func getDelegateClassNames() -> [String] {
+        return [
+            "Hestia.NativeAppLauncherDelegateFactory",
+            "Hestia.WebAppLauncherDelegateFactory",
+            "Hestia.ReactNativeAppLauncherDelegateFactory"
+        ]
     }
     
     func initDelegates() {
-        getDelegateTypes().forEach { DelegateType in
+        let delegateClassNames = getDelegateClassNames()
+        for className in delegateClassNames {
+            guard let DelegateType = NSClassFromString(className) as? AppLauncherDelegateFactory.Type else { continue }
             let factory = DelegateType.init()
             let delegate = factory.create()
             delegates[delegate.appType] = delegate

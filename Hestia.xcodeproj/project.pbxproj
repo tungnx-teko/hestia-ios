@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -70,12 +70,35 @@
 		1A80E86024EA267A00A5A3A3 /* AppType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E85F24EA267900A5A3A3 /* AppType.swift */; };
 		1A80E86B24EA302700A5A3A3 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E86A24EA302700A5A3A3 /* UIApplication+.swift */; };
 		1A80E86D24EA307300A5A3A3 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80E86C24EA307300A5A3A3 /* UIViewController+.swift */; };
+		1AB3225E250611F700D2EFA8 /* WebAppLauncherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3225D250611F700D2EFA8 /* WebAppLauncherDelegate.swift */; };
+		1AB322602506120500D2EFA8 /* WebAppLauncherDelegateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3225F2506120500D2EFA8 /* WebAppLauncherDelegateFactory.swift */; };
+		1AB322642506138300D2EFA8 /* HestiaWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB322632506138300D2EFA8 /* HestiaWebViewController.swift */; };
+		1AB322662506155300D2EFA8 /* WebAppManifestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB322652506155300D2EFA8 /* WebAppManifestData.swift */; };
+		1AB322682506161A00D2EFA8 /* IOSAppManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB322672506161A00D2EFA8 /* IOSAppManifest.swift */; };
+		1AB3226B2506165900D2EFA8 /* WebAppManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3226A2506165900D2EFA8 /* WebAppManifest.swift */; };
+		1AB322752506213000D2EFA8 /* HestiaWebApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AB322732506213000D2EFA8 /* HestiaWebApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AB322782506213000D2EFA8 /* HestiaWebApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB322712506213000D2EFA8 /* HestiaWebApp.framework */; };
+		1AB322792506213000D2EFA8 /* HestiaWebApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB322712506213000D2EFA8 /* HestiaWebApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AB3229425062B7F00D2EFA8 /* HestiaWebModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AB3229225062B7F00D2EFA8 /* HestiaWebModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AB3229A25062B9400D2EFA8 /* HestiaWebAppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3229925062B9400D2EFA8 /* HestiaWebAppFactory.swift */; };
+		1AB3229C25062BC200D2EFA8 /* HestiaWebModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3229B25062BC200D2EFA8 /* HestiaWebModule.swift */; };
+		1AB322A9250642EE00D2EFA8 /* DemoWebModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AB322A7250642EE00D2EFA8 /* DemoWebModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AB322AE2506439000D2EFA8 /* DemoWebModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB322AD2506439000D2EFA8 /* DemoWebModuleFactory.swift */; };
+		1AB322B0250643BD00D2EFA8 /* DemoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB322AF250643BD00D2EFA8 /* DemoModule.swift */; };
+		1AB322B12506448000D2EFA8 /* DemoWebModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB322A5250642EE00D2EFA8 /* DemoWebModule.framework */; };
+		1AB322B22506448000D2EFA8 /* DemoWebModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB322A5250642EE00D2EFA8 /* DemoWebModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AB322B7250644DE00D2EFA8 /* WebRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB322B6250644DE00D2EFA8 /* WebRequest.swift */; };
+		1AB322B9250644E700D2EFA8 /* WebResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB322B8250644E700D2EFA8 /* WebResponse.swift */; };
+		1AB322BC250646FC00D2EFA8 /* Codable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB322BB250646FC00D2EFA8 /* Codable+.swift */; };
+		1AB322BD25064CD000D2EFA8 /* HestiaWebModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */; };
+		1AB322BE25064CD000D2EFA8 /* HestiaWebModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AB322C125064D0000D2EFA8 /* DemoWebModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB322A5250642EE00D2EFA8 /* DemoWebModule.framework */; platformFilter = ios; };
+		1AB322C225064D0000D2EFA8 /* DemoWebModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB322A5250642EE00D2EFA8 /* DemoWebModule.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1ABADEEF2500916B0091385D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADEEE2500916B0091385D /* AppDelegate.swift */; };
 		1ABADEF32500916B0091385D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADEF22500916B0091385D /* ViewController.swift */; };
 		1ABADEF62500916B0091385D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABADEF42500916B0091385D /* Main.storyboard */; };
 		1ABADEF82500916E0091385D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABADEF72500916E0091385D /* Assets.xcassets */; };
 		1ABADEFB2500916E0091385D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABADEF92500916E0091385D /* LaunchScreen.storyboard */; };
-		1ABADF03250093D60091385D /* MiniAppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF02250093D60091385D /* MiniAppListView.swift */; };
 		1ABADF08250094A80091385D /* MiniAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF06250094A80091385D /* MiniAppCell.swift */; };
 		1ABADF09250094A80091385D /* MiniAppCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABADF07250094A80091385D /* MiniAppCell.xib */; };
 		1ABADF0A250098760091385D /* Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; };
@@ -113,6 +136,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1A80E83B24E6743400A5A3A3;
 			remoteInfo = Hestia;
+		};
+		1AB322762506213000D2EFA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB322702506213000D2EFA8;
+			remoteInfo = HestiaWebApp;
+		};
+		1AB322B32506448000D2EFA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB322A4250642EE00D2EFA8;
+			remoteInfo = DemoWebModule;
+		};
+		1AB322BF25064CD000D2EFA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB3228F25062B7F00D2EFA8;
+			remoteInfo = HestiaWebModule;
+		};
+		1AB322C325064D0000D2EFA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB322A4250642EE00D2EFA8;
+			remoteInfo = DemoWebModule;
 		};
 		1ABADF0C250098760091385D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -153,6 +204,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AB322C525064D0000D2EFA8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AB322C225064D0000D2EFA8 /* DemoWebModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1ABADF0E250098760091385D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,8 +222,11 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1ABADF102500990A0091385D /* HestiaIOS.framework in Embed Frameworks */,
+				1AB322B22506448000D2EFA8 /* DemoWebModule.framework in Embed Frameworks */,
 				1ABADF0B250098760091385D /* Hestia.framework in Embed Frameworks */,
 				1A65BF5C250216CA00A8A7BA /* MiniAppSdk.framework in Embed Frameworks */,
+				1AB322792506213000D2EFA8 /* HestiaWebApp.framework in Embed Frameworks */,
+				1AB322BE25064CD000D2EFA8 /* HestiaWebModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +278,28 @@
 		1A80E85F24EA267900A5A3A3 /* AppType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppType.swift; sourceTree = "<group>"; };
 		1A80E86A24EA302700A5A3A3 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		1A80E86C24EA307300A5A3A3 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		1AB3225D250611F700D2EFA8 /* WebAppLauncherDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppLauncherDelegate.swift; sourceTree = "<group>"; };
+		1AB3225F2506120500D2EFA8 /* WebAppLauncherDelegateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppLauncherDelegateFactory.swift; sourceTree = "<group>"; };
+		1AB322632506138300D2EFA8 /* HestiaWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaWebViewController.swift; sourceTree = "<group>"; };
+		1AB322652506155300D2EFA8 /* WebAppManifestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppManifestData.swift; sourceTree = "<group>"; };
+		1AB322672506161A00D2EFA8 /* IOSAppManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSAppManifest.swift; sourceTree = "<group>"; };
+		1AB3226A2506165900D2EFA8 /* WebAppManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppManifest.swift; sourceTree = "<group>"; };
+		1AB322712506213000D2EFA8 /* HestiaWebApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HestiaWebApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB322732506213000D2EFA8 /* HestiaWebApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HestiaWebApp.h; sourceTree = "<group>"; };
+		1AB322742506213000D2EFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HestiaWebModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB3229225062B7F00D2EFA8 /* HestiaWebModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HestiaWebModule.h; sourceTree = "<group>"; };
+		1AB3229325062B7F00D2EFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AB3229925062B9400D2EFA8 /* HestiaWebAppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaWebAppFactory.swift; sourceTree = "<group>"; };
+		1AB3229B25062BC200D2EFA8 /* HestiaWebModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaWebModule.swift; sourceTree = "<group>"; };
+		1AB322A5250642EE00D2EFA8 /* DemoWebModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DemoWebModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB322A7250642EE00D2EFA8 /* DemoWebModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoWebModule.h; sourceTree = "<group>"; };
+		1AB322A8250642EE00D2EFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AB322AD2506439000D2EFA8 /* DemoWebModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoWebModuleFactory.swift; sourceTree = "<group>"; };
+		1AB322AF250643BD00D2EFA8 /* DemoModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModule.swift; sourceTree = "<group>"; };
+		1AB322B6250644DE00D2EFA8 /* WebRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequest.swift; sourceTree = "<group>"; };
+		1AB322B8250644E700D2EFA8 /* WebResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResponse.swift; sourceTree = "<group>"; };
+		1AB322BB250646FC00D2EFA8 /* Codable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+.swift"; sourceTree = "<group>"; };
 		1ABADEEC2500916B0091385D /* SuperAppTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperAppTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABADEEE2500916B0091385D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ABADEF22500916B0091385D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -220,7 +307,6 @@
 		1ABADEF72500916E0091385D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ABADEFA2500916E0091385D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ABADEFC2500916E0091385D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1ABADF02250093D60091385D /* MiniAppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppListView.swift; sourceTree = "<group>"; };
 		1ABADF06250094A80091385D /* MiniAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppCell.swift; sourceTree = "<group>"; };
 		1ABADF07250094A80091385D /* MiniAppCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniAppCell.xib; sourceTree = "<group>"; };
 		1ABADF1425009C600091385D /* HestiaBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaBundle.swift; sourceTree = "<group>"; };
@@ -273,6 +359,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AB3226E2506213000D2EFA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB322C125064D0000D2EFA8 /* DemoWebModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB3228D25062B7F00D2EFA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB322A2250642EE00D2EFA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1ABADEE92500916B0091385D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +389,9 @@
 				1ABADF0F2500990A0091385D /* HestiaIOS.framework in Frameworks */,
 				1ABADF0A250098760091385D /* Hestia.framework in Frameworks */,
 				60E732E6952145646DC09585 /* Pods_SuperAppTemplate.framework in Frameworks */,
+				1AB322B12506448000D2EFA8 /* DemoWebModule.framework in Frameworks */,
+				1AB322782506213000D2EFA8 /* HestiaWebApp.framework in Frameworks */,
+				1AB322BD25064CD000D2EFA8 /* HestiaWebModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,13 +454,6 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		1A14D75824FE62010012CF0C /* HestiaWebApp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HestiaWebApp;
-			sourceTree = "<group>";
-		};
 		1A65BF31250212A700A8A7BA /* MiniApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,11 +482,13 @@
 			isa = PBXGroup;
 			children = (
 				1A80E83E24E6743400A5A3A3 /* Hestia */,
-				1A14D75824FE62010012CF0C /* HestiaWebApp */,
 				1A14D74B24FE41CF0012CF0C /* HestiaIOS */,
 				1ABADEED2500916B0091385D /* SuperAppTemplate */,
 				1A65BF31250212A700A8A7BA /* MiniApp */,
 				1A65BF55250216CA00A8A7BA /* MiniAppSdk */,
+				1AB322722506213000D2EFA8 /* HestiaWebApp */,
+				1AB3229125062B7F00D2EFA8 /* HestiaWebModule */,
+				1AB322A6250642EE00D2EFA8 /* DemoWebModule */,
 				1A80E83D24E6743400A5A3A3 /* Products */,
 				863CD1DABD3D63EA47315899 /* Pods */,
 				C0CF4F9F3FC4D19C39502EA0 /* Frameworks */,
@@ -397,6 +503,9 @@
 				1ABADEEC2500916B0091385D /* SuperAppTemplate.app */,
 				1A65BF30250212A700A8A7BA /* MiniApp.app */,
 				1A65BF54250216CA00A8A7BA /* MiniAppSdk.framework */,
+				1AB322712506213000D2EFA8 /* HestiaWebApp.framework */,
+				1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */,
+				1AB322A5250642EE00D2EFA8 /* DemoWebModule.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -468,6 +577,93 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1AB3225C250611CF00D2EFA8 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1AB3225D250611F700D2EFA8 /* WebAppLauncherDelegate.swift */,
+				1AB3225F2506120500D2EFA8 /* WebAppLauncherDelegateFactory.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		1AB322622506136C00D2EFA8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1AB322632506138300D2EFA8 /* HestiaWebViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1AB322692506162000D2EFA8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1A14D73024FE33F60012CF0C /* HestiaManifestData.swift */,
+				1ABADF1E2500ED6B0091385D /* IOSNativeManifestData.swift */,
+				1AB322652506155300D2EFA8 /* WebAppManifestData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1AB322722506213000D2EFA8 /* HestiaWebApp */ = {
+			isa = PBXGroup;
+			children = (
+				1AB322622506136C00D2EFA8 /* UI */,
+				1AB3225C250611CF00D2EFA8 /* Delegate */,
+				1AB322732506213000D2EFA8 /* HestiaWebApp.h */,
+				1AB322742506213000D2EFA8 /* Info.plist */,
+			);
+			path = HestiaWebApp;
+			sourceTree = "<group>";
+		};
+		1AB3229125062B7F00D2EFA8 /* HestiaWebModule */ = {
+			isa = PBXGroup;
+			children = (
+				1AB322BA250646F300D2EFA8 /* Extensions */,
+				1AB322B5250644D500D2EFA8 /* Model */,
+				1AB3229825062B8500D2EFA8 /* WebModule */,
+				1AB3229225062B7F00D2EFA8 /* HestiaWebModule.h */,
+				1AB3229325062B7F00D2EFA8 /* Info.plist */,
+			);
+			path = HestiaWebModule;
+			sourceTree = "<group>";
+		};
+		1AB3229825062B8500D2EFA8 /* WebModule */ = {
+			isa = PBXGroup;
+			children = (
+				1AB3229925062B9400D2EFA8 /* HestiaWebAppFactory.swift */,
+				1AB3229B25062BC200D2EFA8 /* HestiaWebModule.swift */,
+			);
+			path = WebModule;
+			sourceTree = "<group>";
+		};
+		1AB322A6250642EE00D2EFA8 /* DemoWebModule */ = {
+			isa = PBXGroup;
+			children = (
+				1AB322A7250642EE00D2EFA8 /* DemoWebModule.h */,
+				1AB322A8250642EE00D2EFA8 /* Info.plist */,
+				1AB322AD2506439000D2EFA8 /* DemoWebModuleFactory.swift */,
+				1AB322AF250643BD00D2EFA8 /* DemoModule.swift */,
+			);
+			path = DemoWebModule;
+			sourceTree = "<group>";
+		};
+		1AB322B5250644D500D2EFA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AB322B6250644DE00D2EFA8 /* WebRequest.swift */,
+				1AB322B8250644E700D2EFA8 /* WebResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AB322BA250646F300D2EFA8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1AB322BB250646FC00D2EFA8 /* Codable+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1ABADEED2500916B0091385D /* SuperAppTemplate */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,7 +688,6 @@
 		1ABADF01250093C20091385D /* MiniAppList */ = {
 			isa = PBXGroup;
 			children = (
-				1ABADF02250093D60091385D /* MiniAppListView.swift */,
 				1ABADF06250094A80091385D /* MiniAppCell.swift */,
 				1ABADF07250094A80091385D /* MiniAppCell.xib */,
 				1A65BF7025024B3200A8A7BA /* MiniAppViewModel.swift */,
@@ -515,10 +710,11 @@
 		1ABADF202500ED8E0091385D /* Manifest */ = {
 			isa = PBXGroup;
 			children = (
-				1A14D72824FE33990012CF0C /* HestiaAppManifest.swift */,
-				1A14D73024FE33F60012CF0C /* HestiaManifestData.swift */,
+				1AB322692506162000D2EFA8 /* Data */,
 				1ABADF1C2500E9130091385D /* AnyHestiaAppManifest.swift */,
-				1ABADF1E2500ED6B0091385D /* IOSNativeManifestData.swift */,
+				1A14D72824FE33990012CF0C /* HestiaAppManifest.swift */,
+				1AB322672506161A00D2EFA8 /* IOSAppManifest.swift */,
+				1AB3226A2506165900D2EFA8 /* WebAppManifest.swift */,
 			);
 			path = Manifest;
 			sourceTree = "<group>";
@@ -570,6 +766,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A80E84124E6743400A5A3A3 /* Hestia.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB3226C2506213000D2EFA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB322752506213000D2EFA8 /* HestiaWebApp.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB3228B25062B7F00D2EFA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB3229425062B7F00D2EFA8 /* HestiaWebModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB322A0250642EE00D2EFA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB322A9250642EE00D2EFA8 /* DemoWebModule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +875,62 @@
 			productReference = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		1AB322702506213000D2EFA8 /* HestiaWebApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AB3227A2506213000D2EFA8 /* Build configuration list for PBXNativeTarget "HestiaWebApp" */;
+			buildPhases = (
+				1AB3226C2506213000D2EFA8 /* Headers */,
+				1AB3226D2506213000D2EFA8 /* Sources */,
+				1AB3226E2506213000D2EFA8 /* Frameworks */,
+				1AB3226F2506213000D2EFA8 /* Resources */,
+				1AB322C525064D0000D2EFA8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AB322C425064D0000D2EFA8 /* PBXTargetDependency */,
+			);
+			name = HestiaWebApp;
+			productName = HestiaWebApp;
+			productReference = 1AB322712506213000D2EFA8 /* HestiaWebApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1AB3228F25062B7F00D2EFA8 /* HestiaWebModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AB3229525062B7F00D2EFA8 /* Build configuration list for PBXNativeTarget "HestiaWebModule" */;
+			buildPhases = (
+				1AB3228B25062B7F00D2EFA8 /* Headers */,
+				1AB3228C25062B7F00D2EFA8 /* Sources */,
+				1AB3228D25062B7F00D2EFA8 /* Frameworks */,
+				1AB3228E25062B7F00D2EFA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HestiaWebModule;
+			productName = HestiaWebModule;
+			productReference = 1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1AB322A4250642EE00D2EFA8 /* DemoWebModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AB322AA250642EE00D2EFA8 /* Build configuration list for PBXNativeTarget "DemoWebModule" */;
+			buildPhases = (
+				1AB322A0250642EE00D2EFA8 /* Headers */,
+				1AB322A1250642EE00D2EFA8 /* Sources */,
+				1AB322A2250642EE00D2EFA8 /* Frameworks */,
+				1AB322A3250642EE00D2EFA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DemoWebModule;
+			productName = DemoWebModule;
+			productReference = 1AB322A5250642EE00D2EFA8 /* DemoWebModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		1ABADEEB2500916B0091385D /* SuperAppTemplate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1ABADEFD2500916E0091385D /* Build configuration list for PBXNativeTarget "SuperAppTemplate" */;
@@ -673,6 +949,9 @@
 				1ABADF0D250098760091385D /* PBXTargetDependency */,
 				1ABADF122500990A0091385D /* PBXTargetDependency */,
 				1A65BF5A250216CA00A8A7BA /* PBXTargetDependency */,
+				1AB322772506213000D2EFA8 /* PBXTargetDependency */,
+				1AB322B42506448000D2EFA8 /* PBXTargetDependency */,
+				1AB322C025064CD000D2EFA8 /* PBXTargetDependency */,
 			);
 			name = SuperAppTemplate;
 			productName = SuperAppTemplate;
@@ -706,6 +985,17 @@
 					1A80E87324EA5BA900A5A3A3 = {
 						CreatedOnToolsVersion = 11.6;
 					};
+					1AB322702506213000D2EFA8 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					1AB3228F25062B7F00D2EFA8 = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
+					};
+					1AB322A4250642EE00D2EFA8 = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
+					};
 					1ABADEEB2500916B0091385D = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -730,6 +1020,9 @@
 				1ABADEEB2500916B0091385D /* SuperAppTemplate */,
 				1A65BF2F250212A700A8A7BA /* MiniApp */,
 				1A65BF53250216CA00A8A7BA /* MiniAppSdk */,
+				1AB322702506213000D2EFA8 /* HestiaWebApp */,
+				1AB3228F25062B7F00D2EFA8 /* HestiaWebModule */,
+				1AB322A4250642EE00D2EFA8 /* DemoWebModule */,
 			);
 		};
 /* End PBXProject section */
@@ -769,6 +1062,27 @@
 				1ABADF09250094A80091385D /* MiniAppCell.xib in Resources */,
 				1A65BF7525024C0F00A8A7BA /* MiniAppList.xib in Resources */,
 				1ABADF172500A1FA0091385D /* Hestia.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB3226F2506213000D2EFA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB3228E25062B7F00D2EFA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB322A3250642EE00D2EFA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -986,6 +1300,7 @@
 				1A14D73C24FE361A0012CF0C /* HestiaAppListResponse.swift in Sources */,
 				1A80E86B24EA302700A5A3A3 /* UIApplication+.swift in Sources */,
 				1A14D72B24FE33B40012CF0C /* AppLauncherDelegate.swift in Sources */,
+				1AB322662506155300D2EFA8 /* WebAppManifestData.swift in Sources */,
 				1ABADF192500E1BA0091385D /* HestiaCode.swift in Sources */,
 				1A14D72924FE33990012CF0C /* HestiaAppManifest.swift in Sources */,
 				1A65BF6F2502347500A8A7BA /* HestiaApplication.swift in Sources */,
@@ -993,17 +1308,49 @@
 				1A14D74024FE382B0012CF0C /* HestiaAppDetailResponse.swift in Sources */,
 				1ABADF1F2500ED6B0091385D /* IOSNativeManifestData.swift in Sources */,
 				1A14D72724FE338A0012CF0C /* HestiaApp.swift in Sources */,
-				1ABADF03250093D60091385D /* MiniAppListView.swift in Sources */,
+				1AB322642506138300D2EFA8 /* HestiaWebViewController.swift in Sources */,
 				1ABADF08250094A80091385D /* MiniAppCell.swift in Sources */,
+				1AB322682506161A00D2EFA8 /* IOSAppManifest.swift in Sources */,
+				1AB322602506120500D2EFA8 /* WebAppLauncherDelegateFactory.swift in Sources */,
 				1A14D73324FE34090012CF0C /* HestiaError.swift in Sources */,
 				1A65BF7425024C0F00A8A7BA /* MiniAppList.swift in Sources */,
 				1A14D73124FE33F60012CF0C /* HestiaManifestData.swift in Sources */,
+				1AB3225E250611F700D2EFA8 /* WebAppLauncherDelegate.swift in Sources */,
 				1A80E84F24E674C800A5A3A3 /* AppViewController.swift in Sources */,
 				1A65BF7125024B3200A8A7BA /* MiniAppViewModel.swift in Sources */,
 				1A14D72D24FE33C90012CF0C /* Runtime.swift in Sources */,
 				1ABADF1525009C600091385D /* HestiaBundle.swift in Sources */,
 				1A14D74424FE3F640012CF0C /* String+.swift in Sources */,
 				1A14D72424FE334A0012CF0C /* Decodable+.swift in Sources */,
+				1AB3226B2506165900D2EFA8 /* WebAppManifest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB3226D2506213000D2EFA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB3228C25062B7F00D2EFA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB322B7250644DE00D2EFA8 /* WebRequest.swift in Sources */,
+				1AB322B9250644E700D2EFA8 /* WebResponse.swift in Sources */,
+				1AB3229C25062BC200D2EFA8 /* HestiaWebModule.swift in Sources */,
+				1AB322BC250646FC00D2EFA8 /* Codable+.swift in Sources */,
+				1AB3229A25062B9400D2EFA8 /* HestiaWebAppFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB322A1250642EE00D2EFA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB322B0250643BD00D2EFA8 /* DemoModule.swift in Sources */,
+				1AB322AE2506439000D2EFA8 /* DemoWebModuleFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1033,6 +1380,27 @@
 			isa = PBXTargetDependency;
 			target = 1A80E83B24E6743400A5A3A3 /* Hestia */;
 			targetProxy = 1A65BF62250216E300A8A7BA /* PBXContainerItemProxy */;
+		};
+		1AB322772506213000D2EFA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AB322702506213000D2EFA8 /* HestiaWebApp */;
+			targetProxy = 1AB322762506213000D2EFA8 /* PBXContainerItemProxy */;
+		};
+		1AB322B42506448000D2EFA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AB322A4250642EE00D2EFA8 /* DemoWebModule */;
+			targetProxy = 1AB322B32506448000D2EFA8 /* PBXContainerItemProxy */;
+		};
+		1AB322C025064CD000D2EFA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AB3228F25062B7F00D2EFA8 /* HestiaWebModule */;
+			targetProxy = 1AB322BF25064CD000D2EFA8 /* PBXContainerItemProxy */;
+		};
+		1AB322C425064D0000D2EFA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 1AB322A4250642EE00D2EFA8 /* DemoWebModule */;
+			targetProxy = 1AB322C325064D0000D2EFA8 /* PBXContainerItemProxy */;
 		};
 		1ABADF0D250098760091385D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1420,6 +1788,160 @@
 			};
 			name = Release;
 		};
+		1AB3227B2506213000D2EFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2G2F7B8D22;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HestiaWebApp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.miniappdemo.HestiaWebApp;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AB3227C2506213000D2EFA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2G2F7B8D22;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HestiaWebApp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.miniappdemo.HestiaWebApp;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1AB3229625062B7F00D2EFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HestiaWebModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.miniappdemo.HestiaWebModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AB3229725062B7F00D2EFA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HestiaWebModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.miniappdemo.HestiaWebModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1AB322AB250642EE00D2EFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DemoWebModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.miniappdemo.DemoWebModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AB322AC250642EE00D2EFA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DemoWebModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.miniappdemo.DemoWebModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1ABADEFE2500916E0091385D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ACC143FB832FD38EDBE7468 /* Pods-SuperAppTemplate.debug.xcconfig */;
@@ -1515,6 +2037,33 @@
 			buildConfigurations = (
 				1A80E87424EA5BA900A5A3A3 /* Debug */,
 				1A80E87524EA5BA900A5A3A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AB3227A2506213000D2EFA8 /* Build configuration list for PBXNativeTarget "HestiaWebApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AB3227B2506213000D2EFA8 /* Debug */,
+				1AB3227C2506213000D2EFA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AB3229525062B7F00D2EFA8 /* Build configuration list for PBXNativeTarget "HestiaWebModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AB3229625062B7F00D2EFA8 /* Debug */,
+				1AB3229725062B7F00D2EFA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AB322AA250642EE00D2EFA8 /* Build configuration list for PBXNativeTarget "DemoWebModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AB322AB250642EE00D2EFA8 /* Debug */,
+				1AB322AC250642EE00D2EFA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -28,14 +28,16 @@ public class MiniAppList: UICollectionViewController, UICollectionViewDelegateFl
         self.collectionView.backgroundColor = .white
         self.collectionView!.register(UINib(nibName: "MiniAppCell", bundle: Bundle(for: MiniAppCell.self)), forCellWithReuseIdentifier: reuseIdentifier)
         
-        HestiaFactory.sharedHestia?.fetchApplicationList(completion: { result in
-            switch result {
-            case .success(let apps):
-                self.apps = apps
-            case .failure(let error):
-                print(error)
-            }
-        })
+        self.apps = [mockApp]
+        
+//        HestiaFactory.sharedHestia?.fetchApplicationList(completion: { result in
+//            switch result {
+//            case .success(let apps):
+//                self.apps = apps
+//            case .failure(let error):
+//                print(error)
+//            }
+//        })
     }
 
     public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -44,8 +46,7 @@ public class MiniAppList: UICollectionViewController, UICollectionViewDelegateFl
 
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MiniAppCell
-//        cell.configure(app: apps[indexPath.item])
-        cell.nameLabel.text = "DDMCM"
+        cell.configure(app: apps[indexPath.item])
         return cell
     }
     

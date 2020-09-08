@@ -1,0 +1,30 @@
+{
+  "name": "epub_kitty",
+  "version": "0.0.1",
+  "summary": "A epub reader flutter plugin project.",
+  "description": "A new flutter plugin project.",
+  "homepage": "https://github.com/451518849/epub_kitty.git",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "xiaofwang": "451518849@qq.com"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": [
+    "Classes/**/*"
+  ],
+  "dependencies": {
+    "Flutter": [
+
+    ],
+    "epub_kitty_ios": [
+      "0.1.0"
+    ]
+  },
+  "platforms": {
+    "ios": "9.0"
+  }
+}

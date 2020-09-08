@@ -9,14 +9,14 @@
 import UIKit
 import Hestia
 
-public protocol IOSAppLauncher {
+public protocol IOSAppLauncherProtocol {
     var viewController: UIViewController? { get }
     var hestiaDelegate: HestiaDelegate? { get }
     
     init(className: String, launcherData: AppLauncherData, delegate: HestiaDelegate?)
 }
 
-open class BaseAppLauncher: IOSAppLauncher {
+open class IOSAppLauncher: IOSAppLauncherProtocol {
     public private(set) var hestiaDelegate: HestiaDelegate?
     public private(set) var viewController: UIViewController?
     

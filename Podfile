@@ -59,8 +59,14 @@ target 'HestiaIOS' do
   pod 'Janus', '~> 0.1.11', :source => 'https://github.com/teko-vn/Specs-ios.git'
 end
 
+
+#flutter_application_path = '../../../../tungnx-developer/side-projects/hitruyen/hitruyen_mobile'
+#load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
 target 'SuperAppTemplate' do
   use_frameworks!
+  
+#  install_all_flutter_pods(flutter_application_path)
   
   pod 'TekCoreNetwork'
   pod 'TekCoreService'

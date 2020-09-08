@@ -12,7 +12,7 @@ import Janus
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var containerView: MiniAppListView!
+    @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
