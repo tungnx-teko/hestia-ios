@@ -18,7 +18,7 @@ public class HestiaFactory: ServiceBuildable, ServiceConfigAttachable {
     public var urlString: String?
     
     required public init() {
-        _ = Runtime.classes(conformTo: AppLauncherDelegateFactory.self)
+        
     }
     
     public static var sharedHestia: Hestia?

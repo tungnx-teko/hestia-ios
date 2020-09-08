@@ -30,7 +30,7 @@ public class HestiaApp: Decodable {
         code = try values.decodeIfPresent(String.self, forKey: .code) ?? ""
         platformCode = try values.decodeIfPresent(String.self, forKey: .platformCode) ?? ""
         version = try values.decodeIfPresent(String.self, forKey: .version) ?? ""
-        type = AppType(rawValue: code) ?? .native
+        type = AppType(rawValue: platformCode) ?? .native
         switch type {
         case .native:
             let iosAppManifest = try values.decodeIfPresent(IOSAppManifest.self, forKey: .manifest)
@@ -43,37 +43,43 @@ public class HestiaApp: Decodable {
         }
     }
     
-    public init(name: String, manifest: WebAppManifest) {
-        self.name = name
-        self.manifest = AnyHestiaAppManifest(manifest)
-        self.icon = ""
-        self.description = ""
-        self.code = ""
-        self.platformCode = ""
-        self.version = ""
-        self.type = .webView
-    }
-    
 }
 
-let mockApp: HestiaApp = {
+let mockApps: [HestiaApp] = {
     let json = """
-        {
-            "name":"Tung Test",
-            "code":"web",
-            "description":"",
-            "platformCode":"web",
-            "version":"",
-            "manifest":{
-                "data": {
-                    "iamAudience": "",
-                    "@type":"web",
-                    "url":"https://nhan-vien-phong-vu-dev2.firebaseapp.com"
+        [
+            {
+                "name":"Native Test",
+                "code":"app_1",
+                "description":"",
+                "platformCode":"ios_native",
+                "version":"0.0.1",
+                "manifest":{
+                    "data": {
+                        "iamAudience": "",
+                        "@type":"ios_native",
+                        "mainClass": "MiniAppSdk.ViewController",
+                        "initClass": "MiniAppSdk.MiniAppLauncher"
+                    }
                 }
-            }
-        }
+            },
+            {
+                "name":"Demo Web app",
+                "code":"app_2",
+                "description":"",
+                "platformCode":"web",
+                "version":"",
+                "manifest":{
+                    "data": {
+                        "iamAudience": "",
+                        "@type":"web",
+                        "url":"https://nhan-vien-phong-vu-dev2.firebaseapp.com"
+                    }
+                }
+            },
+        ]
         """
     let data = json.data(using: .utf8)!
-    let app = try! JSONDecoder().decode(HestiaApp.self, from: data)
-    return app
+    let apps = try! JSONDecoder().decode([HestiaApp].self, from: data)
+    return apps
 }()

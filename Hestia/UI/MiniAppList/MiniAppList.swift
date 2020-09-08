@@ -28,7 +28,7 @@ public class MiniAppList: UICollectionViewController, UICollectionViewDelegateFl
         self.collectionView.backgroundColor = .white
         self.collectionView!.register(UINib(nibName: "MiniAppCell", bundle: Bundle(for: MiniAppCell.self)), forCellWithReuseIdentifier: reuseIdentifier)
         
-        self.apps = [mockApp]
+        self.apps = mockApps
         
 //        HestiaFactory.sharedHestia?.fetchApplicationList(completion: { result in
 //            switch result {

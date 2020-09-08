@@ -61,7 +61,10 @@ extension Hestia: HestiaInterface {
     }
     
     func startApp(appCode: String, delegate: HestiaDelegate? = nil) throws {
-        try? self.delegates[mockApp.type]?.startApp(application: self.application, app: mockApp, delegate: delegate)
+        // FIXME: Remove this
+        let app = mockApps.first { $0.code == appCode }!
+        try? self.delegates[app.type]?.startApp(application: self.application, app: app, delegate: delegate)
+        
 //        fetchApplicationManifest(appCode: appCode) { result in
 //            switch result {
 //            case .success(let app):
@@ -85,9 +88,17 @@ extension Hestia {
     }
     
     func initDelegates() {
-        let delegateClassNames = getDelegateClassNames()
-        for className in delegateClassNames {
-            guard let DelegateType = NSClassFromString(className) as? AppLauncherDelegateFactory.Type else { continue }
+//        let delegateClassNames = getDelegateClassNames()
+//        for className in delegateClassNames {
+//            guard let DelegateType = NSClassFromString(className) as? AppLauncherDelegateFactory.Type else { continue }
+//            let factory = DelegateType.init()
+//            let delegate = factory.create()
+//            delegates[delegate.appType] = delegate
+//        }
+        
+        
+        let DelegateTypes = Runtime.allClasses().filter { $0 is AppLauncherDelegateFactory.Type }.compactMap { $0 as? AppLauncherDelegateFactory.Type }
+        for DelegateType in DelegateTypes {
             let factory = DelegateType.init()
             let delegate = factory.create()
             delegates[delegate.appType] = delegate

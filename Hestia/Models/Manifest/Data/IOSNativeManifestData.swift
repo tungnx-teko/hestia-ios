@@ -17,11 +17,9 @@ public class IOSNativeManifestData: HestiaManifestData {
     }
     
     required init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        mainClass = try values.decode(String.self, forKey: .mainClass)
-//        initClass = try values.decode(String.self, forKey: .initClass)
-        mainClass = "MiniAppSdk.ViewController"
-        initClass = "MiniAppSdk.MiniAppLauncher"
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        mainClass = try values.decode(String.self, forKey: .mainClass)
+        initClass = try values.decode(String.self, forKey: .initClass)
         try super.init(from: decoder)
     }
 }

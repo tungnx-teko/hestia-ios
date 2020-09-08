@@ -27,8 +27,8 @@
                                     <constraint firstAttribute="width" constant="40" id="zrR-zt-tPh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pH4-eO-cMe">
-                                <rect key="frame" x="19.5" y="52" width="55" height="13.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name New Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pH4-eO-cMe">
+                                <rect key="frame" x="4" y="52" width="86" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -37,6 +37,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xVF-SG-JD0" firstAttribute="centerX" secondItem="61o-8R-0AE" secondAttribute="centerX" id="2Cq-DQ-UzH"/>
+                            <constraint firstAttribute="trailing" secondItem="pH4-eO-cMe" secondAttribute="trailing" constant="4" id="FbG-tu-c4O"/>
+                            <constraint firstItem="pH4-eO-cMe" firstAttribute="leading" secondItem="61o-8R-0AE" secondAttribute="leading" constant="4" id="Hia-0N-SQ4"/>
                             <constraint firstItem="pH4-eO-cMe" firstAttribute="top" secondItem="xVF-SG-JD0" secondAttribute="bottom" constant="4" id="OBU-19-Fuz"/>
                             <constraint firstItem="pH4-eO-cMe" firstAttribute="centerX" secondItem="xVF-SG-JD0" secondAttribute="centerX" id="qaU-TU-l7R"/>
                             <constraint firstItem="xVF-SG-JD0" firstAttribute="top" secondItem="61o-8R-0AE" secondAttribute="top" constant="8" id="xKv-KP-i31"/>
