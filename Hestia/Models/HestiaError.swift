@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum HestiaError: Error {
+public enum HestiaError: String, Error {
     case invalidCode
     case appNotFound
     case unexpected

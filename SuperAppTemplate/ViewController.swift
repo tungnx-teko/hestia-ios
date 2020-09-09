@@ -17,8 +17,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        displayViewController(MiniAppList(nibName: "MiniAppList", bundle: Bundle(for: MiniAppList.self)),
-                              in: containerView)
+        let appList = MiniAppList(nibName: "MiniAppList", bundle: Bundle(for: MiniAppList.self))
+        appList.delegate = self
+        displayViewController(appList, in: containerView)
     }
 
     @IBAction func loginGoogleWasTapped(_ sender: Any) {
@@ -36,6 +37,25 @@ class ViewController: UIViewController {
         childVC.willMove(toParent: nil)
         childVC.view.removeFromSuperview()
         childVC.removeFromParent()
+    }
+    
+}
+
+extension ViewController: MiniAppListDelegate {
+
+    func didSelectApp(appList: MiniAppList, appCode: String) {
+        guard let hestia = (UIApplication.shared.delegate as? AppDelegate)?.hestia else { return }
+        hestia.startApp(appCode: appCode, delegate: nil, onSuccess: {
+            print("Open app successfully")
+        }) { error in
+            self.showAlert(message: error.rawValue)
+        }
+    }
+    
+    func showAlert(message: String?) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
 }

@@ -56,7 +56,7 @@ let mockApps: [HestiaApp] = {
                 "version":"0.0.1",
                 "manifest":{
                     "data": {
-                        "iamAudience": "",
+                        "iamAudience": "tripi-flight:1b14898e-4de6-4bde-a986-1eac5f7ae37b",
                         "@type":"ios_native",
                         "mainClass": "MiniAppSdk.ViewController",
                         "initClass": "MiniAppSdk.MiniAppLauncher"
@@ -71,7 +71,7 @@ let mockApps: [HestiaApp] = {
                 "version":"",
                 "manifest":{
                     "data": {
-                        "iamAudience": "",
+                        "iamAudience": "tripi-flight:1b14898e-4de6-4bde-a986-1eac5f7ae37b",
                         "@type":"web",
                         "url":"https://nhan-vien-phong-vu-dev2.firebaseapp.com"
                     }

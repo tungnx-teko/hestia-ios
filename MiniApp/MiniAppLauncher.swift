@@ -11,7 +11,7 @@ import HestiaIOS
 import Hestia
 
 class MiniAppLauncher: IOSAppLauncher, ViewControllerDelegate {
-
+    
     required init(className: String, launcherData: AppLauncherData, delegate: HestiaDelegate? = nil) {
         super.init(className: className, launcherData: launcherData, delegate: delegate)
         (viewController as? ViewController)?.delegate = self

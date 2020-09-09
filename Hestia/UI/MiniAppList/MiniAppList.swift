@@ -10,7 +10,13 @@ import UIKit
 
 private let reuseIdentifier = "MiniAppCell"
 
+public protocol MiniAppListDelegate: class {
+    func didSelectApp(appList: MiniAppList, appCode: String)
+}
+
 public class MiniAppList: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    public weak var delegate: MiniAppListDelegate?
     
     var apps: [HestiaApp] = [] {
         didSet {
@@ -27,17 +33,15 @@ public class MiniAppList: UICollectionViewController, UICollectionViewDelegateFl
         view.backgroundColor = .white
         self.collectionView.backgroundColor = .white
         self.collectionView!.register(UINib(nibName: "MiniAppCell", bundle: Bundle(for: MiniAppCell.self)), forCellWithReuseIdentifier: reuseIdentifier)
-        
-        self.apps = mockApps
-        
-//        HestiaFactory.sharedHestia?.fetchApplicationList(completion: { result in
-//            switch result {
-//            case .success(let apps):
-//                self.apps = apps
-//            case .failure(let error):
-//                print(error)
-//            }
-//        })
+
+        HestiaFactory.sharedHestia?.fetchApplicationList(completion: { result in
+            switch result {
+            case .success(let apps):
+                self.apps = apps
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 
     public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -68,10 +72,7 @@ public class MiniAppList: UICollectionViewController, UICollectionViewDelegateFl
     
     public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let appCode = apps[indexPath.item].code
-        DispatchQueue.global().async {
-            try? HestiaFactory.sharedHestia?.startApp(appCode: appCode, delegate: self)
-        }
-        
+        delegate?.didSelectApp(appList: self, appCode: appCode)
     }
     
     

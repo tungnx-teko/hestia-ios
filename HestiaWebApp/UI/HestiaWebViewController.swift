@@ -8,7 +8,6 @@
 
 import UIKit
 import WebKit
-import HestiaWebApp
 import HestiaWebModule
 
 open class HestiaWebViewController: UIViewController {
@@ -25,6 +24,14 @@ open class HestiaWebViewController: UIViewController {
         webView.configuration.userContentController.addUserScript(script)
         
         return webView
+    }()
+    
+    let backButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Back", for: .normal)
+        button.setTitleColor(.systemGreen, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     let manifest: WebAppManifest
@@ -44,12 +51,22 @@ open class HestiaWebViewController: UIViewController {
         self.view.addSubview(webView)
         webView.frame = view.bounds
         loadApp(manifest: manifest)
+        
+        let leftMenuItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(back))
+        self.navigationItem.setLeftBarButton(leftMenuItem, animated: false)
+        
         loadWebModules()
     }
     
-    func setupLog() {
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
     
+    @objc func back() {
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
+        
     func loadApp(manifest: WebAppManifest) {
         guard let manifestData = manifest.data else { return }
         guard let url = URL(string: manifestData.url) else { return }

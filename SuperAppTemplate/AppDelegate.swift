@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let factory = HestiaFactory()
         factory.urlString = "http://terra.dev.tekoapis.net"
         factory.application = application
-        factory.clientId = "vnshop:android:playstore:1.0.0"
+        factory.clientId = "superappdemo:ios:appstore:0.0.1"
         
         hestia = try? factory.createService().base as? Hestia
         

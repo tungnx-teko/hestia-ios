@@ -11,16 +11,18 @@ import UIKit
 public class WebAppLauncherDelegate: AppLauncherDelegate {
     
     public var appType: AppType = .webView
-    
-    public func startApp(application: HestiaApplication, app: HestiaApp, delegate: HestiaDelegate?) throws {
+        
+    public func startApp(application: HestiaApplication, app: HestiaApp, delegate: HestiaDelegate?, onSuccess: @escaping () -> (), onFailure: @escaping (HestiaError) -> ()) {
         guard let manifest = app.manifest?.base as? WebAppManifest else {
-            throw HestiaError.invalidManifestData
+            onFailure(.invalidManifestData)
+            return
         }
         
         DispatchQueue.main.async {
             let hestiaWebVC = HestiaWebViewController(manifest: manifest, delegate: delegate)
             let navigation = UINavigationController(rootViewController: hestiaWebVC)
             application.open(navigation)
+            onSuccess()
         }
     }
     

@@ -13,7 +13,7 @@ import UIKit
 protocol HestiaInterface {
     func fetchApplicationList(completion: @escaping (Result<[HestiaApp], HestiaError>) -> ())
     func fetchApplicationManifest(appCode: String, completion: @escaping (Result<HestiaApp, HestiaError>) -> ())
-    func startApp(appCode: String, delegate: HestiaDelegate?) throws
+    func startApp(appCode: String, delegate: HestiaDelegate?, onSuccess: @escaping () -> (), onFailure: @escaping (HestiaError) -> ())
 }
 
 public class Hestia: BaseService<APIManager> {
@@ -37,7 +37,7 @@ public class Hestia: BaseService<APIManager> {
 
 extension Hestia: HestiaInterface {
     
-    func fetchApplicationList(completion: @escaping (Result<[HestiaApp], HestiaError>) -> ()) {
+    public func fetchApplicationList(completion: @escaping (Result<[HestiaApp], HestiaError>) -> ()) {
         let request = HestiaListRequest(clientId: encodedClientId)
         apiManager.call(request, onSuccess: { response in
             completion(.success(response.data))
@@ -46,7 +46,7 @@ extension Hestia: HestiaInterface {
         }
     }
     
-    func fetchApplicationManifest(appCode: String, completion: @escaping (Result<HestiaApp, HestiaError>) -> ()) {
+    public func fetchApplicationManifest(appCode: String, completion: @escaping (Result<HestiaApp, HestiaError>) -> ()) {
         let request = HestiaGetRequest(clientId: encodedClientId, appCode: appCode)
         apiManager.call(request, onSuccess: { response in
             guard let app = response.data else {
@@ -60,19 +60,21 @@ extension Hestia: HestiaInterface {
         }
     }
     
-    func startApp(appCode: String, delegate: HestiaDelegate? = nil) throws {
-        // FIXME: Remove this
-        let app = mockApps.first { $0.code == appCode }!
-        try? self.delegates[app.type]?.startApp(application: self.application, app: app, delegate: delegate)
-        
-//        fetchApplicationManifest(appCode: appCode) { result in
-//            switch result {
-//            case .success(let app):
-//                try? self.delegates[app.type]?.startApp(application: self.application, app: app, delegate: delegate)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+    public func startApp(appCode: String, delegate: HestiaDelegate? = nil,
+                         onSuccess: @escaping () -> (),
+                         onFailure: @escaping (HestiaError) -> ()) {
+        fetchApplicationManifest(appCode: appCode) { result in
+            switch result {
+            case .success(let app):
+                self.delegates[app.type]?.startApp(application: self.application, app: app, delegate: delegate, onSuccess: {
+                    onSuccess()
+                }, onFailure: { error in
+                    onFailure(error)
+                })
+            case .failure(let error):
+                onFailure(error)
+            }
+        }
     }
     
 }

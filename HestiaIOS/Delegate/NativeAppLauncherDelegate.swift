@@ -14,9 +14,12 @@ class NativeAppLauncherDelegate: AppLauncherDelegate {
     
     var appType: AppType = .native
     
-    func startApp(application: HestiaApplication, app: HestiaApp, delegate: HestiaDelegate?) throws {
+    public func startApp(application: HestiaApplication, app: HestiaApp, delegate: HestiaDelegate? = nil,
+                         onSuccess: @escaping () -> (),
+                         onFailure: @escaping (HestiaError) -> ()) {
         guard let data = (app.manifest?.base as? IOSAppManifest)?.data else {
-            throw HestiaError.invalidManifestData
+            onFailure(HestiaError.invalidManifestData)
+            return
         }
         
         getMiniAppIdToken(manifestData: data, onSuccess: { [weak self] idToken in
@@ -26,7 +29,7 @@ class NativeAppLauncherDelegate: AppLauncherDelegate {
             
             launcher?.viewController.map { application.open($0) }
         }) { error in
-            print(error)
+            onFailure(error)
         }
     }
     

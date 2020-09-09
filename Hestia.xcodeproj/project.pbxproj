@@ -94,6 +94,12 @@
 		1AB322BE25064CD000D2EFA8 /* HestiaWebModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AB322C125064D0000D2EFA8 /* DemoWebModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB322A5250642EE00D2EFA8 /* DemoWebModule.framework */; platformFilter = ios; };
 		1AB322C225064D0000D2EFA8 /* DemoWebModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB322A5250642EE00D2EFA8 /* DemoWebModule.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AB322CA250786D900D2EFA8 /* HestiaWebModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */; };
+		1AB322CB250786D900D2EFA8 /* HestiaWebModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AB322CF25078E2B00D2EFA8 /* HestiaWebModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */; platformFilter = ios; };
+		1AB322D025078E2B00D2EFA8 /* HestiaWebModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AB322D325078E9200D2EFA8 /* Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; };
+		1AB322D425078E9200D2EFA8 /* Hestia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1ABADEEF2500916B0091385D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADEEE2500916B0091385D /* AppDelegate.swift */; };
 		1ABADEF32500916B0091385D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADEF22500916B0091385D /* ViewController.swift */; };
 		1ABADEF62500916B0091385D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABADEF42500916B0091385D /* Main.storyboard */; };
@@ -165,6 +171,27 @@
 			remoteGlobalIDString = 1AB322A4250642EE00D2EFA8;
 			remoteInfo = DemoWebModule;
 		};
+		1AB322CC250786D900D2EFA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB3228F25062B7F00D2EFA8;
+			remoteInfo = HestiaWebModule;
+		};
+		1AB322D125078E2B00D2EFA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AB3228F25062B7F00D2EFA8;
+			remoteInfo = HestiaWebModule;
+		};
+		1AB322D525078E9200D2EFA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A80E83B24E6743400A5A3A3;
+			remoteInfo = Hestia;
+		};
 		1ABADF0C250098760091385D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
@@ -211,6 +238,29 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1AB322C225064D0000D2EFA8 /* DemoWebModule.framework in Embed Frameworks */,
+				1AB322D025078E2B00D2EFA8 /* HestiaWebModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB322CE250786D900D2EFA8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AB322CB250786D900D2EFA8 /* HestiaWebModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AB322D725078E9200D2EFA8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AB322D425078E9200D2EFA8 /* Hestia.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +381,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB322D325078E9200D2EFA8 /* Hestia.framework in Frameworks */,
 				13E109E8EAE38187505F8814 /* Pods_HestiaIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB322C125064D0000D2EFA8 /* DemoWebModule.framework in Frameworks */,
+				1AB322CF25078E2B00D2EFA8 /* HestiaWebModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +430,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB322CA250786D900D2EFA8 /* HestiaWebModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,10 +859,12 @@
 				1A14D74724FE41CF0012CF0C /* Frameworks */,
 				1A14D74824FE41CF0012CF0C /* Resources */,
 				1FEE2DD128E907B502227B3B /* [CP] Copy Pods Resources */,
+				1AB322D725078E9200D2EFA8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1AB322D625078E9200D2EFA8 /* PBXTargetDependency */,
 			);
 			name = HestiaIOS;
 			productName = HestiaIOS;
@@ -889,6 +944,7 @@
 			);
 			dependencies = (
 				1AB322C425064D0000D2EFA8 /* PBXTargetDependency */,
+				1AB322D225078E2B00D2EFA8 /* PBXTargetDependency */,
 			);
 			name = HestiaWebApp;
 			productName = HestiaWebApp;
@@ -921,10 +977,12 @@
 				1AB322A1250642EE00D2EFA8 /* Sources */,
 				1AB322A2250642EE00D2EFA8 /* Frameworks */,
 				1AB322A3250642EE00D2EFA8 /* Resources */,
+				1AB322CE250786D900D2EFA8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1AB322CD250786D900D2EFA8 /* PBXTargetDependency */,
 			);
 			name = DemoWebModule;
 			productName = DemoWebModule;
@@ -1401,6 +1459,22 @@
 			platformFilter = ios;
 			target = 1AB322A4250642EE00D2EFA8 /* DemoWebModule */;
 			targetProxy = 1AB322C325064D0000D2EFA8 /* PBXContainerItemProxy */;
+		};
+		1AB322CD250786D900D2EFA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AB3228F25062B7F00D2EFA8 /* HestiaWebModule */;
+			targetProxy = 1AB322CC250786D900D2EFA8 /* PBXContainerItemProxy */;
+		};
+		1AB322D225078E2B00D2EFA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 1AB3228F25062B7F00D2EFA8 /* HestiaWebModule */;
+			targetProxy = 1AB322D125078E2B00D2EFA8 /* PBXContainerItemProxy */;
+		};
+		1AB322D625078E9200D2EFA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A80E83B24E6743400A5A3A3 /* Hestia */;
+			targetProxy = 1AB322D525078E9200D2EFA8 /* PBXContainerItemProxy */;
 		};
 		1ABADF0D250098760091385D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
