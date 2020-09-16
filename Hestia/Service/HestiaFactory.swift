@@ -10,43 +10,29 @@ import Foundation
 import TekCoreService
 import UIKit
 
-public class HestiaFactory: ServiceBuildable, ServiceConfigAttachable {
-    
-    public var config: ServiceConfig?
-    public var clientId: String?
-    public var application: HestiaApplication!
-    public var urlString: String?
-    
-    required public init() {
-        
-    }
-    
-    public static var sharedHestia: Hestia?
-    
-    public func createService() throws -> AnyService {
-        guard let rawUrl = urlString, let url = URL(string: rawUrl) else {
-            throw ServiceError.invalidURL
-        }
-        guard let application = application else {
-            // FIXME: Invalid application
-            throw ServiceError.invalidURL
-        }
-        guard let clientId = clientId else {
-//            throw ServiceError.missingClientId
-            // FIXME: Missing client id
-            throw ServiceError.missingUserConfig
-        }
-        let instance = Hestia(application: application, url: url, clientId: clientId)
-        HestiaFactory.sharedHestia = instance
-        return AnyService(instance)
-    }
-    
-    public func withConfig(_ config: ServiceConfig) {
-        self.config = config
-    }
-    
-    public func withApplication(_ application: HestiaApplication) {
-        self.application = application
-    }
-    
-}
+//public class HestiaFactory: ServiceBuildable, ServiceConverterSupportable {
+//    
+//    public typealias ServiceConverter = HestiaConfigConverter
+//    
+//    public var rawConfig: [String : Any] = [:]
+//    public var serviceName: String = "hestia"
+//    
+//    public var clientId: String?
+//    public var application: HestiaApplication!
+//    public var urlString: String?
+//    
+//    required public init() {}
+//    
+//    public func createService() throws -> AnyService {
+//        guard let config = config, let url = URL(string: config.url) else {
+//            throw ServiceError.invalidURL
+//        }
+//        let instance = Hestia(application: application, url: url, clientId: config.clientId)
+//        return AnyService(instance)
+//    }
+//    
+//    public func withApplication(_ application: HestiaApplication) {
+//        self.application = application
+//    }
+//    
+//}

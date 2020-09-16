@@ -45,10 +45,10 @@ target 'Hestia' do
   use_frameworks!
 
   # Pods for Hestia
-  pod 'TekCoreNetwork', '~> 0.1.32'
-  pod 'TekCoreService', '~> 0.1.31'
+  pod 'TekCoreNetwork'
+  pod 'TekCoreService', '~> 0.2.6'
   pod 'TekServiceInterfaces'
-  pod 'Janus', '~> 0.1.11', :source => 'https://github.com/teko-vn/Specs-ios.git'
+  pod 'Janus', '~> 0.2.5', :source => 'https://github.com/teko-vn/Specs-ios.git'
   pod 'Kingfisher'
 
 end
@@ -56,15 +56,15 @@ end
 target 'HestiaIOS' do
   use_frameworks!
   pod 'TekServiceInterfaces'
-  pod 'Janus', '~> 0.1.11', :source => 'https://github.com/teko-vn/Specs-ios.git'
+  pod 'Janus', '~> 0.2.5', :source => 'https://github.com/teko-vn/Specs-ios.git'
 end
 
 target 'SuperAppTemplate' do
   use_frameworks!
   
   pod 'TekCoreNetwork'
-  pod 'TekCoreService'
+  pod 'TekCoreService', '~> 0.2.6'
   pod 'TekServiceInterfaces'
-  pod 'Janus', '~> 0.1.11', :source => 'https://github.com/teko-vn/Specs-ios.git'
+  pod 'Janus', '~> 0.2.5', :source => 'https://github.com/teko-vn/Specs-ios.git'
   pod 'Kingfisher'
 end

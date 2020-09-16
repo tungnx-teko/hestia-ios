@@ -38,8 +38,6 @@ class NativeAppLauncherDelegate: AppLauncherDelegate {
         return launcherClass.init(className: data.mainClass, launcherData: launcherData, delegate: delegate)
     }
     
-    
-    
 }
 
 extension NativeAppLauncherDelegate {

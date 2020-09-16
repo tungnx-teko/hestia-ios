@@ -23,7 +23,6 @@ public class MiniAppList: UICollectionViewController, UICollectionViewDelegateFl
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
-            
         }
     }
     
@@ -34,7 +33,7 @@ public class MiniAppList: UICollectionViewController, UICollectionViewDelegateFl
         self.collectionView.backgroundColor = .white
         self.collectionView!.register(UINib(nibName: "MiniAppCell", bundle: Bundle(for: MiniAppCell.self)), forCellWithReuseIdentifier: reuseIdentifier)
 
-        HestiaFactory.sharedHestia?.fetchApplicationList(completion: { result in
+        Hestia.shared.fetchApplicationList(completion: { result in
             switch result {
             case .success(let apps):
                 self.apps = apps

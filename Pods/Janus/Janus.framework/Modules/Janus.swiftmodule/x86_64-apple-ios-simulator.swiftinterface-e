@@ -43,6 +43,14 @@ public enum LoginType : Swift.String {
     get
   }
 }
+public class Janus {
+  public static var shared: Janus.Janus
+  public static var configName: Swift.String
+  public func initialize(config: [Swift.String : Any], for application: UIKit.UIApplication, launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  public func initialize(config: Janus.JanusConfig, for application: UIKit.UIApplication, launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  public func application(_ app: UIKit.UIApplication, open url: Foundation.URL, options: [UIKit.UIApplication.OpenURLOptionsKey : Any] = [:]) -> Swift.Bool
+  @objc deinit
+}
 public protocol AuthLoginDelegate : AnyObject {
   func loginSuccess(accessToken: Swift.String, refreshToken: Swift.String)
   func loginFail(error: Janus.AuthError?)
@@ -108,6 +116,17 @@ public struct PasswordlessLoginMethod : Janus.AuthLoginMethod {
   public init(passwordlessServiceUrl url: Foundation.URL)
   public func register()
 }
+public struct JanusConfig {
+  public var oauthUrl: Swift.String
+  public var identityUrl: Swift.String
+  public var clientId: Swift.String
+  public var scopes: Swift.String
+  public var googleAppId: Swift.String?
+  public var googleAppSecret: Swift.String?
+  public var facebookAppId: Swift.String?
+  public var appleBundleId: Swift.String?
+  public init(oauthUrl: Swift.String, identityUrl: Swift.String, clientId: Swift.String, scopes: Swift.String, googleAppId: Swift.String?, googleAppSecret: Swift.String?, facebookAppId: Swift.String?, appleBundleId: Swift.String?)
+}
 @available(iOS 13.0, *)
 public class AppleLogin {
   weak public var delegate: Janus.AuthLoginDelegate?
@@ -120,26 +139,8 @@ public class AppleLogin {
 }
 public class AuthLoginManager {
   public static var shared: Janus.AuthLoginManager
-  public func login(_ login: Janus.AuthLogin) throws
+  public func login(_ login: Janus.AuthLogin)
   public func logout()
-  @objc deinit
-}
-public struct JanusConfig {
-  public var oauthUrl: Swift.String
-  public var identityUrl: Swift.String
-  public var clientId: Swift.String
-  public var scope: Swift.String
-  public var googleAppId: Swift.String?
-  public var googleAppSecret: Swift.String?
-  public var facebookAppId: Swift.String?
-  public var appleBundleId: Swift.String?
-  public init(oauthUrl: Swift.String, identityUrl: Swift.String, clientId: Swift.String, scope: Swift.String, googleAppId: Swift.String?, googleAppSecret: Swift.String?, facebookAppId: Swift.String?, appleBundleId: Swift.String?)
-}
-public class Janus {
-  public static var shared: Janus.Janus
-  public func initialize(config: Janus.JanusConfig)
-  public func application(for application: UIKit.UIApplication, didFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
-  public func application(_ app: UIKit.UIApplication, open url: Foundation.URL, options: [UIKit.UIApplication.OpenURLOptionsKey : Any] = [:]) -> Swift.Bool
   @objc deinit
 }
 public struct KeychainSwiftConstants {

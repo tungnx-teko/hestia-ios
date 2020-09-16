@@ -5,12 +5,21 @@ import Foundation
 import Swift
 import TekCoreNetwork
 @_exported import TekCoreService
+import UIKit
+public protocol ServiceConfigConvertible {
+  associatedtype ServiceConfig
+  init(input: [Swift.String : Any])
+  var input: [Swift.String : Any] { get }
+  func convertConfig(rawValue: [Swift.String : Any]) -> Self.ServiceConfig
+}
+extension ServiceConfigConvertible {
+  public var output: Self.ServiceConfig {
+    get
+  }
+}
 public enum ServiceError : Swift.Error {
   case invalidURL
-  case missingPaymentConfig
-  case missingAuthConfig
-  case missingLineConfig
-  case missingUserConfig
+  case missingConfig
   public var localizedDescription: Swift.String {
     get
   }
@@ -20,50 +29,8 @@ public enum ServiceError : Swift.Error {
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
-public class ClientConfig {
-  public var clientCode: Swift.String
-  public init(clientCode: Swift.String?)
-  @objc deinit
-}
-public class PaymentConfig : TekCoreService.ClientConfig {
-  public var secretKey: Swift.String
-  public var terminalCode: Swift.String
-  public init(clientCode: Swift.String?, terminalCode: Swift.String?, secretKey: Swift.String?)
-  override public init(clientCode: Swift.String?)
-  @objc deinit
-}
-public class OAuthConfig : TekCoreService.ClientConfig {
-  public var scopes: Swift.String
-  public init(clientId: Swift.String?, scopes: Swift.String?)
-  override public init(clientCode: Swift.String?)
-  @objc deinit
-}
-public class LineConfig {
-  public var channel: TekCoreService.VSChannel
-  public var terminal: TekCoreService.VSTerminal
-  public init(channel: TekCoreService.VSChannel, terminal: TekCoreService.VSTerminal)
-  @objc deinit
-}
-public struct ServiceConfig {
-  public var addressRawUrl: Swift.String?
-  public var catalogRawUrl: Swift.String?
-  public var crmRawUrl: Swift.String?
-  public var iamRawUrl: Swift.String?
-  public var listingRawUrl: Swift.String?
-  public var omRawUrl: Swift.String?
-  public var pageBuilderRawUrl: Swift.String?
-  public var ppmRawUrl: Swift.String?
-  public var psRawUrl: Swift.String?
-  public var searchRawUrl: Swift.String?
-  public var stnRawUrl: Swift.String?
-  public var usRawUrl: Swift.String?
-  public var oAuthRawUrl: Swift.String?
-  public var discoveryRawUrl: Swift.String?
-  public var userConfig: TekCoreService.ClientConfig?
-  public var lineConfig: TekCoreService.LineConfig?
-  public var paymentConfig: TekCoreService.PaymentConfig?
-  public var oAuthConfig: TekCoreService.OAuthConfig?
-  public init(addressRawUrl: Swift.String? = nil, catalogRawUrl: Swift.String? = nil, crmRawUrl: Swift.String? = nil, iamRawUrl: Swift.String? = nil, listingRawUrl: Swift.String? = nil, omRawUrl: Swift.String? = nil, pageBuilderRawUrl: Swift.String? = nil, ppmRawUrl: Swift.String? = nil, psRawUrl: Swift.String? = nil, searchRawUrl: Swift.String? = nil, stnRawUrl: Swift.String? = nil, usRawUrl: Swift.String? = nil, oAuthRawUrl: Swift.String? = nil, discoveryRawUrl: Swift.String? = nil, userConfig: TekCoreService.ClientConfig? = nil, lineConfig: TekCoreService.LineConfig? = nil, paymentConfig: TekCoreService.PaymentConfig? = nil, oAuthConfig: TekCoreService.OAuthConfig? = nil)
+extension Optional where Wrapped == Swift.String {
+  public func rawAsURL() throws -> Foundation.URL
 }
 open class APIManager : TekCoreNetwork.CoreAPIManager {
   required public convenience init(requestConfiguration: TekCoreNetwork.RequestConfigurationProtocol, serviceCredential: TekCoreService.ServicesCredential? = nil)
@@ -77,43 +44,22 @@ open class CancelableAPIManager : TekCoreService.APIManager {
   override public init(configuration: TekCoreNetwork.APIClientConfiguration)
   @objc deinit
 }
-public enum VSTerminal : Swift.String {
-  case ch0000
-  case cp01
-  case cp02
-  case cp09
-  case vnShopApp
-  case phongVu
-  case cp15
-  public typealias RawValue = Swift.String
-  public init?(rawValue: Swift.String)
-  public var rawValue: Swift.String {
+public protocol ServiceConverterSupportable {
+  associatedtype ServiceConverter : TekCoreService.ServiceConfigConvertible
+}
+extension ServiceConverterSupportable where Self : TekCoreService.ServiceBuildable {
+  public var converter: Self.ServiceConverter {
+    get
+  }
+  public var config: Self.ServiceConverter.ServiceConfig? {
     get
   }
 }
 public protocol ServiceBuildable : AnyObject {
   init()
+  var serviceName: Swift.String { get }
+  var rawConfig: [Swift.String : Any] { get set }
   func createService() throws -> TekCoreService.AnyService
-}
-public protocol ServiceConfigAttachable {
-  var config: TekCoreService.ServiceConfig? { get }
-  func withConfig(_ config: TekCoreService.ServiceConfig)
-}
-public protocol ServiceCredentialAttachable {
-  var credential: TekCoreService.ServicesCredential? { get }
-  func withCredential(_ credential: TekCoreService.ServicesCredential)
-}
-public enum VSChannel : Swift.String {
-  case showroom
-  case online
-  case agent
-  case vnShopOnline
-  case all
-  public typealias RawValue = Swift.String
-  public init?(rawValue: Swift.String)
-  public var rawValue: Swift.String {
-    get
-  }
 }
 public struct AnyService : TekCoreService.CoreService {
   public typealias API = TekCoreService.APIManager
@@ -131,6 +77,14 @@ public struct AnyService : TekCoreService.CoreService {
     get
   }
 }
+public protocol ServiceApplicationAttachable {
+  var application: UIKit.UIApplication? { get }
+  func withApplication(_ application: UIKit.UIApplication)
+}
+public protocol ServiceCredentialAttachable {
+  var credential: TekCoreService.ServicesCredential? { get }
+  func withCredential(_ credential: TekCoreService.ServicesCredential)
+}
 public protocol CoreService {
   associatedtype API : TekCoreService.APIManager
   var serviceCredential: TekCoreService.ServicesCredential? { get }
@@ -141,41 +95,20 @@ extension CoreService {
     get
   }
 }
-public protocol CorePaymentService : TekCoreService.CoreService {
-  var paymentConfig: TekCoreService.PaymentConfig { get }
-}
-public protocol CoreAuthService : TekCoreService.CoreService {
-  var authConfig: TekCoreService.OAuthConfig { get }
-}
-public protocol CoreTermiService : TekCoreService.CoreService {
-  var lineConfig: TekCoreService.LineConfig { get }
-}
 open class BaseService<API> : TekCoreService.CoreService where API : TekCoreService.APIManager {
   public var serviceCredential: TekCoreService.ServicesCredential?
   public var url: Foundation.URL
   public init(url: Foundation.URL, credential: TekCoreService.ServicesCredential? = nil)
   @objc deinit
 }
+open class BaseServiceConverter<ServiceConfig> : TekCoreService.ServiceConfigConvertible {
+  public var input: [Swift.String : Any]
+  required public init(input: [Swift.String : Any])
+  open func convertConfig(rawValue: [Swift.String : Any]) -> ServiceConfig
+  @objc deinit
+}
+public typealias ServicesCredentialRefreshHandler = (Swift.Bool) -> Swift.Void
 public protocol ServicesCredential {
   var accessToken: Swift.String { get }
-  func refresh(completion: (Swift.Bool) -> Swift.Void)
-}
-public enum ServiceType {
-  case address
-  case catalog
-  case crm
-  case iam
-  case listing
-  case om
-  case pageBuilder
-  case ppm
-  case ps
-  case search
-  case stn
-  case us
-  public static func == (a: TekCoreService.ServiceType, b: TekCoreService.ServiceType) -> Swift.Bool
-  public var hashValue: Swift.Int {
-    get
-  }
-  public func hash(into hasher: inout Swift.Hasher)
+  func refresh(completion: @escaping TekCoreService.ServicesCredentialRefreshHandler)
 }

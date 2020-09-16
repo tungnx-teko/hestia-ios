@@ -16,20 +16,21 @@ protocol HestiaInterface {
     func startApp(appCode: String, delegate: HestiaDelegate?, onSuccess: @escaping () -> (), onFailure: @escaping (HestiaError) -> ())
 }
 
-public class Hestia: BaseService<APIManager> {
+public class Hestia {
     
-    var application: HestiaApplication
-    var clientId: String
+    public static let shared = Hestia()
+    public static let configName = "hestia"
+    
+    var application: HestiaApplication?
+    var clientId: String?
     var delegates: [AppType: AppLauncherDelegate] = [:]
+
+    var service: HestiaService?
     
-    var encodedClientId: String {
-        return clientId.toBase64()
-    }
-    
-    public init(application: HestiaApplication, url: URL, clientId: String) {
+    public func initialize(config: HestiaConfig, application: HestiaApplication) {
         self.application = application
-        self.clientId = clientId
-        super.init(url: url)
+        self.clientId = config.clientId
+        self.service = HestiaService(url: URL(string: config.url)!)
         initDelegates()
     }
     
@@ -38,35 +39,28 @@ public class Hestia: BaseService<APIManager> {
 extension Hestia: HestiaInterface {
     
     public func fetchApplicationList(completion: @escaping (Result<[HestiaApp], HestiaError>) -> ()) {
-        let request = HestiaListRequest(clientId: encodedClientId)
-        apiManager.call(request, onSuccess: { response in
-            completion(.success(response.data))
-        }) { (error, response) in
-            completion(.failure(.unexpected))
-        }
+        service?.fetchApplicationList(clientId: clientId ?? "", completion: { result in
+            completion(result)
+        })
     }
     
     public func fetchApplicationManifest(appCode: String, completion: @escaping (Result<HestiaApp, HestiaError>) -> ()) {
-        let request = HestiaGetRequest(clientId: encodedClientId, appCode: appCode)
-        apiManager.call(request, onSuccess: { response in
-            guard let app = response.data else {
-                completion(.failure(.appNotFound))
-                return
-            }
-            completion(.success(app))
-        }) { (error, _) in
-            print(error)
-            completion(.failure(HestiaError.unexpected))
-        }
+        service?.fetchApplicationManifest(clientId: clientId ?? "", appCode: appCode, completion: { result in
+            completion(result)
+        })
     }
     
     public func startApp(appCode: String, delegate: HestiaDelegate? = nil,
                          onSuccess: @escaping () -> (),
                          onFailure: @escaping (HestiaError) -> ()) {
-        fetchApplicationManifest(appCode: appCode) { result in
+        guard let application = self.application else {
+            onFailure(.applicationNotInit)
+            return
+        }
+        service?.fetchApplicationManifest(clientId: clientId ?? "", appCode: appCode, completion: { result in
             switch result {
             case .success(let app):
-                self.delegates[app.type]?.startApp(application: self.application, app: app, delegate: delegate, onSuccess: {
+                self.delegates[app.type]?.startApp(application: application, app: app, delegate: delegate, onSuccess: {
                     onSuccess()
                 }, onFailure: { error in
                     onFailure(error)
@@ -74,7 +68,7 @@ extension Hestia: HestiaInterface {
             case .failure(let error):
                 onFailure(error)
             }
-        }
+        })
     }
     
 }

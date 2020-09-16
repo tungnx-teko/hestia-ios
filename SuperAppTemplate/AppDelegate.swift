@@ -20,29 +20,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var hestia: Hestia?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let factory = HestiaFactory()
-        factory.urlString = "http://terra.dev.tekoapis.net"
-        factory.application = application
-        factory.clientId = "superappdemo:ios:appstore:0.0.1"
+        let hestiaConfig = HestiaConfig(url: "http://terra.dev.tekoapis.net",
+                                        clientId: "superappdemo:ios:appstore:0.0.1")
         
-        hestia = try? factory.createService().base as? Hestia
+        Hestia.shared.initialize(config: hestiaConfig, application: application as HestiaApplication)
         
-        let config = JanusConfig(oauthUrl: "https://oauth.develop.tekoapis.net",
-                                 identityUrl: "https://identity.develop.tekoapis.net",
-                                 clientId: "6e6d495375e04b6aa6aa102a4abedb3a",
-                                 scope: "openid profile read:permissions",
-                                 googleAppId: "127353225225-o3cnd43i0bn55fcqm8qpj58a5ee6kq69.apps.googleusercontent.com",
-                                 googleAppSecret: "kMBMp81a1qNpOsSqAL6dUPnm",
-                                 facebookAppId: "2414049058898575",
-                                 appleBundleId: "xxxx")
+        let config: [String : Any] = [
+            "oauthUrl":"https://oauth.develop.tekoapis.net",
+            "identityUrl":"https://identity.develop.tekoapis.net",
+            "clientId":"6e6d495375e04b6aa6aa102a4abedb3a",
+            "scope":"openid profile read:permissions",
+            "googleAppId":"563692749265-7d1vdgcj20ltdb61torp9n76mmsi2907.apps.googleusercontent.com",
+            "facebookAppId":"2414049058898575"
+        ]
         
-        Janus.shared.initialize(config: config)
-        Janus.shared.application(for: application, didFinishLaunchingWithOptions: launchOptions)
+        Janus.shared.initialize(config: config, for: application, launchOptions: launchOptions)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return Janus.shared.application(app, open: url, options: options)
     }
 
 }

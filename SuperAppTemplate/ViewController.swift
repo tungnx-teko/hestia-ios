@@ -23,8 +23,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginGoogleWasTapped(_ sender: Any) {
-        let fbLogin = FacebookLogin(presentViewController: self, delegate: self)
-        try? AuthLoginManager.shared.login(fbLogin)
+        try? AuthLoginManager.shared.login(FacebookLogin(presentViewController: self, delegate: nil))
     }
     
     func displayViewController(_ childVC: UIViewController, in view: UIView) {
