@@ -60,7 +60,6 @@ public protocol IAuthCredential {
   var refreshToken: Swift.String? { get }
   var tokenExpiredSec: Swift.Int { get }
   var tokenType: TokenType? { get }
-  var idToken: Swift.String? { get }
   var data: Foundation.Data? { get }
 }
 public protocol AuthLoginMethod {

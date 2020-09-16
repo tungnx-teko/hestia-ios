@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginGoogleWasTapped(_ sender: Any) {
-        try? AuthLoginManager.shared.login(FacebookLogin(presentViewController: self, delegate: nil))
+        AuthLoginManager.shared.login(FacebookLogin(presentViewController: self, delegate: nil))
     }
     
     func displayViewController(_ childVC: UIViewController, in view: UIView) {
@@ -43,8 +43,7 @@ class ViewController: UIViewController {
 extension ViewController: MiniAppListDelegate {
 
     func didSelectApp(appList: MiniAppList, appCode: String) {
-        guard let hestia = (UIApplication.shared.delegate as? AppDelegate)?.hestia else { return }
-        hestia.startApp(appCode: appCode, delegate: nil, onSuccess: {
+        Hestia.shared.startApp(appCode: appCode, delegate: nil, onSuccess: {
             print("Open app successfully")
         }) { error in
             self.showAlert(message: error.rawValue)
