@@ -58,6 +58,11 @@ target 'HestiaIOS' do
   pod 'Janus', '~> 0.2.9', :source => 'https://github.com/teko-vn/Specs-ios.git'
 end
 
+target 'HestiaReactNative' do
+  use_frameworks!
+  pod "PromiseKit", "~> 6.8"
+end
+
 target 'SuperAppTemplate' do
   use_frameworks!
   

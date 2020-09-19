@@ -50,6 +50,12 @@ extension Hestia: HestiaInterface {
         })
     }
     
+    public func fetchAssetList(appCode: String, appVersion: String, assetIds: [String], completion: @escaping (Result<[AssetDetail], HestiaError>) -> ()) {
+        service?.fetchAssetList(clientId: clientId ?? "", appCode: appCode, appVersion: appVersion, assetIds: assetIds, completion: { result in
+            completion(result)
+        })
+    }
+
     public func startApp(appCode: String, delegate: HestiaDelegate? = nil,
                          onSuccess: @escaping () -> (),
                          onFailure: @escaping (HestiaError) -> ()) {
@@ -79,6 +85,13 @@ extension Hestia {
         let DelegateTypes = Runtime.allClasses().filter { $0 is AppLauncherDelegateFactory.Type }.compactMap { $0 as? AppLauncherDelegateFactory.Type }
         for DelegateType in DelegateTypes {
             let factory = DelegateType.init()
+
+            if let needClientIdFactory = factory as? NeedClientId {
+                if let clientId = self.clientId {
+                    needClientIdFactory.withClientId(clientId: clientId)
+                }
+            }
+
             let delegate = factory.create()
             delegates[delegate.appType] = delegate
         }

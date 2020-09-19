@@ -15,4 +15,5 @@ public enum HestiaError: String, Error {
     case exchangeTokenFailed
     case invalidManifestData
     case applicationNotInit
+    case assetsNotFound
 }

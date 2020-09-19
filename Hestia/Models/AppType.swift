@@ -9,7 +9,7 @@
 import Foundation
 
 public enum AppType: String {
-    case reactNative = "react_native"
+    case reactNative = "react_native_android" // FIXME: only for test
     case native = "ios_native"
     case webView = "web"
 }

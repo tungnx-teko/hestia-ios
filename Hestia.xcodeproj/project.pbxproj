@@ -120,6 +120,29 @@
 		1ABADF1D2500E9130091385D /* AnyHestiaAppManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF1C2500E9130091385D /* AnyHestiaAppManifest.swift */; };
 		1ABADF1F2500ED6B0091385D /* IOSNativeManifestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF1E2500ED6B0091385D /* IOSNativeManifestData.swift */; };
 		9A03264188A3AD3E3E7EC2C6 /* Pods_HestiaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078E0EC36E5403C0984ED8B1 /* Pods_HestiaIOS.framework */; };
+		BC157FC02515C2A100195991 /* HestiaReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC157FB72515C2A100195991 /* HestiaReactNative.framework */; };
+		BC157FC72515C2A100195991 /* HestiaReactNativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FC62515C2A100195991 /* HestiaReactNativeTests.swift */; };
+		BC157FC92515C2A100195991 /* HestiaReactNative.h in Headers */ = {isa = PBXBuildFile; fileRef = BC157FB92515C2A100195991 /* HestiaReactNative.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC157FCC2515C2A100195991 /* HestiaReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC157FB72515C2A100195991 /* HestiaReactNative.framework */; };
+		BC157FCD2515C2A100195991 /* HestiaReactNative.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC157FB72515C2A100195991 /* HestiaReactNative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC157FD42515C2B600195991 /* Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; platformFilter = ios; };
+		BC157FD52515C2B600195991 /* Hestia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A80E83C24E6743400A5A3A3 /* Hestia.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC157FE62515C2D900195991 /* LocalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FDA2515C2D900195991 /* LocalApp.swift */; };
+		BC157FE72515C2D900195991 /* LocalAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FDB2515C2D900195991 /* LocalAsset.swift */; };
+		BC157FE82515C2D900195991 /* ReactNativeAppLauncherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FDD2515C2D900195991 /* ReactNativeAppLauncherDelegate.swift */; };
+		BC157FE92515C2D900195991 /* ReactNativeAppLauncherDelegateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FDE2515C2D900195991 /* ReactNativeAppLauncherDelegateFactory.swift */; };
+		BC157FEA2515C2D900195991 /* BundleDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FE02515C2D900195991 /* BundleDownloader.swift */; };
+		BC157FEB2515C2D900195991 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FE22515C2D900195991 /* FileUtils.swift */; };
+		BC157FEC2515C2D900195991 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FE42515C2D900195991 /* URL+.swift */; };
+		BC157FED2515C2D900195991 /* FileManager+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FE52515C2D900195991 /* FileManager+.swift */; };
+		BC1580222515C33300195991 /* AssetListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580212515C33300195991 /* AssetListResponse.swift */; };
+		BC1580242515C33E00195991 /* AssetListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580232515C33E00195991 /* AssetListRequest.swift */; };
+		BC1580262515C34E00195991 /* AssetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580252515C34E00195991 /* AssetDetail.swift */; };
+		BC1580282515C35600195991 /* ReactNativeAppManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580272515C35600195991 /* ReactNativeAppManifest.swift */; };
+		BC15802C2515C36400195991 /* ReactNativeAppManifestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580292515C36400195991 /* ReactNativeAppManifestData.swift */; };
+		BC15802D2515C36400195991 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15802B2515C36400195991 /* Asset.swift */; };
+		BC15802F2515C3BA00195991 /* NeedClientId.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15802E2515C3BA00195991 /* NeedClientId.swift */; };
+		BC1580312515C60500195991 /* AvailableAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580302515C60500195991 /* AvailableAsset.swift */; };
 		BCC3F0DB699E0C9825232E53 /* Pods_SuperAppTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9B7809BB34923B8E373431 /* Pods_SuperAppTemplate.framework */; };
 		F7B025530F21531D2F5157CE /* Pods_Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C9556027F8C7FC40190964 /* Pods_Hestia.framework */; };
 /* End PBXBuildFile section */
@@ -209,6 +232,34 @@
 			remoteGlobalIDString = 1A14D74924FE41CF0012CF0C;
 			remoteInfo = HestiaIOS;
 		};
+		BC157FC12515C2A100195991 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC157FB62515C2A100195991;
+			remoteInfo = HestiaReactNative;
+		};
+		BC157FC32515C2A100195991 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ABADEEB2500916B0091385D;
+			remoteInfo = SuperAppTemplate;
+		};
+		BC157FCA2515C2A100195991 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC157FB62515C2A100195991;
+			remoteInfo = HestiaReactNative;
+		};
+		BC157FD62515C2B600195991 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A80E83324E6743400A5A3A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A80E83B24E6743400A5A3A3;
+			remoteInfo = Hestia;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -276,10 +327,22 @@
 			files = (
 				1ABADF102500990A0091385D /* HestiaIOS.framework in Embed Frameworks */,
 				1AB322B22506448000D2EFA8 /* DemoWebModule.framework in Embed Frameworks */,
+				BC157FCD2515C2A100195991 /* HestiaReactNative.framework in Embed Frameworks */,
 				1ABADF0B250098760091385D /* Hestia.framework in Embed Frameworks */,
 				1A65BF5C250216CA00A8A7BA /* MiniAppSdk.framework in Embed Frameworks */,
 				1AB322792506213000D2EFA8 /* HestiaWebApp.framework in Embed Frameworks */,
 				1AB322BE25064CD000D2EFA8 /* HestiaWebModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC157FD82515C2B600195991 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC157FD52515C2B600195991 /* Hestia.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +440,28 @@
 		6B05B0FDBCC708E91CC288E3 /* Pods-Hestia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.release.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.release.xcconfig"; sourceTree = "<group>"; };
 		6C54DB62233DD6408CD4D45C /* Pods-SuperAppTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		79A798D9C817E1BF23ABFB8E /* Pods-HestiaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.debug.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BC157FB72515C2A100195991 /* HestiaReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HestiaReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC157FB92515C2A100195991 /* HestiaReactNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HestiaReactNative.h; sourceTree = "<group>"; };
+		BC157FBA2515C2A100195991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC157FBF2515C2A100195991 /* HestiaReactNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HestiaReactNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC157FC62515C2A100195991 /* HestiaReactNativeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaReactNativeTests.swift; sourceTree = "<group>"; };
+		BC157FC82515C2A100195991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC157FDA2515C2D900195991 /* LocalApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalApp.swift; sourceTree = "<group>"; };
+		BC157FDB2515C2D900195991 /* LocalAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalAsset.swift; sourceTree = "<group>"; };
+		BC157FDD2515C2D900195991 /* ReactNativeAppLauncherDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactNativeAppLauncherDelegate.swift; sourceTree = "<group>"; };
+		BC157FDE2515C2D900195991 /* ReactNativeAppLauncherDelegateFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactNativeAppLauncherDelegateFactory.swift; sourceTree = "<group>"; };
+		BC157FE02515C2D900195991 /* BundleDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleDownloader.swift; sourceTree = "<group>"; };
+		BC157FE22515C2D900195991 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		BC157FE42515C2D900195991 /* URL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		BC157FE52515C2D900195991 /* FileManager+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+.swift"; sourceTree = "<group>"; };
+		BC1580212515C33300195991 /* AssetListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetListResponse.swift; sourceTree = "<group>"; };
+		BC1580232515C33E00195991 /* AssetListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetListRequest.swift; sourceTree = "<group>"; };
+		BC1580252515C34E00195991 /* AssetDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetDetail.swift; sourceTree = "<group>"; };
+		BC1580272515C35600195991 /* ReactNativeAppManifest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactNativeAppManifest.swift; sourceTree = "<group>"; };
+		BC1580292515C36400195991 /* ReactNativeAppManifestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactNativeAppManifestData.swift; sourceTree = "<group>"; };
+		BC15802B2515C36400195991 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		BC15802E2515C3BA00195991 /* NeedClientId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedClientId.swift; sourceTree = "<group>"; };
+		BC1580302515C60500195991 /* AvailableAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableAsset.swift; sourceTree = "<group>"; };
 		C9B93E7684F50AD17E9A9EEC /* Pods-HestiaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.release.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED9B7809BB34923B8E373431 /* Pods_SuperAppTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperAppTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6035EEBE025DBAB4EE01E38 /* Pods-SuperAppTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.release.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.release.xcconfig"; sourceTree = "<group>"; };
@@ -447,10 +532,27 @@
 				1A65BF5B250216CA00A8A7BA /* MiniAppSdk.framework in Frameworks */,
 				1ABADF0F2500990A0091385D /* HestiaIOS.framework in Frameworks */,
 				1ABADF0A250098760091385D /* Hestia.framework in Frameworks */,
+				BC157FCC2515C2A100195991 /* HestiaReactNative.framework in Frameworks */,
 				1AB322B12506448000D2EFA8 /* DemoWebModule.framework in Frameworks */,
 				1AB322782506213000D2EFA8 /* HestiaWebApp.framework in Frameworks */,
 				1AB322BD25064CD000D2EFA8 /* HestiaWebModule.framework in Frameworks */,
 				BCC3F0DB699E0C9825232E53 /* Pods_SuperAppTemplate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC157FB42515C2A100195991 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC157FD42515C2B600195991 /* Hestia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC157FBC2515C2A100195991 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC157FC02515C2A100195991 /* HestiaReactNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +582,7 @@
 		1A14D73D24FE380E0012CF0C /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				BC1580232515C33E00195991 /* AssetListRequest.swift */,
 				1A14D73924FE35E40012CF0C /* HestiaGetRequest.swift */,
 				1A14D74124FE3A270012CF0C /* HestiaListRequest.swift */,
 			);
@@ -489,6 +592,7 @@
 		1A14D73E24FE38140012CF0C /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				BC1580212515C33300195991 /* AssetListResponse.swift */,
 				1A14D73B24FE361A0012CF0C /* HestiaAppListResponse.swift */,
 				1A14D73F24FE382B0012CF0C /* HestiaAppDetailResponse.swift */,
 				1ABADF182500E1BA0091385D /* HestiaCode.swift */,
@@ -551,6 +655,8 @@
 				1A65BF31250212A700A8A7BA /* MiniApp */,
 				1A65BF55250216CA00A8A7BA /* MiniAppSdk */,
 				1AB322A6250642EE00D2EFA8 /* DemoWebModule */,
+				BC157FB82515C2A100195991 /* HestiaReactNative */,
+				BC157FC52515C2A100195991 /* HestiaReactNativeTests */,
 				1A80E83D24E6743400A5A3A3 /* Products */,
 				863CD1DABD3D63EA47315899 /* Pods */,
 				4440B22419B957ACCB3F37C3 /* Frameworks */,
@@ -568,6 +674,8 @@
 				1AB322712506213000D2EFA8 /* HestiaWebApp.framework */,
 				1AB3229025062B7F00D2EFA8 /* HestiaWebModule.framework */,
 				1AB322A5250642EE00D2EFA8 /* DemoWebModule.framework */,
+				BC157FB72515C2A100195991 /* HestiaReactNative.framework */,
+				BC157FBF2515C2A100195991 /* HestiaReactNativeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -593,6 +701,7 @@
 		1A80E84B24E6747200A5A3A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BC1580252515C34E00195991 /* AssetDetail.swift */,
 				1ABADF202500ED8E0091385D /* Manifest */,
 				1A14D73224FE34090012CF0C /* HestiaError.swift */,
 				1A14D72624FE338A0012CF0C /* HestiaApp.swift */,
@@ -622,6 +731,7 @@
 		1A80E86424EA2CC900A5A3A3 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				BC15802E2515C3BA00195991 /* NeedClientId.swift */,
 				1A14D72A24FE33B40012CF0C /* AppLauncherDelegate.swift */,
 				1A65BF6C25021FA600A8A7BA /* HestiaAppDelegate.swift */,
 			);
@@ -659,6 +769,8 @@
 		1AB322692506162000D2EFA8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BC15802A2515C36400195991 /* ReactNative */,
+				BC1580292515C36400195991 /* ReactNativeAppManifestData.swift */,
 				1A14D73024FE33F60012CF0C /* HestiaManifestData.swift */,
 				1ABADF1E2500ED6B0091385D /* IOSNativeManifestData.swift */,
 				1AB322652506155300D2EFA8 /* WebAppManifestData.swift */,
@@ -772,6 +884,7 @@
 		1ABADF202500ED8E0091385D /* Manifest */ = {
 			isa = PBXGroup;
 			children = (
+				BC1580272515C35600195991 /* ReactNativeAppManifest.swift */,
 				1AB322692506162000D2EFA8 /* Data */,
 				1ABADF1C2500E9130091385D /* AnyHestiaAppManifest.swift */,
 				1A14D72824FE33990012CF0C /* HestiaAppManifest.swift */,
@@ -802,6 +915,81 @@
 				F6035EEBE025DBAB4EE01E38 /* Pods-SuperAppTemplate.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC157FB82515C2A100195991 /* HestiaReactNative */ = {
+			isa = PBXGroup;
+			children = (
+				BC157FDF2515C2D900195991 /* Bundle */,
+				BC157FDC2515C2D900195991 /* Delegate */,
+				BC157FE32515C2D900195991 /* Extensions */,
+				BC157FD92515C2D900195991 /* Models */,
+				BC157FE12515C2D900195991 /* Utils */,
+				BC157FB92515C2A100195991 /* HestiaReactNative.h */,
+				BC157FBA2515C2A100195991 /* Info.plist */,
+			);
+			path = HestiaReactNative;
+			sourceTree = "<group>";
+		};
+		BC157FC52515C2A100195991 /* HestiaReactNativeTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC157FC62515C2A100195991 /* HestiaReactNativeTests.swift */,
+				BC157FC82515C2A100195991 /* Info.plist */,
+			);
+			path = HestiaReactNativeTests;
+			sourceTree = "<group>";
+		};
+		BC157FD92515C2D900195991 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC157FDA2515C2D900195991 /* LocalApp.swift */,
+				BC157FDB2515C2D900195991 /* LocalAsset.swift */,
+				BC1580302515C60500195991 /* AvailableAsset.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC157FDC2515C2D900195991 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BC157FDD2515C2D900195991 /* ReactNativeAppLauncherDelegate.swift */,
+				BC157FDE2515C2D900195991 /* ReactNativeAppLauncherDelegateFactory.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		BC157FDF2515C2D900195991 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				BC157FE02515C2D900195991 /* BundleDownloader.swift */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		BC157FE12515C2D900195991 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BC157FE22515C2D900195991 /* FileUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BC157FE32515C2D900195991 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC157FE42515C2D900195991 /* URL+.swift */,
+				BC157FE52515C2D900195991 /* FileManager+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC15802A2515C36400195991 /* ReactNative */ = {
+			isa = PBXGroup;
+			children = (
+				BC15802B2515C36400195991 /* Asset.swift */,
+			);
+			path = ReactNative;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -852,6 +1040,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB322A9250642EE00D2EFA8 /* DemoWebModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC157FB22515C2A100195991 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC157FC92515C2A100195991 /* HestiaReactNative.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,11 +1215,51 @@
 				1AB322772506213000D2EFA8 /* PBXTargetDependency */,
 				1AB322B42506448000D2EFA8 /* PBXTargetDependency */,
 				1AB322C025064CD000D2EFA8 /* PBXTargetDependency */,
+				BC157FCB2515C2A100195991 /* PBXTargetDependency */,
 			);
 			name = SuperAppTemplate;
 			productName = SuperAppTemplate;
 			productReference = 1ABADEEC2500916B0091385D /* SuperAppTemplate.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BC157FB62515C2A100195991 /* HestiaReactNative */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC157FD22515C2A100195991 /* Build configuration list for PBXNativeTarget "HestiaReactNative" */;
+			buildPhases = (
+				BC157FB22515C2A100195991 /* Headers */,
+				BC157FB32515C2A100195991 /* Sources */,
+				BC157FB42515C2A100195991 /* Frameworks */,
+				BC157FB52515C2A100195991 /* Resources */,
+				BC157FD82515C2B600195991 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC157FD72515C2B600195991 /* PBXTargetDependency */,
+			);
+			name = HestiaReactNative;
+			productName = HestiaReactNative;
+			productReference = BC157FB72515C2A100195991 /* HestiaReactNative.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BC157FBE2515C2A100195991 /* HestiaReactNativeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC157FD32515C2A100195991 /* Build configuration list for PBXNativeTarget "HestiaReactNativeTests" */;
+			buildPhases = (
+				BC157FBB2515C2A100195991 /* Sources */,
+				BC157FBC2515C2A100195991 /* Frameworks */,
+				BC157FBD2515C2A100195991 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC157FC22515C2A100195991 /* PBXTargetDependency */,
+				BC157FC42515C2A100195991 /* PBXTargetDependency */,
+			);
+			name = HestiaReactNativeTests;
+			productName = HestiaReactNativeTests;
+			productReference = BC157FBF2515C2A100195991 /* HestiaReactNativeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -1031,7 +1267,7 @@
 		1A80E83324E6743400A5A3A3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Tung Nguyen";
 				TargetAttributes = {
@@ -1066,6 +1302,13 @@
 					1ABADEEB2500916B0091385D = {
 						CreatedOnToolsVersion = 11.6;
 					};
+					BC157FB62515C2A100195991 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					BC157FBE2515C2A100195991 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 1ABADEEB2500916B0091385D;
+					};
 				};
 			};
 			buildConfigurationList = 1A80E83624E6743400A5A3A3 /* Build configuration list for PBXProject "Hestia" */;
@@ -1090,6 +1333,8 @@
 				1AB322702506213000D2EFA8 /* HestiaWebApp */,
 				1AB3228F25062B7F00D2EFA8 /* HestiaWebModule */,
 				1AB322A4250642EE00D2EFA8 /* DemoWebModule */,
+				BC157FB62515C2A100195991 /* HestiaReactNative */,
+				BC157FBE2515C2A100195991 /* HestiaReactNativeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1160,6 +1405,20 @@
 				1ABADEFB2500916E0091385D /* LaunchScreen.storyboard in Resources */,
 				1ABADEF82500916E0091385D /* Assets.xcassets in Resources */,
 				1ABADEF62500916B0091385D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC157FB52515C2A100195991 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC157FBD2515C2A100195991 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1365,11 +1624,13 @@
 				1A14D73A24FE35E40012CF0C /* HestiaGetRequest.swift in Sources */,
 				1A14D75624FE5AFF0012CF0C /* AppLauncherData.swift in Sources */,
 				1A14D73C24FE361A0012CF0C /* HestiaAppListResponse.swift in Sources */,
+				BC1580222515C33300195991 /* AssetListResponse.swift in Sources */,
 				1A80E86B24EA302700A5A3A3 /* UIApplication+.swift in Sources */,
 				1A14D72B24FE33B40012CF0C /* AppLauncherDelegate.swift in Sources */,
 				1AB322662506155300D2EFA8 /* WebAppManifestData.swift in Sources */,
 				1ABADF192500E1BA0091385D /* HestiaCode.swift in Sources */,
 				1A14D72924FE33990012CF0C /* HestiaAppManifest.swift in Sources */,
+				BC1580262515C34E00195991 /* AssetDetail.swift in Sources */,
 				1A1E13162511E86A003BEDC9 /* HestiaService.swift in Sources */,
 				1A65BF6F2502347500A8A7BA /* HestiaApplication.swift in Sources */,
 				1A14D72F24FE33E40012CF0C /* Hestia.swift in Sources */,
@@ -1378,10 +1639,14 @@
 				1A14D72724FE338A0012CF0C /* HestiaApp.swift in Sources */,
 				1AB322642506138300D2EFA8 /* HestiaWebViewController.swift in Sources */,
 				1ABADF08250094A80091385D /* MiniAppCell.swift in Sources */,
+				BC1580282515C35600195991 /* ReactNativeAppManifest.swift in Sources */,
 				1AB322682506161A00D2EFA8 /* IOSAppManifest.swift in Sources */,
+				BC1580242515C33E00195991 /* AssetListRequest.swift in Sources */,
 				1AB322602506120500D2EFA8 /* WebAppLauncherDelegateFactory.swift in Sources */,
 				1A14D73324FE34090012CF0C /* HestiaError.swift in Sources */,
 				1A65BF7425024C0F00A8A7BA /* MiniAppList.swift in Sources */,
+				BC15802C2515C36400195991 /* ReactNativeAppManifestData.swift in Sources */,
+				BC15802D2515C36400195991 /* Asset.swift in Sources */,
 				1A1E13142511CDDA003BEDC9 /* HestiaConfig.swift in Sources */,
 				1A14D73124FE33F60012CF0C /* HestiaManifestData.swift in Sources */,
 				1AB3225E250611F700D2EFA8 /* WebAppLauncherDelegate.swift in Sources */,
@@ -1391,6 +1656,7 @@
 				1A1E13122511CDCE003BEDC9 /* HestiaConfigConverter.swift in Sources */,
 				1ABADF1525009C600091385D /* HestiaBundle.swift in Sources */,
 				1A14D74424FE3F640012CF0C /* String+.swift in Sources */,
+				BC15802F2515C3BA00195991 /* NeedClientId.swift in Sources */,
 				1A14D72424FE334A0012CF0C /* Decodable+.swift in Sources */,
 				1AB3226B2506165900D2EFA8 /* WebAppManifest.swift in Sources */,
 			);
@@ -1430,6 +1696,30 @@
 			files = (
 				1ABADEF32500916B0091385D /* ViewController.swift in Sources */,
 				1ABADEEF2500916B0091385D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC157FB32515C2A100195991 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1580312515C60500195991 /* AvailableAsset.swift in Sources */,
+				BC157FE82515C2D900195991 /* ReactNativeAppLauncherDelegate.swift in Sources */,
+				BC157FE72515C2D900195991 /* LocalAsset.swift in Sources */,
+				BC157FEC2515C2D900195991 /* URL+.swift in Sources */,
+				BC157FED2515C2D900195991 /* FileManager+.swift in Sources */,
+				BC157FE92515C2D900195991 /* ReactNativeAppLauncherDelegateFactory.swift in Sources */,
+				BC157FEB2515C2D900195991 /* FileUtils.swift in Sources */,
+				BC157FEA2515C2D900195991 /* BundleDownloader.swift in Sources */,
+				BC157FE62515C2D900195991 /* LocalApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC157FBB2515C2A100195991 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC157FC72515C2A100195991 /* HestiaReactNativeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1497,6 +1787,27 @@
 			isa = PBXTargetDependency;
 			target = 1A14D74924FE41CF0012CF0C /* HestiaIOS */;
 			targetProxy = 1ABADF112500990A0091385D /* PBXContainerItemProxy */;
+		};
+		BC157FC22515C2A100195991 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC157FB62515C2A100195991 /* HestiaReactNative */;
+			targetProxy = BC157FC12515C2A100195991 /* PBXContainerItemProxy */;
+		};
+		BC157FC42515C2A100195991 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ABADEEB2500916B0091385D /* SuperAppTemplate */;
+			targetProxy = BC157FC32515C2A100195991 /* PBXContainerItemProxy */;
+		};
+		BC157FCB2515C2A100195991 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC157FB62515C2A100195991 /* HestiaReactNative */;
+			targetProxy = BC157FCA2515C2A100195991 /* PBXContainerItemProxy */;
+		};
+		BC157FD72515C2B600195991 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 1A80E83B24E6743400A5A3A3 /* Hestia */;
+			targetProxy = BC157FD62515C2B600195991 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2070,6 +2381,98 @@
 			};
 			name = Release;
 		};
+		BC157FCE2515C2A100195991 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2G2F7B8D22;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HestiaReactNative/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.HestiaReactNative;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC157FCF2515C2A100195991 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2G2F7B8D22;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HestiaReactNative/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.HestiaReactNative;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BC157FD02515C2A100195991 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G2F7B8D22;
+				INFOPLIST_FILE = HestiaReactNativeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.HestiaReactNativeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperAppTemplate.app/SuperAppTemplate";
+			};
+			name = Debug;
+		};
+		BC157FD12515C2A100195991 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G2F7B8D22;
+				INFOPLIST_FILE = HestiaReactNativeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.HestiaReactNativeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperAppTemplate.app/SuperAppTemplate";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2159,6 +2562,24 @@
 			buildConfigurations = (
 				1ABADEFE2500916E0091385D /* Debug */,
 				1ABADEFF2500916E0091385D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC157FD22515C2A100195991 /* Build configuration list for PBXNativeTarget "HestiaReactNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC157FCE2515C2A100195991 /* Debug */,
+				BC157FCF2515C2A100195991 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC157FD32515C2A100195991 /* Build configuration list for PBXNativeTarget "HestiaReactNativeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC157FD02515C2A100195991 /* Debug */,
+				BC157FD12515C2A100195991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

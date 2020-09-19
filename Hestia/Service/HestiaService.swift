@@ -33,5 +33,14 @@ class HestiaService: BaseService<APIManager> {
             completion(.failure(HestiaError.unexpected))
         }
     }
+
+    public func fetchAssetList(clientId: String, appCode: String, appVersion: String, assetIds: [String], completion: @escaping (Result<[AssetDetail], HestiaError>) -> ()) {
+        let request = AssetListRequest(clientId: clientId.toBase64(), appCode: appCode, appVersion: appVersion, assetIds: assetIds)
+        apiManager.call(request, onSuccess: { response in
+            completion(.success(response.data))
+        }) { (error, _) in
+            completion(.failure(.unexpected))
+        }
+    }
     
 }
