@@ -10,6 +10,13 @@ import Foundation
 
 class FileUtils {
     private static let fileManager = FileManager.default
+    
+    static func createFileIfNotExists(file: URL) throws {
+        if !fileManager.fileExists(atPath: file.path) {
+            try createParentDirectory(for: file)
+            fileManager.createFile(atPath: file.path, contents: nil, attributes: nil)
+        }
+    }
 
     static func removeItemIfExists(atPath destination: URL) throws {
         if fileManager.fileExists(atPath: destination.path) {
@@ -23,9 +30,9 @@ class FileUtils {
     
     static func createParentDirectory(for file: URL) throws {
         if (file.isFileURL) {
-            let destinationDirectory = file.deletingLastPathComponent()
-            if !fileManager.fileExists(atPath: destinationDirectory.path) {
-                try fileManager.createDirectory(at: file, withIntermediateDirectories: true, attributes: nil)
+            let parentDirectory = file.deletingLastPathComponent()
+            if !fileManager.fileExists(atPath: parentDirectory.path) {
+                try fileManager.createDirectory(at: parentDirectory, withIntermediateDirectories: true, attributes: nil)
             }
         }
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-let APPS_DIRECTORY_NAME = "terra-rn-apps"
+let APPS_DIRECTORY_NAME = "rn-apps"
 
 extension FileManager {
     

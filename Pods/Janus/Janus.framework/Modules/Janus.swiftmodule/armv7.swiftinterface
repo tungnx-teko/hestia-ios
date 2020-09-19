@@ -72,7 +72,7 @@ public struct GoogleLoginMethod : AuthLoginMethod {
 }
 public class PhoneAuthProvider {
   public static var shared: PhoneAuthProvider
-  public func requestOTP(phone: Swift.String, completion: @escaping ((Swift.Bool) -> Swift.Void))
+  public func requestOTP(phone: Swift.String, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
   public func createPasswordlessLogin(pin: Swift.String, delegate: AuthLoginDelegate?) -> PasswordlessLogin?
   @objc deinit
 }
@@ -209,6 +209,20 @@ public class PasswordlessLogin : AuthLogin {
   public init(phone: Swift.String, pin: Swift.String, delegate: AuthLoginDelegate?)
   public func execute()
   @objc deinit
+}
+public enum IdentityError : Swift.Int, Swift.Error {
+  case invalidPhone
+  case invalidEmail
+  case phoneHasUsed
+  case emailHasUsed
+  case invalidCode
+  case invalidAuth
+  case other
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 public typealias OAuthLoginHandler = (Swift.Bool, AuthError?) -> ()
 public typealias ExchangeTokenHandler = (Swift.Bool, Swift.String?, AuthError?) -> ()

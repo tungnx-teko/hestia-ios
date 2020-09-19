@@ -9,10 +9,10 @@
 import Foundation
 
 public struct AssetDetail: Decodable  {
-    var id: String
-    var name: String
-    var content: String
-    var type: String
+    public var id: String
+    public var name: String
+    public var content: String
+    public var type: String
 
     enum CodingKeys: String, CodingKey {
         case id, name, content, type

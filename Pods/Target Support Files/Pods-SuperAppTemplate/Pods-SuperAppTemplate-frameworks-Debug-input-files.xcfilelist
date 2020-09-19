@@ -1,5 +1,9 @@
 ${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${PODS_ROOT}/TekCoreNetwork/TekCoreNetwork.framework
+${PODS_ROOT}/TekCoreService/TekCoreService.framework
+${BUILT_PRODUCTS_DIR}/TekServiceInterfaces/TekServiceInterfaces.framework
 ${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework
@@ -10,8 +14,5 @@ ${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework
 ${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework
 ${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework
 ${PODS_ROOT}/Janus/Janus.framework
-${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
-${PODS_ROOT}/TekCoreNetwork/TekCoreNetwork.framework
-${PODS_ROOT}/TekCoreService/TekCoreService.framework
-${BUILT_PRODUCTS_DIR}/TekServiceInterfaces/TekServiceInterfaces.framework
+${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework

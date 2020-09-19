@@ -6,6 +6,7 @@
 //  Copyright © 2020 Tung Nguyen. All rights reserved.
 //
 
+import UIKit
 import Hestia
 
 public class ReactNativeAppLauncherDelegate: AppLauncherDelegate {
@@ -24,10 +25,21 @@ public class ReactNativeAppLauncherDelegate: AppLauncherDelegate {
             return
         }
         
-        // TODO: download bundle
-        BundleDownloader(clientId: clientId).resolveBundleFromManifest(app: app, completion: { url, error in
-            
-        })
+//        // TODO: download bundle
+//        BundleDownloader(clientId: clientId).resolveBundleFromManifest(app: app, completion: { url, error in
+//
+//        })
+        
+        DispatchQueue.main.async {
+            let rootVC = HestiaReactNativeApplication.shared.createRootViewController(manifest: manifest, delegate: delegate)
+            if let rootVC = rootVC {
+                let navigation = UINavigationController(rootViewController: rootVC)
+                application.open(navigation)
+                onSuccess()
+            } else {
+                // TODO: error
+            }
+        }
     }
     
 }

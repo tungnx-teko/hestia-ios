@@ -8,7 +8,8 @@
 
 import Foundation
 import Hestia
-//import PromiseKit
+import PromiseKit
+import Alamofire
 
 class BundleDownloader {
     private let clientId: String
@@ -31,7 +32,7 @@ class BundleDownloader {
         let userDefaults = UserDefaults.standard
         var localApp: LocalApp? = nil
         
-        let currentAppKey = "@@-terra-rn-apps-\(app.code)-@@"
+        let currentAppKey = "@@-rn-apps-\(app.code)-@@"
         let currentAppVersion = userDefaults.string(forKey: currentAppKey)
         
         guard currentAppVersion != nil else {
@@ -124,30 +125,56 @@ class BundleDownloader {
         to newLocalAppDirectoryUrl: URL
     ) {
         let neededAssetIds = neededAssets.map { $0.id }
-        
-        Hestia.shared.fetchAssetList(appCode: app.code, appVersion: app.version, assetIds: neededAssetIds) { result  in
-            switch result {
-            case .success(let assets):
-                print(assets)
-            case .failure(let error):
-                print(error)
+
+        firstly {
+            fetchAssetList(app.code, app.version, neededAssetIds)
+        }.then { (assets: [AssetDetail]) -> Promise<[URL]> in
+            let downloadAssetPromises = assets.map { self.downloadAsset($0, to: newLocalAppDirectoryUrl) }
+            return when(fulfilled: downloadAssetPromises)
+        }.done { result in
+            print(result)
+        }.catch { error in
+            print(error)
+        }
+    }
+
+    private func fetchAssetList(_ appCode: String, _ appVersion: String, _ assetIds: [String]) -> Promise<[AssetDetail]> {
+        return Promise { seal in
+            Hestia.shared.fetchAssetList(appCode: appCode, appVersion: appVersion, assetIds: assetIds) { result  in
+                switch result {
+                case .success(let assets):
+                    seal.fulfill(assets)
+                case .failure(let error):
+                    seal.reject(error)
+                }
             }
         }
-
-//        if (result.isSuccess()) {
-//            val gotAssets = result.get().data
-//            gotAssets.map { asset ->
-//                scope.async {
-//                    downloadAsset(asset, newLocalAppDirectory)
-//                }
-//            }.awaitAll()
-//        } else {
-//            throw result.exception()
-//        }
     }
     
-    private func downloadAsset() {
-        
+    private func downloadAsset(_ asset: AssetDetail, to newLocalAppDirectoryUrl: URL) -> Promise<URL> {
+        return Promise { seal in
+            Alamofire.request(asset.content).responseData { response in
+                if let data = response.value {
+                    if let decodedData = Data(base64Encoded: data) {
+                        do {
+                            let assetFileUrl = newLocalAppDirectoryUrl.appendingPathComponent(asset.name, isDirectory: false)
+                            try FileUtils.createFileIfNotExists(file: assetFileUrl)
+                            try decodedData.write(to: assetFileUrl)
+                            seal.fulfill(assetFileUrl)
+                        } catch {
+                            // TODO: error here
+                            print(error)
+                            seal.reject(error)
+                        }
+                    } else  {
+                        // TODO: error here
+                    }
+                } else {
+                    print(response.error)
+                    seal.reject(response.error!)
+                }
+            }
+        }
     }
     
     private func getMainBundleJsUrl(_ appCode: String, _ appVersion: String) -> URL {

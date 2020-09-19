@@ -120,6 +120,7 @@
 		1ABADF1D2500E9130091385D /* AnyHestiaAppManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF1C2500E9130091385D /* AnyHestiaAppManifest.swift */; };
 		1ABADF1F2500ED6B0091385D /* IOSNativeManifestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF1E2500ED6B0091385D /* IOSNativeManifestData.swift */; };
 		9A03264188A3AD3E3E7EC2C6 /* Pods_HestiaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078E0EC36E5403C0984ED8B1 /* Pods_HestiaIOS.framework */; };
+		A2A4C7EDC2DB7EDB3566B83B /* Pods_HestiaReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FD4E569E64CAA774C0E7BF /* Pods_HestiaReactNative.framework */; };
 		BC157FC02515C2A100195991 /* HestiaReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC157FB72515C2A100195991 /* HestiaReactNative.framework */; };
 		BC157FC72515C2A100195991 /* HestiaReactNativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FC62515C2A100195991 /* HestiaReactNativeTests.swift */; };
 		BC157FC92515C2A100195991 /* HestiaReactNative.h in Headers */ = {isa = PBXBuildFile; fileRef = BC157FB92515C2A100195991 /* HestiaReactNative.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -143,6 +144,9 @@
 		BC15802D2515C36400195991 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15802B2515C36400195991 /* Asset.swift */; };
 		BC15802F2515C3BA00195991 /* NeedClientId.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15802E2515C3BA00195991 /* NeedClientId.swift */; };
 		BC1580312515C60500195991 /* AvailableAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580302515C60500195991 /* AvailableAsset.swift */; };
+		BC1580342516171300195991 /* HestiaReactNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580332516171300195991 /* HestiaReactNativeViewController.swift */; };
+		BC1580362516185000195991 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580352516185000195991 /* LoadingViewController.swift */; };
+		BC15803825161B3900195991 /* HestiaReactNativeApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15803725161B3900195991 /* HestiaReactNativeApplication.swift */; };
 		BCC3F0DB699E0C9825232E53 /* Pods_SuperAppTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9B7809BB34923B8E373431 /* Pods_SuperAppTemplate.framework */; };
 		F7B025530F21531D2F5157CE /* Pods_Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C9556027F8C7FC40190964 /* Pods_Hestia.framework */; };
 /* End PBXBuildFile section */
@@ -437,6 +441,7 @@
 		1ABADF1E2500ED6B0091385D /* IOSNativeManifestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSNativeManifestData.swift; sourceTree = "<group>"; };
 		31C9556027F8C7FC40190964 /* Pods_Hestia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hestia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA439E82A38069A59985C1D /* Pods-Hestia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.debug.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.debug.xcconfig"; sourceTree = "<group>"; };
+		63BFC81570837891F09F00D7 /* Pods-HestiaReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaReactNative.release.xcconfig"; path = "Target Support Files/Pods-HestiaReactNative/Pods-HestiaReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		6B05B0FDBCC708E91CC288E3 /* Pods-Hestia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.release.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.release.xcconfig"; sourceTree = "<group>"; };
 		6C54DB62233DD6408CD4D45C /* Pods-SuperAppTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		79A798D9C817E1BF23ABFB8E /* Pods-HestiaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.debug.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -462,7 +467,12 @@
 		BC15802B2515C36400195991 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		BC15802E2515C3BA00195991 /* NeedClientId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedClientId.swift; sourceTree = "<group>"; };
 		BC1580302515C60500195991 /* AvailableAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableAsset.swift; sourceTree = "<group>"; };
+		BC1580332516171300195991 /* HestiaReactNativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaReactNativeViewController.swift; sourceTree = "<group>"; };
+		BC1580352516185000195991 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		BC15803725161B3900195991 /* HestiaReactNativeApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaReactNativeApplication.swift; sourceTree = "<group>"; };
+		BF045F47F0D8D7A4D17C6FEF /* Pods-HestiaReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaReactNative.debug.xcconfig"; path = "Target Support Files/Pods-HestiaReactNative/Pods-HestiaReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		C9B93E7684F50AD17E9A9EEC /* Pods-HestiaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.release.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.release.xcconfig"; sourceTree = "<group>"; };
+		D3FD4E569E64CAA774C0E7BF /* Pods_HestiaReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HestiaReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9B7809BB34923B8E373431 /* Pods_SuperAppTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperAppTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6035EEBE025DBAB4EE01E38 /* Pods-SuperAppTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.release.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -545,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC157FD42515C2B600195991 /* Hestia.framework in Frameworks */,
+				A2A4C7EDC2DB7EDB3566B83B /* Pods_HestiaReactNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,6 +911,7 @@
 				31C9556027F8C7FC40190964 /* Pods_Hestia.framework */,
 				078E0EC36E5403C0984ED8B1 /* Pods_HestiaIOS.framework */,
 				ED9B7809BB34923B8E373431 /* Pods_SuperAppTemplate.framework */,
+				D3FD4E569E64CAA774C0E7BF /* Pods_HestiaReactNative.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -913,6 +925,8 @@
 				C9B93E7684F50AD17E9A9EEC /* Pods-HestiaIOS.release.xcconfig */,
 				6C54DB62233DD6408CD4D45C /* Pods-SuperAppTemplate.debug.xcconfig */,
 				F6035EEBE025DBAB4EE01E38 /* Pods-SuperAppTemplate.release.xcconfig */,
+				BF045F47F0D8D7A4D17C6FEF /* Pods-HestiaReactNative.debug.xcconfig */,
+				63BFC81570837891F09F00D7 /* Pods-HestiaReactNative.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -920,6 +934,7 @@
 		BC157FB82515C2A100195991 /* HestiaReactNative */ = {
 			isa = PBXGroup;
 			children = (
+				BC158032251616F200195991 /* UI */,
 				BC157FDF2515C2D900195991 /* Bundle */,
 				BC157FDC2515C2D900195991 /* Delegate */,
 				BC157FE32515C2D900195991 /* Extensions */,
@@ -990,6 +1005,16 @@
 				BC15802B2515C36400195991 /* Asset.swift */,
 			);
 			path = ReactNative;
+			sourceTree = "<group>";
+		};
+		BC158032251616F200195991 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BC1580332516171300195991 /* HestiaReactNativeViewController.swift */,
+				BC1580352516185000195991 /* LoadingViewController.swift */,
+				BC15803725161B3900195991 /* HestiaReactNativeApplication.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1124,7 +1149,6 @@
 				1A80E83824E6743400A5A3A3 /* Sources */,
 				1A80E83924E6743400A5A3A3 /* Frameworks */,
 				1A80E83A24E6743400A5A3A3 /* Resources */,
-				39688D85F5C993A125488BD6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1226,6 +1250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC157FD22515C2A100195991 /* Build configuration list for PBXNativeTarget "HestiaReactNative" */;
 			buildPhases = (
+				5ADF1E7A4C02AC9652FCC339 /* [CP] Check Pods Manifest.lock */,
 				BC157FB22515C2A100195991 /* Headers */,
 				BC157FB32515C2A100195991 /* Sources */,
 				BC157FB42515C2A100195991 /* Frameworks */,
@@ -1460,23 +1485,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# build fat framework script\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nWORKSPACE=\"Hestia.xcworkspace\"\nNAME_OUTPUT_FOLDER=\"Outputs\"\nOUTPUT_FOLDER=\"${PROJECT_DIR}/${NAME_OUTPUT_FOLDER}/\"\n\nSDK_TARGET_NAME=\"Hestia\"\n#ZIP_NAME=\"${SDK_TARGET_NAME}.zip\"\n\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\nmkdir -p \"${OUTPUT_FOLDER}\"\n\n# Build Device and Simulator versions\nxcodebuild -workspace \"${WORKSPACE}\" -scheme \"${SDK_TARGET_NAME}\" -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" ONLY_ACTIVE_ARCH=NO BUILD_ROOT=\"${BUILD_ROOT}\" OBJROOT=\"${OBJROOT}/DependentBuilds\"\nxcodebuild -workspace \"${WORKSPACE}\" -scheme \"${SDK_TARGET_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ARCHS=x86_64 ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OBJROOT=\"${OBJROOT}/DependentBuilds\"\n\n# make fat framework\n\"${PROJECT_DIR}/build-phases/make-fat-framework.sh\" \"${UNIVERSAL_OUTPUTFOLDER}\" \"${SDK_TARGET_NAME}\" \"${OUTPUT_FOLDER}\"\n\n# Open the project's directory in Finder\nopen \"${OUTPUT_FOLDER}\"\n\n# Zip file\n#zip -r \"${ZIP_NAME}\" ./\"${NAME_OUTPUT_FOLDER}\"\n";
 		};
-		39688D85F5C993A125488BD6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hestia/Pods-Hestia-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hestia/Pods-Hestia-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hestia/Pods-Hestia-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		58F2E04BA8FDEB6D7A592669 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1493,6 +1501,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-HestiaIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ADF1E7A4C02AC9652FCC339 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HestiaReactNative-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1704,12 +1734,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC1580312515C60500195991 /* AvailableAsset.swift in Sources */,
+				BC15803825161B3900195991 /* HestiaReactNativeApplication.swift in Sources */,
+				BC1580342516171300195991 /* HestiaReactNativeViewController.swift in Sources */,
 				BC157FE82515C2D900195991 /* ReactNativeAppLauncherDelegate.swift in Sources */,
 				BC157FE72515C2D900195991 /* LocalAsset.swift in Sources */,
 				BC157FEC2515C2D900195991 /* URL+.swift in Sources */,
 				BC157FED2515C2D900195991 /* FileManager+.swift in Sources */,
 				BC157FE92515C2D900195991 /* ReactNativeAppLauncherDelegateFactory.swift in Sources */,
 				BC157FEB2515C2D900195991 /* FileUtils.swift in Sources */,
+				BC1580362516185000195991 /* LoadingViewController.swift in Sources */,
 				BC157FEA2515C2D900195991 /* BundleDownloader.swift in Sources */,
 				BC157FE62515C2D900195991 /* LocalApp.swift in Sources */,
 			);
@@ -2383,6 +2416,7 @@
 		};
 		BC157FCE2515C2A100195991 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF045F47F0D8D7A4D17C6FEF /* Pods-HestiaReactNative.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -2408,6 +2442,7 @@
 		};
 		BC157FCF2515C2A100195991 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63BFC81570837891F09F00D7 /* Pods-HestiaReactNative.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

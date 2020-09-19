@@ -1,0 +1,6 @@
+framework module Pods_HestiaReactNative {
+  umbrella header "Pods-HestiaReactNative-umbrella.h"
+
+  export *
+  module * { export * }
+}
