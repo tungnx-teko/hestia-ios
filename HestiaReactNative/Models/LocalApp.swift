@@ -6,10 +6,10 @@
 //  Copyright © 2020 Tung Nguyen. All rights reserved.
 //
 
-import Foundation
+import Hestia
 
-struct LocalApp: Decodable {
+struct LocalApp: Codable {
     var code: String
     var version: String
-    var assets: [LocalAsset]
+    var assets: [Asset]
 }

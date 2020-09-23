@@ -16,4 +16,5 @@ public enum HestiaError: String, Error {
     case invalidManifestData
     case applicationNotInit
     case assetsNotFound
+    case invalidAssetFormat
 }

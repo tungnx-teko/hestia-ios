@@ -20,18 +20,13 @@ public class ReactNativeAppLauncherDelegate: AppLauncherDelegate {
     }
         
     public func startApp(application: HestiaApplication, app: HestiaApp, delegate: HestiaDelegate?, onSuccess: @escaping () -> (), onFailure: @escaping (HestiaError) -> ()) {
-        guard let manifest = app.manifest?.base as? ReactNativeAppManifest else {
+        guard let _ = app.manifest?.base as? ReactNativeAppManifest else {
             onFailure(.invalidManifestData)
             return
         }
         
-//        // TODO: download bundle
-//        BundleDownloader(clientId: clientId).resolveBundleFromManifest(app: app, completion: { url, error in
-//
-//        })
-        
         DispatchQueue.main.async {
-            let rootVC = HestiaReactNativeApplication.shared.createRootViewController(manifest: manifest, delegate: delegate)
+            let rootVC = HestiaReactNativeApplication.shared.createRootViewController(clientId: self.clientId, app: app, delegate: delegate)
             if let rootVC = rootVC {
                 let navigation = UINavigationController(rootViewController: rootVC)
                 application.open(navigation)

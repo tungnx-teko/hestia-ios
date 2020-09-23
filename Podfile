@@ -4,6 +4,9 @@
 source 'https://github.com/CocoaPods/Specs.git' # for using pods from cocoaPods
 source "https://github.com/teko-vn/Specs-ios.git"   # for using pods from Teko
 
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+
 # bitcode enable
 post_install do |installer|
   installer.pods_project.targets.each do |target|
@@ -61,6 +64,10 @@ end
 target 'HestiaReactNative' do
   use_frameworks!
   pod "PromiseKit", "~> 6.8"
+  pod "Alamofire", "~> 4.8.2"
+
+  config = use_native_modules!
+  use_react_native!(:path => config["reactNativePath"])
 end
 
 target 'SuperAppTemplate' do

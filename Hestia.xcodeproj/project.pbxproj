@@ -144,9 +144,27 @@
 		BC15802D2515C36400195991 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15802B2515C36400195991 /* Asset.swift */; };
 		BC15802F2515C3BA00195991 /* NeedClientId.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15802E2515C3BA00195991 /* NeedClientId.swift */; };
 		BC1580312515C60500195991 /* AvailableAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580302515C60500195991 /* AvailableAsset.swift */; };
-		BC1580342516171300195991 /* HestiaReactNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580332516171300195991 /* HestiaReactNativeViewController.swift */; };
+		BC1580342516171300195991 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580332516171300195991 /* RootViewController.swift */; };
 		BC1580362516185000195991 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1580352516185000195991 /* LoadingViewController.swift */; };
 		BC15803825161B3900195991 /* HestiaReactNativeApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15803725161B3900195991 /* HestiaReactNativeApplication.swift */; };
+		BC4044E4251AE2730073FE7C /* DemoReactBridgeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4044E3251AE2730073FE7C /* DemoReactBridgeModule.swift */; };
+		BC4044E6251AE2840073FE7C /* DemoReactBridgeModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4044E5251AE2840073FE7C /* DemoReactBridgeModuleFactory.swift */; };
+		BC4044E8251AE8870073FE7C /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4044E7251AE8870073FE7C /* EventEmitter.swift */; };
+		BC4044EA251B20B30073FE7C /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4044E9251B20B30073FE7C /* Errors.swift */; };
+		BCA443D7251B47A2005386EB /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA443D6251B47A2005386EB /* Date+.swift */; };
+		BCA443D9251B4F7B005386EB /* BundleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA443D8251B4F7B005386EB /* BundleConfig.swift */; };
+		BCA443DB251B522E005386EB /* LocalAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA443DA251B522E005386EB /* LocalAppManager.swift */; };
+		BCBC26C12519D4D300B59067 /* ReactNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26C02519D4D300B59067 /* ReactNativeViewController.swift */; };
+		BCBC26C82519FD0600B59067 /* HestiaModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26C72519FD0600B59067 /* HestiaModule.swift */; };
+		BCBC26CA251A015700B59067 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26C9251A015700B59067 /* ErrorViewController.swift */; };
+		BCBC26CC251A07E800B59067 /* HestiaModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26CB251A07E800B59067 /* HestiaModule.m */; };
+		BCBC26D0251A0EF000B59067 /* TerraModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26CF251A0EF000B59067 /* TerraModule.m */; };
+		BCBC26D2251A0EFB00B59067 /* TerraModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26D1251A0EFB00B59067 /* TerraModule.swift */; };
+		BCBC26D5251A4B4500B59067 /* BaseReactBridgeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26D4251A4B4500B59067 /* BaseReactBridgeModule.swift */; };
+		BCBC26D9251A4F1000B59067 /* BaseReactBridgeModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26D8251A4F1000B59067 /* BaseReactBridgeModuleFactory.swift */; };
+		BCBC26E0251A518300B59067 /* RNRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26DF251A518300B59067 /* RNRequest.swift */; };
+		BCBC26E2251A519F00B59067 /* RNResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26E1251A519F00B59067 /* RNResponse.swift */; };
+		BCBC26E4251A52AE00B59067 /* Codable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26E3251A52AE00B59067 /* Codable+.swift */; };
 		BCC3F0DB699E0C9825232E53 /* Pods_SuperAppTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9B7809BB34923B8E373431 /* Pods_SuperAppTemplate.framework */; };
 		F7B025530F21531D2F5157CE /* Pods_Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C9556027F8C7FC40190964 /* Pods_Hestia.framework */; };
 /* End PBXBuildFile section */
@@ -467,9 +485,27 @@
 		BC15802B2515C36400195991 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		BC15802E2515C3BA00195991 /* NeedClientId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedClientId.swift; sourceTree = "<group>"; };
 		BC1580302515C60500195991 /* AvailableAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableAsset.swift; sourceTree = "<group>"; };
-		BC1580332516171300195991 /* HestiaReactNativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaReactNativeViewController.swift; sourceTree = "<group>"; };
+		BC1580332516171300195991 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		BC1580352516185000195991 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		BC15803725161B3900195991 /* HestiaReactNativeApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaReactNativeApplication.swift; sourceTree = "<group>"; };
+		BC4044E3251AE2730073FE7C /* DemoReactBridgeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoReactBridgeModule.swift; sourceTree = "<group>"; };
+		BC4044E5251AE2840073FE7C /* DemoReactBridgeModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoReactBridgeModuleFactory.swift; sourceTree = "<group>"; };
+		BC4044E7251AE8870073FE7C /* EventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
+		BC4044E9251B20B30073FE7C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		BCA443D6251B47A2005386EB /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		BCA443D8251B4F7B005386EB /* BundleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleConfig.swift; sourceTree = "<group>"; };
+		BCA443DA251B522E005386EB /* LocalAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAppManager.swift; sourceTree = "<group>"; };
+		BCBC26C02519D4D300B59067 /* ReactNativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeViewController.swift; sourceTree = "<group>"; };
+		BCBC26C72519FD0600B59067 /* HestiaModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaModule.swift; sourceTree = "<group>"; };
+		BCBC26C9251A015700B59067 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		BCBC26CB251A07E800B59067 /* HestiaModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HestiaModule.m; sourceTree = "<group>"; };
+		BCBC26CF251A0EF000B59067 /* TerraModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerraModule.m; sourceTree = "<group>"; };
+		BCBC26D1251A0EFB00B59067 /* TerraModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerraModule.swift; sourceTree = "<group>"; };
+		BCBC26D4251A4B4500B59067 /* BaseReactBridgeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReactBridgeModule.swift; sourceTree = "<group>"; };
+		BCBC26D8251A4F1000B59067 /* BaseReactBridgeModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReactBridgeModuleFactory.swift; sourceTree = "<group>"; };
+		BCBC26DF251A518300B59067 /* RNRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNRequest.swift; sourceTree = "<group>"; };
+		BCBC26E1251A519F00B59067 /* RNResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNResponse.swift; sourceTree = "<group>"; };
+		BCBC26E3251A52AE00B59067 /* Codable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+.swift"; sourceTree = "<group>"; };
 		BF045F47F0D8D7A4D17C6FEF /* Pods-HestiaReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaReactNative.debug.xcconfig"; path = "Target Support Files/Pods-HestiaReactNative/Pods-HestiaReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		C9B93E7684F50AD17E9A9EEC /* Pods-HestiaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.release.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.release.xcconfig"; sourceTree = "<group>"; };
 		D3FD4E569E64CAA774C0E7BF /* Pods_HestiaReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HestiaReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -934,6 +970,7 @@
 		BC157FB82515C2A100195991 /* HestiaReactNative */ = {
 			isa = PBXGroup;
 			children = (
+				BCBC26C42519FC4200B59067 /* NativeModule */,
 				BC158032251616F200195991 /* UI */,
 				BC157FDF2515C2D900195991 /* Bundle */,
 				BC157FDC2515C2D900195991 /* Delegate */,
@@ -978,6 +1015,8 @@
 			isa = PBXGroup;
 			children = (
 				BC157FE02515C2D900195991 /* BundleDownloader.swift */,
+				BCA443D8251B4F7B005386EB /* BundleConfig.swift */,
+				BCA443DA251B522E005386EB /* LocalAppManager.swift */,
 			);
 			path = Bundle;
 			sourceTree = "<group>";
@@ -995,6 +1034,8 @@
 			children = (
 				BC157FE42515C2D900195991 /* URL+.swift */,
 				BC157FE52515C2D900195991 /* FileManager+.swift */,
+				BCBC26E3251A52AE00B59067 /* Codable+.swift */,
+				BCA443D6251B47A2005386EB /* Date+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1010,11 +1051,72 @@
 		BC158032251616F200195991 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				BC1580332516171300195991 /* HestiaReactNativeViewController.swift */,
+				BC1580332516171300195991 /* RootViewController.swift */,
 				BC1580352516185000195991 /* LoadingViewController.swift */,
 				BC15803725161B3900195991 /* HestiaReactNativeApplication.swift */,
+				BCBC26C02519D4D300B59067 /* ReactNativeViewController.swift */,
+				BCBC26C9251A015700B59067 /* ErrorViewController.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		BCBC26C42519FC4200B59067 /* NativeModule */ = {
+			isa = PBXGroup;
+			children = (
+				BCBC26CE251A0EC500B59067 /* TerraModule */,
+				BCBC26CD251A0EB300B59067 /* HestiaModule */,
+			);
+			path = NativeModule;
+			sourceTree = "<group>";
+		};
+		BCBC26CD251A0EB300B59067 /* HestiaModule */ = {
+			isa = PBXGroup;
+			children = (
+				BCBC26CB251A07E800B59067 /* HestiaModule.m */,
+				BCBC26C72519FD0600B59067 /* HestiaModule.swift */,
+			);
+			path = HestiaModule;
+			sourceTree = "<group>";
+		};
+		BCBC26CE251A0EC500B59067 /* TerraModule */ = {
+			isa = PBXGroup;
+			children = (
+				BCBC26DE251A515B00B59067 /* Model */,
+				BCBC26DA251A50F400B59067 /* DemoReactBridge */,
+				BCBC26D3251A4B1C00B59067 /* ReactBridge */,
+				BCBC26CF251A0EF000B59067 /* TerraModule.m */,
+				BCBC26D1251A0EFB00B59067 /* TerraModule.swift */,
+				BC4044E9251B20B30073FE7C /* Errors.swift */,
+			);
+			path = TerraModule;
+			sourceTree = "<group>";
+		};
+		BCBC26D3251A4B1C00B59067 /* ReactBridge */ = {
+			isa = PBXGroup;
+			children = (
+				BCBC26D4251A4B4500B59067 /* BaseReactBridgeModule.swift */,
+				BCBC26D8251A4F1000B59067 /* BaseReactBridgeModuleFactory.swift */,
+				BC4044E7251AE8870073FE7C /* EventEmitter.swift */,
+			);
+			path = ReactBridge;
+			sourceTree = "<group>";
+		};
+		BCBC26DA251A50F400B59067 /* DemoReactBridge */ = {
+			isa = PBXGroup;
+			children = (
+				BC4044E3251AE2730073FE7C /* DemoReactBridgeModule.swift */,
+				BC4044E5251AE2840073FE7C /* DemoReactBridgeModuleFactory.swift */,
+			);
+			path = DemoReactBridge;
+			sourceTree = "<group>";
+		};
+		BCBC26DE251A515B00B59067 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCBC26DF251A518300B59067 /* RNRequest.swift */,
+				BCBC26E1251A519F00B59067 /* RNResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1329,6 +1431,7 @@
 					};
 					BC157FB62515C2A100195991 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					BC157FBE2515C2A100195991 = {
 						CreatedOnToolsVersion = 11.5;
@@ -1733,17 +1836,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCBC26D5251A4B4500B59067 /* BaseReactBridgeModule.swift in Sources */,
+				BCBC26E0251A518300B59067 /* RNRequest.swift in Sources */,
 				BC1580312515C60500195991 /* AvailableAsset.swift in Sources */,
+				BCBC26D9251A4F1000B59067 /* BaseReactBridgeModuleFactory.swift in Sources */,
 				BC15803825161B3900195991 /* HestiaReactNativeApplication.swift in Sources */,
-				BC1580342516171300195991 /* HestiaReactNativeViewController.swift in Sources */,
+				BCBC26CC251A07E800B59067 /* HestiaModule.m in Sources */,
+				BC1580342516171300195991 /* RootViewController.swift in Sources */,
+				BCBC26D0251A0EF000B59067 /* TerraModule.m in Sources */,
 				BC157FE82515C2D900195991 /* ReactNativeAppLauncherDelegate.swift in Sources */,
 				BC157FE72515C2D900195991 /* LocalAsset.swift in Sources */,
+				BC4044E4251AE2730073FE7C /* DemoReactBridgeModule.swift in Sources */,
+				BCBC26C82519FD0600B59067 /* HestiaModule.swift in Sources */,
+				BCBC26D2251A0EFB00B59067 /* TerraModule.swift in Sources */,
+				BC4044E6251AE2840073FE7C /* DemoReactBridgeModuleFactory.swift in Sources */,
 				BC157FEC2515C2D900195991 /* URL+.swift in Sources */,
+				BCBC26E4251A52AE00B59067 /* Codable+.swift in Sources */,
+				BCA443DB251B522E005386EB /* LocalAppManager.swift in Sources */,
 				BC157FED2515C2D900195991 /* FileManager+.swift in Sources */,
 				BC157FE92515C2D900195991 /* ReactNativeAppLauncherDelegateFactory.swift in Sources */,
+				BCBC26C12519D4D300B59067 /* ReactNativeViewController.swift in Sources */,
+				BC4044EA251B20B30073FE7C /* Errors.swift in Sources */,
+				BCA443D7251B47A2005386EB /* Date+.swift in Sources */,
+				BCBC26E2251A519F00B59067 /* RNResponse.swift in Sources */,
 				BC157FEB2515C2D900195991 /* FileUtils.swift in Sources */,
 				BC1580362516185000195991 /* LoadingViewController.swift in Sources */,
 				BC157FEA2515C2D900195991 /* BundleDownloader.swift in Sources */,
+				BCBC26CA251A015700B59067 /* ErrorViewController.swift in Sources */,
+				BCA443D9251B4F7B005386EB /* BundleConfig.swift in Sources */,
+				BC4044E8251AE8870073FE7C /* EventEmitter.swift in Sources */,
 				BC157FE62515C2D900195991 /* LocalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2418,6 +2539,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF045F47F0D8D7A4D17C6FEF /* Pods-HestiaReactNative.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2G2F7B8D22;
@@ -2435,6 +2557,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ios.HestiaReactNative;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2444,6 +2567,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63BFC81570837891F09F00D7 /* Pods-HestiaReactNative.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2G2F7B8D22;

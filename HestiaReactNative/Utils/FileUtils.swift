@@ -36,4 +36,11 @@ class FileUtils {
             }
         }
     }
+    
+    static func save(jsonObject: LocalApp, to destination: URL) throws {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted]
+        let data = try encoder.encode(jsonObject)
+        try data.write(to: destination, options: [.atomicWrite])
+    }
 }

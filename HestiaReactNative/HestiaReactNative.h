@@ -16,4 +16,10 @@ FOUNDATION_EXPORT const unsigned char HestiaReactNativeVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <HestiaReactNative/PublicHeader.h>
 
+#import <React/RCTBridgeModule.h>
+#import <React/RCTViewManager.h>
+#import <React/RCTBridge.h>
+#import <React/RCTUIManager.h>
+#import <React/RCTEventEmitter.h>
+
 

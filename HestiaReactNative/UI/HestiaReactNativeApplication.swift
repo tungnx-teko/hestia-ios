@@ -11,10 +11,10 @@ import Hestia
 class HestiaReactNativeApplication {
     public static let shared = HestiaReactNativeApplication()
     
-    private(set) var rootViewController: HestiaReactNativeViewController? = nil
+    private(set) var rootViewController: RootViewController? = nil
     
-    public func createRootViewController(manifest: ReactNativeAppManifest, delegate: HestiaDelegate?) -> HestiaReactNativeViewController? {
-        rootViewController = HestiaReactNativeViewController(manifest: manifest, delegate: delegate)
+    public func createRootViewController(clientId: String, app: HestiaApp, delegate: HestiaDelegate?) -> RootViewController? {
+        rootViewController = RootViewController(clientId: clientId, app: app, delegate: delegate)
         return rootViewController
     }
 }

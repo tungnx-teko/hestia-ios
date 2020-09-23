@@ -13,44 +13,21 @@ import Alamofire
 
 class BundleDownloader {
     private let clientId: String
+    private let localAppManager: LocalAppManager
     
-    init(clientId: String) {
+    init(clientId: String, localAppManager: LocalAppManager) {
         self.clientId = clientId
+        self.localAppManager = localAppManager
     }
     
     func resolveBundleFromManifest(app: HestiaApp, completion: @escaping (_ mainJsBundleUrl: URL?, _ error: Error?) -> ()) {
-        let localApp = getCurrentLocalApp(for: app)
+        let localApp = localAppManager.getCurrentLocalApp(for: app)
         
         if (shouldDownloadNewVersion(localApp, app)) {
             downloadNewVersion(localApp, app, completion)
+        } else  {
+            completion(localAppManager.getMainBundleJsUrl(app.code, app.version), nil)
         }
-        
-        completion(getMainBundleJsUrl(app.code, app.version), nil)
-    }
-    
-    private func getCurrentLocalApp(for app: HestiaApp) -> LocalApp? {
-        let userDefaults = UserDefaults.standard
-        var localApp: LocalApp? = nil
-        
-        let currentAppKey = "@@-rn-apps-\(app.code)-@@"
-        let currentAppVersion = userDefaults.string(forKey: currentAppKey)
-        
-        guard currentAppVersion != nil else {
-            return nil
-        }
-
-        let appDirectoryURL = FileManager.getDirectoryURL(of: app.code)
-        let currentLocalAppManifestURL = appDirectoryURL.appendingPathComponent(app.version).appendingPathComponent("app.manifest", isDirectory: false)
-        
-        do {
-            let data = try Data(contentsOf: currentLocalAppManifestURL)
-            let decoder = JSONDecoder()
-            localApp = try decoder.decode(LocalApp.self, from: data)
-        } catch {
-            // TODO: forward error to higher layer
-        }
-
-        return localApp
     }
     
     private func shouldDownloadNewVersion(_ localApp: LocalApp?, _ app: HestiaApp) -> Bool {
@@ -59,17 +36,21 @@ class BundleDownloader {
     
     private func downloadNewVersion(_ localApp: LocalApp?, _ app: HestiaApp, _ completion: @escaping (_ mainJsBundleUrl: URL?, _ error: Error?) -> ()) {
         
-        do {
-            let (availableAssets, neededRemoteAssets) = checkNewAssetsWithLocal(localApp: localApp, app: app)
-            let newLocalAppDirectoryUrl = getLocalAppDirectoryUrl(app.code, app.version)
+        let (availableAssets, neededRemoteAssets) = checkNewAssetsWithLocal(localApp: localApp, app: app)
+        let newLocalAppDirectoryUrl = localAppManager.getLocalAppDirectoryUrl(app.code, app.version)
 
-            try copyAvailableAssets(availableLocalAssets: availableAssets)
-            
-            downloadNeededAssets(neededAssets: neededRemoteAssets, for: app, to: newLocalAppDirectoryUrl)
-//            saveNewLocalAppToDb(app)
-//            deleteLocalAppDirectory(localApp)
-        } catch {
-            // TODO
+        firstly {
+            copyAvailableAssets(availableLocalAssets: availableAssets)
+        }.then { (result: Void) -> Promise<Void> in
+            self.downloadNeededAssets(neededAssets: neededRemoteAssets, for: app, to: newLocalAppDirectoryUrl)
+        }.then { (result: Void) -> Promise<Void> in
+            self.saveNewLocalAppManifest(app: app)
+        }.then { (result: Void) -> Promise<Void> in
+            self.deleteLocalAppDirectory(localApp: localApp)
+        }.done {
+            completion(self.localAppManager.getMainBundleJsUrl(app.code, app.version), nil)
+        }.catch { error in
+            completion(nil, error)
         }
         
     }
@@ -83,9 +64,9 @@ class BundleDownloader {
             return ([], appAssets)
         }
 
-        let localAssets: [LocalAsset] = localApp!.assets
-        let localAppDirectionUrl = getLocalAppDirectoryUrl(localApp!.code, localApp!.version)
-        let newLocalAppDirectoryUrl = getLocalAppDirectoryUrl(app.code, app.version)
+        let localAssets: [Asset] = localApp!.assets
+        let localAppDirectionUrl = localAppManager.getLocalAppDirectoryUrl(localApp!.code, localApp!.version)
+        let newLocalAppDirectoryUrl = localAppManager.getLocalAppDirectoryUrl(app.code, app.version)
 
         var availableAssets = [AvailableAsset]()
         var neededAssets = [Asset]()
@@ -109,13 +90,16 @@ class BundleDownloader {
     
     private func copyAvailableAssets(
         availableLocalAssets: [AvailableAsset]
-    ) throws {
-        do {
-            for availableAsset in availableLocalAssets {
-                try FileManager.default.copyItem(at: availableAsset.sourceAssetUrl, to: availableAsset.destinationAssetUrl)
+    ) -> Promise<Void> {
+        return Promise { seal in
+            do {
+                for availableAsset in availableLocalAssets {
+                    try FileManager.default.copyItem(at: availableAsset.sourceAssetUrl, to: availableAsset.destinationAssetUrl)
+                }
+                seal.fulfill(())
+            } catch {
+                seal.reject(error)
             }
-        } catch {
-            throw error
         }
     }
     
@@ -123,18 +107,21 @@ class BundleDownloader {
         neededAssets: [Asset],
         for app: HestiaApp,
         to newLocalAppDirectoryUrl: URL
-    ) {
-        let neededAssetIds = neededAssets.map { $0.id }
+    ) -> Promise<Void> {
+        return Promise { seal in
+            let neededAssetIds = neededAssets.map { $0.id }
+            let localAppBundleUrl = newLocalAppDirectoryUrl.appendingPathComponent("bundle")
 
-        firstly {
-            fetchAssetList(app.code, app.version, neededAssetIds)
-        }.then { (assets: [AssetDetail]) -> Promise<[URL]> in
-            let downloadAssetPromises = assets.map { self.downloadAsset($0, to: newLocalAppDirectoryUrl) }
-            return when(fulfilled: downloadAssetPromises)
-        }.done { result in
-            print(result)
-        }.catch { error in
-            print(error)
+            firstly {
+                fetchAssetList(app.code, app.version, neededAssetIds)
+            }.then { (assets: [AssetDetail]) -> Promise<[URL]> in
+                let downloadAssetPromises = assets.map { self.downloadAsset($0, to: localAppBundleUrl) }
+                return when(fulfilled: downloadAssetPromises)
+            }.done { result in
+                return seal.fulfill(())
+            }.catch { error in
+                return seal.reject(error)
+            }
         }
     }
 
@@ -151,37 +138,51 @@ class BundleDownloader {
         }
     }
     
-    private func downloadAsset(_ asset: AssetDetail, to newLocalAppDirectoryUrl: URL) -> Promise<URL> {
+    private func downloadAsset(_ asset: AssetDetail, to directoryDestination: URL) -> Promise<URL> {
         return Promise { seal in
             Alamofire.request(asset.content).responseData { response in
-                if let data = response.value {
-                    if let decodedData = Data(base64Encoded: data) {
-                        do {
-                            let assetFileUrl = newLocalAppDirectoryUrl.appendingPathComponent(asset.name, isDirectory: false)
-                            try FileUtils.createFileIfNotExists(file: assetFileUrl)
-                            try decodedData.write(to: assetFileUrl)
-                            seal.fulfill(assetFileUrl)
-                        } catch {
-                            // TODO: error here
-                            print(error)
-                            seal.reject(error)
-                        }
-                    } else  {
-                        // TODO: error here
-                    }
-                } else {
-                    print(response.error)
+                guard let data = response.value else {
                     seal.reject(response.error!)
+                    return
+                }
+                guard let decodedData = Data(base64Encoded: data) else {
+                    seal.reject(HestiaError.invalidAssetFormat)
+                    return
+                }
+                
+                do {
+                    let assetFileUrl = directoryDestination.appendingPathComponent(asset.name, isDirectory: false)
+                    try FileUtils.createFileIfNotExists(file: assetFileUrl)
+                    try decodedData.write(to: assetFileUrl)
+                    seal.fulfill(assetFileUrl)
+                } catch {
+                    seal.reject(error)
                 }
             }
         }
     }
     
-    private func getMainBundleJsUrl(_ appCode: String, _ appVersion: String) -> URL {
-        return getLocalAppDirectoryUrl(appCode, appCode).appendingPathComponent("main.jsbundle", isDirectory: false)
+    private func saveNewLocalAppManifest(app: HestiaApp) -> Promise<Void> {
+        return Promise { seal in
+            do {
+                try localAppManager.saveNewLocalApp(for: app)
+                seal.fulfill(())
+            } catch {
+                seal.reject(error)
+            }
+        }
     }
     
-    private func getLocalAppDirectoryUrl(_ appCode: String, _ appVersion: String) -> URL {
-        return FileManager.getDirectoryURL(of: appCode).appendingPathComponent(appVersion).appendingPathComponent("bundle")
-   }
+    private func deleteLocalAppDirectory(localApp: LocalApp?) -> Promise<Void> {
+        return Promise { seal in
+            do {
+                if let localApp = localApp {
+                    try FileUtils.removeItemIfExists(atPath: localAppManager.getLocalAppDirectoryUrl(localApp.code, localApp.version))
+                }
+                seal.fulfill(())
+            } catch {
+                seal.reject(error)
+            }
+        }
+    }
 }
