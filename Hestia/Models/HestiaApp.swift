@@ -38,8 +38,9 @@ public class HestiaApp: Decodable {
         case .webView:
             let webAppManifest = try values.decodeIfPresent(WebAppManifest.self, forKey: .manifest)
             self.manifest = webAppManifest.map { AnyHestiaAppManifest($0) }
-        default:
-            self.manifest = nil
+        case .reactNative:
+            let reactNativeAppManifest = try values.decodeIfPresent(ReactNativeAppManifest.self, forKey: .manifest)
+            self.manifest = reactNativeAppManifest.map { AnyHestiaAppManifest($0) }
         }
     }
     

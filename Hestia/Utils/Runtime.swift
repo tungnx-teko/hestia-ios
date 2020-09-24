@@ -26,6 +26,8 @@ public class Runtime {
     
     public static func subclasses(of `class`: AnyClass) -> [AnyClass] {
         return self.allClasses().filter {
+            if ObjectIdentifier($0) == ObjectIdentifier(`class`) { return false }
+
             var ancestor: AnyClass? = $0
             while let type = ancestor {
                 if ObjectIdentifier(type) == ObjectIdentifier(`class`) { return true }

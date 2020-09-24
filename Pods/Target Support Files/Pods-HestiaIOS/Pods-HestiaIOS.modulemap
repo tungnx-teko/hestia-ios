@@ -1,6 +1,0 @@
-framework module Pods_HestiaIOS {
-  umbrella header "Pods-HestiaIOS-umbrella.h"
-
-  export *
-  module * { export * }
-}
