@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Hestia
 
 class WebAppLauncherDelegateFactory: AppLauncherDelegateFactory {
     

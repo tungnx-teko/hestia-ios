@@ -10,8 +10,8 @@ import UIKit
 
 public extension UIApplication {
     
-    func topViewController() -> UIViewController? {
-        return UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController?.topViewController()
-    }
+//    func topViewController() -> UIViewController? {
+//        return UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController?.topViewController()
+//    }
     
 }

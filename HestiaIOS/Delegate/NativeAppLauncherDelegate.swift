@@ -14,7 +14,7 @@ class NativeAppLauncherDelegate: AppLauncherDelegate {
     
     var appType: AppType = .native
     
-    public func startApp(application: HestiaApplication, app: HestiaApp, delegate: HestiaDelegate? = nil,
+    public func startApp(onViewController hostViewController: UIViewController, app: HestiaApp, delegate: HestiaDelegate? = nil,
                          onSuccess: @escaping () -> (),
                          onFailure: @escaping (HestiaError) -> ()) {
         guard let data = (app.manifest?.base as? IOSAppManifest)?.data else {
@@ -27,7 +27,10 @@ class NativeAppLauncherDelegate: AppLauncherDelegate {
             
             let launcher = self?.getAppLauncher(data: data, launcherData: launcherData, delegate: delegate)
             
-            launcher?.viewController.map { application.open($0) }
+            launcher?.create(className: data.mainClass, launcherData: launcherData, delegate: delegate, completion: { viewController in
+                guard let viewController = viewController else { return }
+                hostViewController.navigationController?.pushViewController(viewController, animated: true)
+            })
         }) { error in
             onFailure(error)
         }
@@ -45,7 +48,7 @@ extension NativeAppLauncherDelegate {
     func getMiniAppIdToken(manifestData: IOSNativeManifestData,
                            onSuccess: @escaping (String) -> (),
                            onFailure: @escaping (HestiaError) -> ()) {
-        AuthManager.shared.exchangeToken(audience: manifestData.iamAudience) { (success, idToken, error) in
+        JanusManager.shared.exchangeToken(audience: manifestData.iamAudience) { (success, idToken, error) in
             if let token = idToken {
                 onSuccess(token)
             } else if let _ = error {

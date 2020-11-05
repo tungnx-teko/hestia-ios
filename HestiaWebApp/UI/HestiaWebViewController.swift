@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import HestiaWebModule
+import Hestia
 
 open class HestiaWebViewController: UIViewController {
     

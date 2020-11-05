@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SuperAppDemo/SuperAppDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TrackingBridge/TrackingBridge.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Hestia.xcodeproj">
    </FileRef>
    <FileRef

@@ -46,20 +46,26 @@ end
 target 'Hestia' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for Hestia
-  pod 'TekCoreNetwork'
-  pod 'TekCoreService', '~> 0.2.6'
-  pod 'TekServiceInterfaces'
+  pod 'TekCoreService', '0.3.24'
   pod 'Kingfisher'
-
+  
 end
 
 target 'HestiaIOS' do
   use_frameworks!
-  pod 'TekServiceInterfaces'
-  pod 'Janus', '~> 0.2.9', :source => 'https://github.com/teko-vn/Specs-ios.git'
+#  pod 'TekServiceInterfaces'
+  pod 'Janus', '~> 0.3.26', :source => 'https://github.com/teko-vn/Specs-ios.git'
 end
+
+target 'MiniAppSdk' do
+  use_frameworks!
+  
+  pod 'Hestia', '0.0.3'
+  pod 'HestiaIOS', '0.0.2'
+end
+
 
 target 'HestiaReactNative' do
   use_frameworks!
@@ -70,12 +76,27 @@ target 'HestiaReactNative' do
   use_react_native!(:path => config["reactNativePath"])
 end
 
+target 'TripiFlightSdkConnector' do
+  use_frameworks!
+  
+#  pod 'JVFloatLabeledTextField', '1.1.1'
+#  pod 'Toast-Swift'
+  pod 'TripiFlightKit', '0.0.1-dev', :source => 'https://github.com/teko-vn/Specs-ios.git'
+  pod 'Hestia', '0.0.3'
+  pod 'HestiaIOS', '0.0.2'
+end
+
+
 target 'SuperAppTemplate' do
   use_frameworks!
   
-  pod 'TekCoreNetwork'
-  pod 'TekCoreService', '~> 0.2.6'
+  #  pod 'TekCoreNetwork'
+  pod 'TekCoreService', '0.3.24'
   pod 'TekServiceInterfaces'
-  pod 'Janus', '~> 0.2.9', :source => 'https://github.com/teko-vn/Specs-ios.git'
+  pod 'Janus', '~> 0.3.26', :source => 'https://github.com/teko-vn/Specs-ios.git'
   pod 'Kingfisher'
+  pod 'JVFloatLabeledTextField', '1.1.1'
+  pod 'Toast-Swift'
+  pod 'IQKeyboardManagerSwift', '6.5.0'
+
 end

@@ -33,6 +33,11 @@ public class MiniAppList: UICollectionViewController, UICollectionViewDelegateFl
         self.collectionView.backgroundColor = .white
         self.collectionView!.register(UINib(nibName: "MiniAppCell", bundle: Bundle(for: MiniAppCell.self)), forCellWithReuseIdentifier: reuseIdentifier)
 
+        
+    }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         Hestia.shared.fetchApplicationList(completion: { result in
             switch result {
             case .success(let apps):

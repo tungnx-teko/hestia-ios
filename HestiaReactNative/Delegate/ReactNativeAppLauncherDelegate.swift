@@ -19,7 +19,7 @@ public class ReactNativeAppLauncherDelegate: AppLauncherDelegate {
         self.clientId = clientId
     }
         
-    public func startApp(application: HestiaApplication, app: HestiaApp, delegate: HestiaDelegate?, onSuccess: @escaping () -> (), onFailure: @escaping (HestiaError) -> ()) {
+    public func startApp(onViewController hostViewController: UIViewController, app: HestiaApp, delegate: HestiaDelegate?, onSuccess: @escaping () -> (), onFailure: @escaping (HestiaError) -> ()) {
         guard let _ = app.manifest?.base as? ReactNativeAppManifest else {
             onFailure(.invalidManifestData)
             return
@@ -29,7 +29,7 @@ public class ReactNativeAppLauncherDelegate: AppLauncherDelegate {
             let rootVC = HestiaReactNativeApplication.shared.createRootViewController(clientId: self.clientId, app: app, delegate: delegate)
             if let rootVC = rootVC {
                 let navigation = UINavigationController(rootViewController: rootVC)
-                application.open(navigation)
+                hostViewController.present(navigation, animated: true, completion: nil)
                 onSuccess()
             } else {
                 // TODO: error

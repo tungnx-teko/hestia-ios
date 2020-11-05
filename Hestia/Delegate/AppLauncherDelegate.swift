@@ -11,7 +11,10 @@ import UIKit
 
 public protocol AppLauncherDelegate {
     var appType: AppType { get }
-    func startApp(application: HestiaApplication, app: HestiaApp, delegate: HestiaDelegate?, onSuccess: @escaping () -> (), onFailure: @escaping (HestiaError) -> ())
+    func startApp(onViewController hostViewController: UIViewController,
+                  app: HestiaApp,
+                  delegate: HestiaDelegate?,
+                  onSuccess: @escaping () -> (), onFailure: @escaping (HestiaError) -> ())
 }
 
 public protocol AppLauncherDelegateFactory {

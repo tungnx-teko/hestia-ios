@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginGoogleWasTapped(_ sender: Any) {
-        AuthLoginManager.shared.login(FacebookLogin(presentViewController: self, delegate: nil))
+        JanusLoginManager.shared.login(FacebookLogin(presentViewController: self, delegate: nil))
     }
     
     func displayViewController(_ childVC: UIViewController, in view: UIView) {
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
 extension ViewController: MiniAppListDelegate {
 
     func didSelectApp(appList: MiniAppList, appCode: String) {
-        Hestia.shared.startApp(appCode: appCode, delegate: nil, onSuccess: {
+        Hestia.shared.startApp(onViewController: self, appCode: appCode, delegate: nil, onSuccess: {
             print("Open app successfully")
         }) { error in
             self.showAlert(message: error.rawValue)
@@ -58,13 +58,13 @@ extension ViewController: MiniAppListDelegate {
     
 }
 
-extension ViewController: AuthLoginDelegate {
+extension ViewController: JanusLoginDelegate {
     
     func loginSuccess(accessToken: String, refreshToken: String) {
         print(accessToken)
     }
     
-    func loginFail(error: AuthError?) {
+    func loginFail(error: JanusError?) {
         print("loi cmnr")
     }
     

@@ -9,12 +9,14 @@
 import UIKit
 import HestiaIOS
 import Hestia
+import TrackingBridge
 
 class MiniAppLauncher: IOSAppLauncher, ViewControllerDelegate {
     
     required init(className: String, launcherData: AppLauncherData, delegate: HestiaDelegate? = nil) {
         super.init(className: className, launcherData: launcherData, delegate: delegate)
-        (viewController as? ViewController)?.delegate = self
+        
+        AppTrackingBridgeManager.shared.trackAppEvent(appId: "MINIAPPSDK", eventType: "TÉT", data: ["a": "b"])
     }
     
     func onSuccess() {

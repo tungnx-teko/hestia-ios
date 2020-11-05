@@ -18,8 +18,9 @@ public protocol HestiaApplication {
 public extension HestiaApplication where Self: UIApplication {
     
     func open(_ viewController: UIViewController) {
-        viewController.modalPresentationStyle = .overCurrentContext
-        topViewController()?.present(viewController, animated: true, completion: nil)
+//        viewController.modalPresentationStyle = .overCurrentContext
+//        let navigation = UINavigationController(rootViewController: viewController)
+//        topViewController()?.present(navigation, animated: true, completion: nil)
     }
     
 }
