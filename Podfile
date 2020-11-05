@@ -89,6 +89,8 @@ end
 target 'ReactNativeExample' do
   use_frameworks!
   
+  config = use_native_modules!
+  use_react_native!(:path => config["reactNativePath"])
   # pod 'Hestia', '0.0.3'
 end
 
