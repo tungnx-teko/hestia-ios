@@ -43,8 +43,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0F5F3DA1B308CCF721BF67B9 /* Pods_HestiaReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35F363FAEC1D0EF1D68CF4B /* Pods_HestiaReactNative.framework */; };
-		18F633651FF22F5E2AB66E6A /* Pods_Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F115133C8BAF7C180689BE1 /* Pods_Hestia.framework */; };
+		17908DF7F23A843A2DB03C87 /* Pods_TripiFlightSdkConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EC941AAC5FF472114797D4 /* Pods_TripiFlightSdkConnector.framework */; };
+		19FAAFF340321E47CDBC2824 /* Pods_HestiaReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251B38A547DACD50ADC9BBD8 /* Pods_HestiaReactNative.framework */; };
 		1A14D72424FE334A0012CF0C /* Decodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D72324FE334A0012CF0C /* Decodable+.swift */; };
 		1A14D72724FE338A0012CF0C /* HestiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D72624FE338A0012CF0C /* HestiaApp.swift */; };
 		1A14D72924FE33990012CF0C /* HestiaAppManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D72824FE33990012CF0C /* HestiaAppManifest.swift */; };
@@ -144,9 +144,9 @@
 		1ABADF1F2500ED6B0091385D /* IOSNativeManifestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABADF1E2500ED6B0091385D /* IOSNativeManifestData.swift */; };
 		1AC90455252B62BF0081DF40 /* TripiFlightSdkConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC90453252B62BF0081DF40 /* TripiFlightSdkConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AC9045E252B62D30081DF40 /* TripiFlightLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9045D252B62D30081DF40 /* TripiFlightLauncher.swift */; };
-		2007CA964D09BBA5930CA48D /* Pods_MiniAppSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F8C4315CEE181B351A2A87 /* Pods_MiniAppSdk.framework */; };
-		42A98AEB1F227331AAB325FA /* Pods_SuperAppTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F371CE0A21B077A6AE2CC6 /* Pods_SuperAppTemplate.framework */; };
-		626092464312B3D042931C5E /* Pods_HestiaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D2AABA36CEB0807A7A664 /* Pods_HestiaIOS.framework */; };
+		319DEF1F9805DD14D7E77D67 /* Pods_Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3D22B8C9266268136527A5 /* Pods_Hestia.framework */; };
+		3E16AF998FDD3BED2840C840 /* Pods_HestiaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7753F75644188E7EF816A6 /* Pods_HestiaIOS.framework */; };
+		55C74A71785CDA891A6414D1 /* Pods_MiniAppSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ABCB1361253466B1B85D9C /* Pods_MiniAppSdk.framework */; };
 		BC157FC02515C2A100195991 /* HestiaReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC157FB72515C2A100195991 /* HestiaReactNative.framework */; };
 		BC157FC72515C2A100195991 /* HestiaReactNativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FC62515C2A100195991 /* HestiaReactNativeTests.swift */; };
 		BC157FC92515C2A100195991 /* HestiaReactNative.h in Headers */ = {isa = PBXBuildFile; fileRef = BC157FB92515C2A100195991 /* HestiaReactNative.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -178,6 +178,9 @@
 		BC4044E8251AE8870073FE7C /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4044E7251AE8870073FE7C /* EventEmitter.swift */; };
 		BC4044EA251B20B30073FE7C /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4044E9251B20B30073FE7C /* Errors.swift */; };
 		BC4E057C25539A44003A4517 /* RNResponseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4E057B25539A44003A4517 /* RNResponseUtils.swift */; };
+		BC4E057E2553BC8B003A4517 /* RNResponseUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4E057D2553BC8B003A4517 /* RNResponseUtilsTests.swift */; };
+		BC4E05812553F250003A4517 /* Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4E05802553F250003A4517 /* Manifest.swift */; };
+		BC4E05842553FB2D003A4517 /* EquationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4E05832553FB2D003A4517 /* EquationUtils.swift */; };
 		BCA443D7251B47A2005386EB /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA443D6251B47A2005386EB /* Date+.swift */; };
 		BCA443D9251B4F7B005386EB /* BundleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA443D8251B4F7B005386EB /* BundleConfig.swift */; };
 		BCA443DB251B522E005386EB /* LocalAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA443DA251B522E005386EB /* LocalAppManager.swift */; };
@@ -192,7 +195,7 @@
 		BCBC26E0251A518300B59067 /* RNRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26DF251A518300B59067 /* RNRequest.swift */; };
 		BCBC26E2251A519F00B59067 /* RNResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26E1251A519F00B59067 /* RNResponse.swift */; };
 		BCBC26E4251A52AE00B59067 /* Codable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC26E3251A52AE00B59067 /* Codable+.swift */; };
-		E9471EF7452CD9018637BC6F /* Pods_TripiFlightSdkConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB6BA32EB26E99485B8DB09 /* Pods_TripiFlightSdkConnector.framework */; };
+		C48EB33FFD9D07C6F3BA0619 /* Pods_SuperAppTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A92C6A9C710D1DFDB735945 /* Pods_SuperAppTemplate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -390,6 +393,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1726E54F851F240672D24737 /* Pods-SuperAppTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		1A14D72324FE334A0012CF0C /* Decodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+.swift"; sourceTree = "<group>"; };
 		1A14D72624FE338A0012CF0C /* HestiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaApp.swift; sourceTree = "<group>"; };
 		1A14D72824FE33990012CF0C /* HestiaAppManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HestiaAppManifest.swift; sourceTree = "<group>"; };
@@ -500,19 +504,20 @@
 		1AC90453252B62BF0081DF40 /* TripiFlightSdkConnector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TripiFlightSdkConnector.h; sourceTree = "<group>"; };
 		1AC90454252B62BF0081DF40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AC9045D252B62D30081DF40 /* TripiFlightLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripiFlightLauncher.swift; sourceTree = "<group>"; };
-		21952E4677FDA5A8616CB838 /* Pods-HestiaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.debug.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.debug.xcconfig"; sourceTree = "<group>"; };
-		2A665267A39ED3135CBEC440 /* Pods-Hestia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.release.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.release.xcconfig"; sourceTree = "<group>"; };
-		34DE7C3F8F54CD40A8CCC708 /* Pods-SuperAppTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.release.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.release.xcconfig"; sourceTree = "<group>"; };
-		42305DDCAA312829E57AE1B5 /* Pods-HestiaReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaReactNative.release.xcconfig"; path = "Target Support Files/Pods-HestiaReactNative/Pods-HestiaReactNative.release.xcconfig"; sourceTree = "<group>"; };
-		46A1A80E71BC1593A7ABA547 /* Pods-MiniAppSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniAppSdk.debug.xcconfig"; path = "Target Support Files/Pods-MiniAppSdk/Pods-MiniAppSdk.debug.xcconfig"; sourceTree = "<group>"; };
-		4EC1D2DDC9323F47943C9EF4 /* Pods-SuperAppTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.debug.xcconfig"; sourceTree = "<group>"; };
-		62C515863000C2DC50DF76B3 /* Pods-MiniAppSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniAppSdk.release.xcconfig"; path = "Target Support Files/Pods-MiniAppSdk/Pods-MiniAppSdk.release.xcconfig"; sourceTree = "<group>"; };
-		8C2013331F94A11081427DC5 /* Pods-Hestia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.debug.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.debug.xcconfig"; sourceTree = "<group>"; };
-		8F115133C8BAF7C180689BE1 /* Pods_Hestia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hestia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		91F371CE0A21B077A6AE2CC6 /* Pods_SuperAppTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperAppTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		98EB67E1220DE988A13A2131 /* Pods-HestiaReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaReactNative.debug.xcconfig"; path = "Target Support Files/Pods-HestiaReactNative/Pods-HestiaReactNative.debug.xcconfig"; sourceTree = "<group>"; };
-		A6F8C4315CEE181B351A2A87 /* Pods_MiniAppSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniAppSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACD77BEED12EF741E818389F /* Pods-TripiFlightSdkConnector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripiFlightSdkConnector.release.xcconfig"; path = "Target Support Files/Pods-TripiFlightSdkConnector/Pods-TripiFlightSdkConnector.release.xcconfig"; sourceTree = "<group>"; };
+		1BA988F4D118D71172A5651F /* Pods-MiniAppSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniAppSdk.release.xcconfig"; path = "Target Support Files/Pods-MiniAppSdk/Pods-MiniAppSdk.release.xcconfig"; sourceTree = "<group>"; };
+		251B38A547DACD50ADC9BBD8 /* Pods_HestiaReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HestiaReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3D22B8C9266268136527A5 /* Pods_Hestia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hestia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31ABCB1361253466B1B85D9C /* Pods_MiniAppSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniAppSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D34C6D8D98560F8BED06E4C /* Pods-HestiaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.release.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.release.xcconfig"; sourceTree = "<group>"; };
+		5A92C6A9C710D1DFDB735945 /* Pods_SuperAppTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperAppTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		735A66B3218420BEA79BA1F3 /* Pods-HestiaReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaReactNative.debug.xcconfig"; path = "Target Support Files/Pods-HestiaReactNative/Pods-HestiaReactNative.debug.xcconfig"; sourceTree = "<group>"; };
+		738E0D5BD6FE7CA5B01AA1FB /* Pods-TripiFlightSdkConnector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripiFlightSdkConnector.release.xcconfig"; path = "Target Support Files/Pods-TripiFlightSdkConnector/Pods-TripiFlightSdkConnector.release.xcconfig"; sourceTree = "<group>"; };
+		7B315D930829F95104BD6829 /* Pods-Hestia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.debug.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.debug.xcconfig"; sourceTree = "<group>"; };
+		89EC941AAC5FF472114797D4 /* Pods_TripiFlightSdkConnector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripiFlightSdkConnector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CB9F26933E167B3A3B6FABE /* Pods-HestiaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.debug.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		ACAA5C1020743DA9B318A4CF /* Pods-HestiaReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaReactNative.release.xcconfig"; path = "Target Support Files/Pods-HestiaReactNative/Pods-HestiaReactNative.release.xcconfig"; sourceTree = "<group>"; };
+		AE750C6FAEA4F708DF63BDB6 /* Pods-TripiFlightSdkConnector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripiFlightSdkConnector.debug.xcconfig"; path = "Target Support Files/Pods-TripiFlightSdkConnector/Pods-TripiFlightSdkConnector.debug.xcconfig"; sourceTree = "<group>"; };
+		AFAFEF96FEC2CAD2E8E086EB /* Pods-SuperAppTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.release.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		BC157FB72515C2A100195991 /* HestiaReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HestiaReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC157FB92515C2A100195991 /* HestiaReactNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HestiaReactNative.h; sourceTree = "<group>"; };
 		BC157FBA2515C2A100195991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -543,6 +548,10 @@
 		BC4044E7251AE8870073FE7C /* EventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
 		BC4044E9251B20B30073FE7C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		BC4E057B25539A44003A4517 /* RNResponseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNResponseUtils.swift; sourceTree = "<group>"; };
+		BC4E057D2553BC8B003A4517 /* RNResponseUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNResponseUtilsTests.swift; sourceTree = "<group>"; };
+		BC4E05802553F250003A4517 /* Manifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manifest.swift; sourceTree = "<group>"; };
+		BC4E05832553FB2D003A4517 /* EquationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationUtils.swift; sourceTree = "<group>"; };
+		BC7753F75644188E7EF816A6 /* Pods_HestiaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HestiaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA443D6251B47A2005386EB /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		BCA443D8251B4F7B005386EB /* BundleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleConfig.swift; sourceTree = "<group>"; };
 		BCA443DA251B522E005386EB /* LocalAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAppManager.swift; sourceTree = "<group>"; };
@@ -557,11 +566,8 @@
 		BCBC26DF251A518300B59067 /* RNRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNRequest.swift; sourceTree = "<group>"; };
 		BCBC26E1251A519F00B59067 /* RNResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNResponse.swift; sourceTree = "<group>"; };
 		BCBC26E3251A52AE00B59067 /* Codable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+.swift"; sourceTree = "<group>"; };
-		D35F363FAEC1D0EF1D68CF4B /* Pods_HestiaReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HestiaReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF1D2AABA36CEB0807A7A664 /* Pods_HestiaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HestiaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7FFF57244921D485A8783F0 /* Pods-HestiaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.release.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.release.xcconfig"; sourceTree = "<group>"; };
-		EC8C209303E9B1AE3214BC4A /* Pods-TripiFlightSdkConnector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripiFlightSdkConnector.debug.xcconfig"; path = "Target Support Files/Pods-TripiFlightSdkConnector/Pods-TripiFlightSdkConnector.debug.xcconfig"; sourceTree = "<group>"; };
-		FCB6BA32EB26E99485B8DB09 /* Pods_TripiFlightSdkConnector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripiFlightSdkConnector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE0FA33153EE4668202EFC3 /* Pods-Hestia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.release.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.release.xcconfig"; sourceTree = "<group>"; };
+		CFFC7CBBD61BABF5C29A3925 /* Pods-MiniAppSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniAppSdk.debug.xcconfig"; path = "Target Support Files/Pods-MiniAppSdk/Pods-MiniAppSdk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -570,7 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB322D325078E9200D2EFA8 /* Hestia.framework in Frameworks */,
-				626092464312B3D042931C5E /* Pods_HestiaIOS.framework in Frameworks */,
+				3E16AF998FDD3BED2840C840 /* Pods_HestiaIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A68A3E5254A9FF40048E54F /* TrackingBridge.framework in Frameworks */,
-				2007CA964D09BBA5930CA48D /* Pods_MiniAppSdk.framework in Frameworks */,
+				55C74A71785CDA891A6414D1 /* Pods_MiniAppSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +601,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F633651FF22F5E2AB66E6A /* Pods_Hestia.framework in Frameworks */,
+				319DEF1F9805DD14D7E77D67 /* Pods_Hestia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +640,7 @@
 				1AB322782506213000D2EFA8 /* HestiaWebApp.framework in Frameworks */,
 				1AB322BD25064CD000D2EFA8 /* HestiaWebModule.framework in Frameworks */,
 				1A68A3E7254AA2AA0048E54F /* TrackingBridge.framework in Frameworks */,
-				42A98AEB1F227331AAB325FA /* Pods_SuperAppTemplate.framework in Frameworks */,
+				C48EB33FFD9D07C6F3BA0619 /* Pods_SuperAppTemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,7 +648,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9471EF7452CD9018637BC6F /* Pods_TripiFlightSdkConnector.framework in Frameworks */,
+				17908DF7F23A843A2DB03C87 /* Pods_TripiFlightSdkConnector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,7 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC157FD42515C2B600195991 /* Hestia.framework in Frameworks */,
-				0F5F3DA1B308CCF721BF67B9 /* Pods_HestiaReactNative.framework in Frameworks */,
+				19FAAFF340321E47CDBC2824 /* Pods_HestiaReactNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1016,18 +1022,18 @@
 		863CD1DABD3D63EA47315899 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8C2013331F94A11081427DC5 /* Pods-Hestia.debug.xcconfig */,
-				2A665267A39ED3135CBEC440 /* Pods-Hestia.release.xcconfig */,
-				21952E4677FDA5A8616CB838 /* Pods-HestiaIOS.debug.xcconfig */,
-				E7FFF57244921D485A8783F0 /* Pods-HestiaIOS.release.xcconfig */,
-				98EB67E1220DE988A13A2131 /* Pods-HestiaReactNative.debug.xcconfig */,
-				42305DDCAA312829E57AE1B5 /* Pods-HestiaReactNative.release.xcconfig */,
-				46A1A80E71BC1593A7ABA547 /* Pods-MiniAppSdk.debug.xcconfig */,
-				62C515863000C2DC50DF76B3 /* Pods-MiniAppSdk.release.xcconfig */,
-				4EC1D2DDC9323F47943C9EF4 /* Pods-SuperAppTemplate.debug.xcconfig */,
-				34DE7C3F8F54CD40A8CCC708 /* Pods-SuperAppTemplate.release.xcconfig */,
-				EC8C209303E9B1AE3214BC4A /* Pods-TripiFlightSdkConnector.debug.xcconfig */,
-				ACD77BEED12EF741E818389F /* Pods-TripiFlightSdkConnector.release.xcconfig */,
+				7B315D930829F95104BD6829 /* Pods-Hestia.debug.xcconfig */,
+				CDE0FA33153EE4668202EFC3 /* Pods-Hestia.release.xcconfig */,
+				8CB9F26933E167B3A3B6FABE /* Pods-HestiaIOS.debug.xcconfig */,
+				3D34C6D8D98560F8BED06E4C /* Pods-HestiaIOS.release.xcconfig */,
+				735A66B3218420BEA79BA1F3 /* Pods-HestiaReactNative.debug.xcconfig */,
+				ACAA5C1020743DA9B318A4CF /* Pods-HestiaReactNative.release.xcconfig */,
+				CFFC7CBBD61BABF5C29A3925 /* Pods-MiniAppSdk.debug.xcconfig */,
+				1BA988F4D118D71172A5651F /* Pods-MiniAppSdk.release.xcconfig */,
+				1726E54F851F240672D24737 /* Pods-SuperAppTemplate.debug.xcconfig */,
+				AFAFEF96FEC2CAD2E8E086EB /* Pods-SuperAppTemplate.release.xcconfig */,
+				AE750C6FAEA4F708DF63BDB6 /* Pods-TripiFlightSdkConnector.debug.xcconfig */,
+				738E0D5BD6FE7CA5B01AA1FB /* Pods-TripiFlightSdkConnector.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1051,8 +1057,11 @@
 		BC157FC52515C2A100195991 /* HestiaReactNativeTests */ = {
 			isa = PBXGroup;
 			children = (
+				BC4E05822553FB08003A4517 /* Utils */,
+				BC4E057F2553EEAE003A4517 /* Models */,
 				BC157FC62515C2A100195991 /* HestiaReactNativeTests.swift */,
 				BC157FC82515C2A100195991 /* Info.plist */,
+				BC4E057D2553BC8B003A4517 /* RNResponseUtilsTests.swift */,
 			);
 			path = HestiaReactNativeTests;
 			sourceTree = "<group>";
@@ -1124,6 +1133,22 @@
 				BCBC26C9251A015700B59067 /* ErrorViewController.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		BC4E057F2553EEAE003A4517 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC4E05802553F250003A4517 /* Manifest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC4E05822553FB08003A4517 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BC4E05832553FB2D003A4517 /* EquationUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		BCBC26C42519FC4200B59067 /* NativeModule */ = {
@@ -1210,12 +1235,12 @@
 				1AC90413252B1AFC0081DF40 /* CallAppSDK.framework */,
 				1AC90415252B1AFC0081DF40 /* TripiCommon.framework */,
 				1AC90414252B1AFC0081DF40 /* TripiFlightKit.framework */,
-				8F115133C8BAF7C180689BE1 /* Pods_Hestia.framework */,
-				DF1D2AABA36CEB0807A7A664 /* Pods_HestiaIOS.framework */,
-				D35F363FAEC1D0EF1D68CF4B /* Pods_HestiaReactNative.framework */,
-				A6F8C4315CEE181B351A2A87 /* Pods_MiniAppSdk.framework */,
-				91F371CE0A21B077A6AE2CC6 /* Pods_SuperAppTemplate.framework */,
-				FCB6BA32EB26E99485B8DB09 /* Pods_TripiFlightSdkConnector.framework */,
+				2B3D22B8C9266268136527A5 /* Pods_Hestia.framework */,
+				BC7753F75644188E7EF816A6 /* Pods_HestiaIOS.framework */,
+				251B38A547DACD50ADC9BBD8 /* Pods_HestiaReactNative.framework */,
+				31ABCB1361253466B1B85D9C /* Pods_MiniAppSdk.framework */,
+				5A92C6A9C710D1DFDB735945 /* Pods_SuperAppTemplate.framework */,
+				89EC941AAC5FF472114797D4 /* Pods_TripiFlightSdkConnector.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1294,13 +1319,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A14D74F24FE41CF0012CF0C /* Build configuration list for PBXNativeTarget "HestiaIOS" */;
 			buildPhases = (
-				CBE6BF4D58D1AA39CF2A73FB /* [CP] Check Pods Manifest.lock */,
+				7341432870201C67B1F3138C /* [CP] Check Pods Manifest.lock */,
 				1A14D74524FE41CF0012CF0C /* Headers */,
 				1A14D74624FE41CF0012CF0C /* Sources */,
 				1A14D74724FE41CF0012CF0C /* Frameworks */,
 				1A14D74824FE41CF0012CF0C /* Resources */,
 				1AB322D725078E9200D2EFA8 /* Embed Frameworks */,
-				184AF2CA3FEC361C94C4FB07 /* [CP] Copy Pods Resources */,
+				8F3A8EAB04C8C9143EBB7C7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1335,13 +1360,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A65BF5D250216CA00A8A7BA /* Build configuration list for PBXNativeTarget "MiniAppSdk" */;
 			buildPhases = (
-				9940AA2B139ADF5E0DDB9814 /* [CP] Check Pods Manifest.lock */,
+				AC78B213E5D685DF794B2A63 /* [CP] Check Pods Manifest.lock */,
 				1A65BF4F250216CA00A8A7BA /* Headers */,
 				1A65BF50250216CA00A8A7BA /* Sources */,
 				1A65BF51250216CA00A8A7BA /* Frameworks */,
 				1A65BF52250216CA00A8A7BA /* Resources */,
 				1A65BF64250216E300A8A7BA /* Embed Frameworks */,
-				7C9AFB4E1127CB758513D43F /* [CP] Copy Pods Resources */,
+				473CBD437AA4023DF6145693 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1357,7 +1382,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A80E84424E6743400A5A3A3 /* Build configuration list for PBXNativeTarget "Hestia" */;
 			buildPhases = (
-				377F8194A1978B2A80AC8C8D /* [CP] Check Pods Manifest.lock */,
+				579DB08CAC64E7F0407BEB97 /* [CP] Check Pods Manifest.lock */,
 				1A80E83724E6743400A5A3A3 /* Headers */,
 				1A80E83824E6743400A5A3A3 /* Sources */,
 				1A80E83924E6743400A5A3A3 /* Frameworks */,
@@ -1436,13 +1461,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1ABADEFD2500916E0091385D /* Build configuration list for PBXNativeTarget "SuperAppTemplate" */;
 			buildPhases = (
-				34459F4ECE67B0FD6DB14AE9 /* [CP] Check Pods Manifest.lock */,
+				1DBD446E7DBEC669C6712CB9 /* [CP] Check Pods Manifest.lock */,
 				1ABADEE82500916B0091385D /* Sources */,
 				1ABADEE92500916B0091385D /* Frameworks */,
 				1ABADEEA2500916B0091385D /* Resources */,
 				1ABADF0E250098760091385D /* Embed Frameworks */,
-				A5FE0168D39D7EE045107BFC /* [CP] Embed Pods Frameworks */,
-				C3578008889561D9BB0CF7EC /* [CP] Copy Pods Resources */,
+				A9F849FCDF7D40FA8A3DA986 /* [CP] Embed Pods Frameworks */,
+				D27E77379608409B766CCF50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1462,12 +1487,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AC9045A252B62BF0081DF40 /* Build configuration list for PBXNativeTarget "TripiFlightSdkConnector" */;
 			buildPhases = (
-				27EDB492F3A1F00B54E19185 /* [CP] Check Pods Manifest.lock */,
+				44CEBB1D76163CE81787DCAA /* [CP] Check Pods Manifest.lock */,
 				1AC9044C252B62BE0081DF40 /* Headers */,
 				1AC9044D252B62BE0081DF40 /* Sources */,
 				1AC9044E252B62BE0081DF40 /* Frameworks */,
 				1AC9044F252B62BE0081DF40 /* Resources */,
-				8841EBAE97D3FD0AAEB00C4C /* [CP] Copy Pods Resources */,
+				5580B75A2BA92C4B3A552BBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1482,7 +1507,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC157FD22515C2A100195991 /* Build configuration list for PBXNativeTarget "HestiaReactNative" */;
 			buildPhases = (
-				5A28A6CDD1C60F8182F5714D /* [CP] Check Pods Manifest.lock */,
+				3118774175FF68F5EF4C7707 /* [CP] Check Pods Manifest.lock */,
 				BC157FB22515C2A100195991 /* Headers */,
 				BC157FB32515C2A100195991 /* Sources */,
 				BC157FB42515C2A100195991 /* Frameworks */,
@@ -1703,23 +1728,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		184AF2CA3FEC361C94C4FB07 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1A5BF7AC252C2BC7004BA00A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1771,29 +1779,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# build fat framework script\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nWORKSPACE=\"Hestia.xcworkspace\"\nNAME_OUTPUT_FOLDER=\"Outputs\"\nOUTPUT_FOLDER=\"${PROJECT_DIR}/${NAME_OUTPUT_FOLDER}/\"\n\nSDK_TARGET_NAME=\"TripiFlightSdkConnector\"\n#ZIP_NAME=\"${SDK_TARGET_NAME}.zip\"\n\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\nmkdir -p \"${OUTPUT_FOLDER}\"\n\n# Build Device and Simulator versions\nxcodebuild -workspace \"${WORKSPACE}\" -scheme \"${SDK_TARGET_NAME}\" -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" ONLY_ACTIVE_ARCH=NO BUILD_ROOT=\"${BUILD_ROOT}\" OBJROOT=\"${OBJROOT}/DependentBuilds\"\nxcodebuild -workspace \"${WORKSPACE}\" -scheme \"${SDK_TARGET_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ARCHS=x86_64 ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OBJROOT=\"${OBJROOT}/DependentBuilds\"\n\n# make fat framework\n\"${PROJECT_DIR}/build-phases/make-fat-framework.sh\" \"${UNIVERSAL_OUTPUTFOLDER}\" \"${SDK_TARGET_NAME}\" \"${OUTPUT_FOLDER}\"\n\n# Open the project's directory in Finder\nopen \"${OUTPUT_FOLDER}\"\n\n# Zip file\n#zip -r \"${ZIP_NAME}\" ./\"${NAME_OUTPUT_FOLDER}\"\n";
 		};
-		27EDB492F3A1F00B54E19185 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TripiFlightSdkConnector-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		34459F4ECE67B0FD6DB14AE9 /* [CP] Check Pods Manifest.lock */ = {
+		1DBD446E7DBEC669C6712CB9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1815,29 +1801,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		377F8194A1978B2A80AC8C8D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hestia-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5A28A6CDD1C60F8182F5714D /* [CP] Check Pods Manifest.lock */ = {
+		3118774175FF68F5EF4C7707 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1859,7 +1823,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7C9AFB4E1127CB758513D43F /* [CP] Copy Pods Resources */ = {
+		44CEBB1D76163CE81787DCAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TripiFlightSdkConnector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		473CBD437AA4023DF6145693 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1876,7 +1862,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniAppSdk/Pods-MiniAppSdk-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8841EBAE97D3FD0AAEB00C4C /* [CP] Copy Pods Resources */ = {
+		5580B75A2BA92C4B3A552BBB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1893,7 +1879,85 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TripiFlightSdkConnector/Pods-TripiFlightSdkConnector-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9940AA2B139ADF5E0DDB9814 /* [CP] Check Pods Manifest.lock */ = {
+		579DB08CAC64E7F0407BEB97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hestia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7341432870201C67B1F3138C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HestiaIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F3A8EAB04C8C9143EBB7C7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9F849FCDF7D40FA8A3DA986 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC78B213E5D685DF794B2A63 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1915,24 +1979,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A5FE0168D39D7EE045107BFC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C3578008889561D9BB0CF7EC /* [CP] Copy Pods Resources */ = {
+		D27E77379608409B766CCF50 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1947,28 +1994,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CBE6BF4D58D1AA39CF2A73FB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HestiaIOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2143,7 +2168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4E057E2553BC8B003A4517 /* RNResponseUtilsTests.swift in Sources */,
+				BC4E05842553FB2D003A4517 /* EquationUtils.swift in Sources */,
 				BC157FC72515C2A100195991 /* HestiaReactNativeTests.swift in Sources */,
+				BC4E05812553F250003A4517 /* Manifest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2269,7 +2297,7 @@
 /* Begin XCBuildConfiguration section */
 		1A14D75024FE41CF0012CF0C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21952E4677FDA5A8616CB838 /* Pods-HestiaIOS.debug.xcconfig */;
+			baseConfigurationReference = 8CB9F26933E167B3A3B6FABE /* Pods-HestiaIOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2297,7 +2325,7 @@
 		};
 		1A14D75124FE41CF0012CF0C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7FFF57244921D485A8783F0 /* Pods-HestiaIOS.release.xcconfig */;
+			baseConfigurationReference = 3D34C6D8D98560F8BED06E4C /* Pods-HestiaIOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2408,7 +2436,7 @@
 		};
 		1A65BF5E250216CA00A8A7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46A1A80E71BC1593A7ABA547 /* Pods-MiniAppSdk.debug.xcconfig */;
+			baseConfigurationReference = CFFC7CBBD61BABF5C29A3925 /* Pods-MiniAppSdk.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -2439,7 +2467,7 @@
 		};
 		1A65BF5F250216CA00A8A7BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62C515863000C2DC50DF76B3 /* Pods-MiniAppSdk.release.xcconfig */;
+			baseConfigurationReference = 1BA988F4D118D71172A5651F /* Pods-MiniAppSdk.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -2590,7 +2618,7 @@
 		};
 		1A80E84524E6743400A5A3A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C2013331F94A11081427DC5 /* Pods-Hestia.debug.xcconfig */;
+			baseConfigurationReference = 7B315D930829F95104BD6829 /* Pods-Hestia.debug.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = marker;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -2620,7 +2648,7 @@
 		};
 		1A80E84624E6743400A5A3A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A665267A39ED3135CBEC440 /* Pods-Hestia.release.xcconfig */;
+			baseConfigurationReference = CDE0FA33153EE4668202EFC3 /* Pods-Hestia.release.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -2807,7 +2835,7 @@
 		};
 		1ABADEFE2500916E0091385D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EC1D2DDC9323F47943C9EF4 /* Pods-SuperAppTemplate.debug.xcconfig */;
+			baseConfigurationReference = 1726E54F851F240672D24737 /* Pods-SuperAppTemplate.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2833,7 +2861,7 @@
 		};
 		1ABADEFF2500916E0091385D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34DE7C3F8F54CD40A8CCC708 /* Pods-SuperAppTemplate.release.xcconfig */;
+			baseConfigurationReference = AFAFEF96FEC2CAD2E8E086EB /* Pods-SuperAppTemplate.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2859,7 +2887,7 @@
 		};
 		1AC9045B252B62BF0081DF40 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC8C209303E9B1AE3214BC4A /* Pods-TripiFlightSdkConnector.debug.xcconfig */;
+			baseConfigurationReference = AE750C6FAEA4F708DF63BDB6 /* Pods-TripiFlightSdkConnector.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2893,7 +2921,7 @@
 		};
 		1AC9045C252B62BF0081DF40 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACD77BEED12EF741E818389F /* Pods-TripiFlightSdkConnector.release.xcconfig */;
+			baseConfigurationReference = 738E0D5BD6FE7CA5B01AA1FB /* Pods-TripiFlightSdkConnector.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2926,7 +2954,7 @@
 		};
 		BC157FCE2515C2A100195991 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98EB67E1220DE988A13A2131 /* Pods-HestiaReactNative.debug.xcconfig */;
+			baseConfigurationReference = 735A66B3218420BEA79BA1F3 /* Pods-HestiaReactNative.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2954,7 +2982,7 @@
 		};
 		BC157FCF2515C2A100195991 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42305DDCAA312829E57AE1B5 /* Pods-HestiaReactNative.release.xcconfig */;
+			baseConfigurationReference = ACAA5C1020743DA9B318A4CF /* Pods-HestiaReactNative.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

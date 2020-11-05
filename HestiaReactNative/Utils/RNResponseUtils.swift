@@ -9,8 +9,20 @@
 import Foundation
 
 class RNResponseUtils {
-
+    
     static func convertDataToTransfer(_ data: Any?) -> Any? {
+        guard let data = data else {
+            return nil
+        }
+        
+        if let convertedData = convertData(data) {
+            return convertedData
+        } else {
+            return data
+        }
+    }
+
+    static func convertData(_ data: Any?) -> Any? {
         guard let data = data else {
             return nil
         }
@@ -20,7 +32,7 @@ class RNResponseUtils {
         }
         
         if let array = data as? Array<Any?> {
-            return convertArray(array)
+            return array.map { value in convertDataToTransfer(value) }
         }
         
         let mirror = Mirror(reflecting: data)
@@ -35,20 +47,6 @@ class RNResponseUtils {
         }).compactMap { $0 })
         
         return dictionary.isEmpty ? nil : dictionary
-    }
-    
-    static func convertArray(_ array: Array<Any?>) -> Array<Any?> {
-        return array.map { value in
-            guard let value = value else {
-                return nil
-            }
-            
-            if let convertedValue = convertDataToTransfer(value) {
-                return convertedValue
-            } else {
-                return value
-            }
-        }
     }
 
 }
