@@ -86,6 +86,11 @@ target 'TripiFlightSdkConnector' do
   pod 'HestiaIOS', '0.0.2'
 end
 
+target 'ReactNativeExample' do
+  use_frameworks!
+  
+  # pod 'Hestia', '0.0.3'
+end
 
 target 'SuperAppTemplate' do
   use_frameworks!

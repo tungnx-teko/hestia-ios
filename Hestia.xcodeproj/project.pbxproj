@@ -145,8 +145,14 @@
 		1AC90455252B62BF0081DF40 /* TripiFlightSdkConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC90453252B62BF0081DF40 /* TripiFlightSdkConnector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AC9045E252B62D30081DF40 /* TripiFlightLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9045D252B62D30081DF40 /* TripiFlightLauncher.swift */; };
 		2007CA964D09BBA5930CA48D /* Pods_MiniAppSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F8C4315CEE181B351A2A87 /* Pods_MiniAppSdk.framework */; };
+		31F6141B25540F180088F535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6141A25540F180088F535 /* AppDelegate.swift */; };
+		31F6142425540F190088F535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31F6142325540F190088F535 /* Assets.xcassets */; };
+		31F6142725540F190088F535 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31F6142525540F190088F535 /* LaunchScreen.storyboard */; };
+		31F6142D255411D60088F535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31F6142C255411D60088F535 /* Main.storyboard */; };
+		31F6142F255411DC0088F535 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F6142E255411DC0088F535 /* ViewController.swift */; };
 		42A98AEB1F227331AAB325FA /* Pods_SuperAppTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F371CE0A21B077A6AE2CC6 /* Pods_SuperAppTemplate.framework */; };
 		626092464312B3D042931C5E /* Pods_HestiaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D2AABA36CEB0807A7A664 /* Pods_HestiaIOS.framework */; };
+		656A1774E0B14F944CACF6FA /* Pods_ReactNativeExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBA2FEB202E78E79771973D /* Pods_ReactNativeExample.framework */; };
 		BC157FC02515C2A100195991 /* HestiaReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC157FB72515C2A100195991 /* HestiaReactNative.framework */; };
 		BC157FC72515C2A100195991 /* HestiaReactNativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC157FC62515C2A100195991 /* HestiaReactNativeTests.swift */; };
 		BC157FC92515C2A100195991 /* HestiaReactNative.h in Headers */ = {isa = PBXBuildFile; fileRef = BC157FB92515C2A100195991 /* HestiaReactNative.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -502,11 +508,20 @@
 		1AC9045D252B62D30081DF40 /* TripiFlightLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripiFlightLauncher.swift; sourceTree = "<group>"; };
 		21952E4677FDA5A8616CB838 /* Pods-HestiaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.debug.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2A665267A39ED3135CBEC440 /* Pods-Hestia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.release.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.release.xcconfig"; sourceTree = "<group>"; };
+		2FBA2FEB202E78E79771973D /* Pods_ReactNativeExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31F6141825540F180088F535 /* ReactNativeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31F6141A25540F180088F535 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		31F6142325540F190088F535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31F6142625540F190088F535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		31F6142825540F190088F535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31F6142C255411D60088F535 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		31F6142E255411DC0088F535 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		34DE7C3F8F54CD40A8CCC708 /* Pods-SuperAppTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.release.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		42305DDCAA312829E57AE1B5 /* Pods-HestiaReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaReactNative.release.xcconfig"; path = "Target Support Files/Pods-HestiaReactNative/Pods-HestiaReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		46A1A80E71BC1593A7ABA547 /* Pods-MiniAppSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniAppSdk.debug.xcconfig"; path = "Target Support Files/Pods-MiniAppSdk/Pods-MiniAppSdk.debug.xcconfig"; sourceTree = "<group>"; };
 		4EC1D2DDC9323F47943C9EF4 /* Pods-SuperAppTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		62C515863000C2DC50DF76B3 /* Pods-MiniAppSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniAppSdk.release.xcconfig"; path = "Target Support Files/Pods-MiniAppSdk/Pods-MiniAppSdk.release.xcconfig"; sourceTree = "<group>"; };
+		6ECB41401F84F55946BDFED1 /* Pods-ReactNativeExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeExample.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeExample/Pods-ReactNativeExample.debug.xcconfig"; sourceTree = "<group>"; };
 		8C2013331F94A11081427DC5 /* Pods-Hestia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hestia.debug.xcconfig"; path = "Target Support Files/Pods-Hestia/Pods-Hestia.debug.xcconfig"; sourceTree = "<group>"; };
 		8F115133C8BAF7C180689BE1 /* Pods_Hestia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hestia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F371CE0A21B077A6AE2CC6 /* Pods_SuperAppTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperAppTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -557,6 +572,7 @@
 		BCBC26DF251A518300B59067 /* RNRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNRequest.swift; sourceTree = "<group>"; };
 		BCBC26E1251A519F00B59067 /* RNResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNResponse.swift; sourceTree = "<group>"; };
 		BCBC26E3251A52AE00B59067 /* Codable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+.swift"; sourceTree = "<group>"; };
+		C7CD61F77BE74EF8BA2EBB4C /* Pods-ReactNativeExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeExample.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeExample/Pods-ReactNativeExample.release.xcconfig"; sourceTree = "<group>"; };
 		D35F363FAEC1D0EF1D68CF4B /* Pods_HestiaReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HestiaReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1D2AABA36CEB0807A7A664 /* Pods_HestiaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HestiaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FFF57244921D485A8783F0 /* Pods-HestiaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HestiaIOS.release.xcconfig"; path = "Target Support Files/Pods-HestiaIOS/Pods-HestiaIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -643,6 +659,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9471EF7452CD9018637BC6F /* Pods_TripiFlightSdkConnector.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31F6141525540F180088F535 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				656A1774E0B14F944CACF6FA /* Pods_ReactNativeExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +789,7 @@
 				BC157FB82515C2A100195991 /* HestiaReactNative */,
 				BC157FC52515C2A100195991 /* HestiaReactNativeTests */,
 				1AC90452252B62BE0081DF40 /* TripiFlightSdkConnector */,
+				31F6141925540F180088F535 /* ReactNativeExample */,
 				1A80E83D24E6743400A5A3A3 /* Products */,
 				863CD1DABD3D63EA47315899 /* Pods */,
 				F7A8681AA899116085D7BFAE /* Frameworks */,
@@ -785,6 +810,7 @@
 				BC157FB72515C2A100195991 /* HestiaReactNative.framework */,
 				BC157FBF2515C2A100195991 /* HestiaReactNativeTests.xctest */,
 				1AC90451252B62BE0081DF40 /* TripiFlightSdkConnector.framework */,
+				31F6141825540F180088F535 /* ReactNativeExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1013,6 +1039,19 @@
 			path = TripiFlightSdkConnector;
 			sourceTree = "<group>";
 		};
+		31F6141925540F180088F535 /* ReactNativeExample */ = {
+			isa = PBXGroup;
+			children = (
+				31F6141A25540F180088F535 /* AppDelegate.swift */,
+				31F6142E255411DC0088F535 /* ViewController.swift */,
+				31F6142C255411D60088F535 /* Main.storyboard */,
+				31F6142325540F190088F535 /* Assets.xcassets */,
+				31F6142525540F190088F535 /* LaunchScreen.storyboard */,
+				31F6142825540F190088F535 /* Info.plist */,
+			);
+			path = ReactNativeExample;
+			sourceTree = "<group>";
+		};
 		863CD1DABD3D63EA47315899 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1028,6 +1067,8 @@
 				34DE7C3F8F54CD40A8CCC708 /* Pods-SuperAppTemplate.release.xcconfig */,
 				EC8C209303E9B1AE3214BC4A /* Pods-TripiFlightSdkConnector.debug.xcconfig */,
 				ACD77BEED12EF741E818389F /* Pods-TripiFlightSdkConnector.release.xcconfig */,
+				6ECB41401F84F55946BDFED1 /* Pods-ReactNativeExample.debug.xcconfig */,
+				C7CD61F77BE74EF8BA2EBB4C /* Pods-ReactNativeExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1216,6 +1257,7 @@
 				A6F8C4315CEE181B351A2A87 /* Pods_MiniAppSdk.framework */,
 				91F371CE0A21B077A6AE2CC6 /* Pods_SuperAppTemplate.framework */,
 				FCB6BA32EB26E99485B8DB09 /* Pods_TripiFlightSdkConnector.framework */,
+				2FBA2FEB202E78E79771973D /* Pods_ReactNativeExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1478,6 +1520,24 @@
 			productReference = 1AC90451252B62BE0081DF40 /* TripiFlightSdkConnector.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		31F6141725540F180088F535 /* ReactNativeExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31F6142B25540F190088F535 /* Build configuration list for PBXNativeTarget "ReactNativeExample" */;
+			buildPhases = (
+				AC19907693805E45390B1D59 /* [CP] Check Pods Manifest.lock */,
+				31F6141425540F180088F535 /* Sources */,
+				31F6141525540F180088F535 /* Frameworks */,
+				31F6141625540F180088F535 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactNativeExample;
+			productName = ReactNativeExample;
+			productReference = 31F6141825540F180088F535 /* ReactNativeExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		BC157FB62515C2A100195991 /* HestiaReactNative */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC157FD22515C2A100195991 /* Build configuration list for PBXNativeTarget "HestiaReactNative" */;
@@ -1524,7 +1584,7 @@
 		1A80E83324E6743400A5A3A3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Tung Nguyen";
 				TargetAttributes = {
@@ -1569,6 +1629,9 @@
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
 					};
+					31F6141725540F180088F535 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					BC157FB62515C2A100195991 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1150;
@@ -1606,6 +1669,7 @@
 				1A5BF7A7252C2BBA004BA00A /* Hestia-Universal */,
 				1A5BF7B9252C40DC004BA00A /* HestiaIOS-Universal */,
 				1A5BF7FD252C6ADF004BA00A /* TripiFlightSdkConnector-Universal */,
+				31F6141725540F180088F535 /* ReactNativeExample */,
 			);
 		};
 /* End PBXProject section */
@@ -1683,6 +1747,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31F6141625540F180088F535 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31F6142D255411D60088F535 /* Main.storyboard in Resources */,
+				31F6142725540F190088F535 /* LaunchScreen.storyboard in Resources */,
+				31F6142425540F190088F535 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1932,6 +2006,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppTemplate/Pods-SuperAppTemplate-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AC19907693805E45390B1D59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactNativeExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C3578008889561D9BB0CF7EC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2101,6 +2197,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		31F6141425540F180088F535 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31F6142F255411DC0088F535 /* ViewController.swift in Sources */,
+				31F6141B25540F180088F535 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC157FB32515C2A100195991 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2260,6 +2365,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				1ABADEFA2500916E0091385D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		31F6142525540F190088F535 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31F6142625540F190088F535 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -2924,6 +3037,46 @@
 			};
 			name = Release;
 		};
+		31F6142925540F190088F535 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECB41401F84F55946BDFED1 /* Pods-ReactNativeExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4299CL6M2Z;
+				INFOPLIST_FILE = ReactNativeExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ReactNativeExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		31F6142A25540F190088F535 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7CD61F77BE74EF8BA2EBB4C /* Pods-ReactNativeExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4299CL6M2Z;
+				INFOPLIST_FILE = ReactNativeExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.ReactNativeExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BC157FCE2515C2A100195991 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98EB67E1220DE988A13A2131 /* Pods-HestiaReactNative.debug.xcconfig */;
@@ -3137,6 +3290,15 @@
 			buildConfigurations = (
 				1AC9045B252B62BF0081DF40 /* Debug */,
 				1AC9045C252B62BF0081DF40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31F6142B25540F190088F535 /* Build configuration list for PBXNativeTarget "ReactNativeExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31F6142925540F190088F535 /* Debug */,
+				31F6142A25540F190088F535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
