@@ -8,55 +8,76 @@
 
 import Foundation
 
-public class RNResponse<T: Encodable>: Encodable {
+public class RNResponse {
+    private static let KEY_DICTIONARY_SUBSCRIBER_ID = "subscriber_id"
+    private static let KEY_DICTIONARY_DATA = "data"
+    
     var subscriberId: String = ""
-    var data: ResponseData<T>
+    var data: ResponseData
     
-    enum CodingKeys: String, CodingKey {
-        case subscriberId = "subscriber_id"
-        case data
-    }
-    
-    public init(subscriberId: String, data: ResponseData<T>) {
+    public init(subscriberId: String, data: ResponseData) {
         self.subscriberId = subscriberId
         self.data = data
     }
+    
+    func toDictionary() -> [String: Any] {
+        return [
+            RNResponse.KEY_DICTIONARY_SUBSCRIBER_ID: self.subscriberId,
+            RNResponse.KEY_DICTIONARY_DATA: self.data.toDictionary()
+        ]
+    }
 }
 
-public class ResponseData<T: Encodable>: Encodable {
-    var statusCode: StatusCode = StatusCode.success
-    var result: T?
-    var error: String?
+public class ResponseData {
+    private static let KEY_DICTIONARY_STATUS_CODE = "status_code"
+    private static let KEY_DICTIONARY_RESULT = "result"
+    private static let KEY_DICTIONARY_ERROR = "error"
+       
     
-    enum CodingKeys: String, CodingKey {
-        case statusCode = "status_code"
-        case result
-        case error
-    }
+    var statusCode: StatusCode = StatusCode.success
+    var result: Any?
+    var error: String?
 
-    public init(statusCode: StatusCode, result: T?, error: String?) {
+    public init(statusCode: StatusCode, result: Any?, error: String?) {
         self.statusCode = statusCode
         self.result = result
         self.error = error
     }
 
+    func toDictionary() -> [String: Any?] {
+        return [
+            ResponseData.KEY_DICTIONARY_STATUS_CODE: self.statusCode.toInt(),
+            ResponseData.KEY_DICTIONARY_RESULT: self.convertResult(),
+            ResponseData.KEY_DICTIONARY_ERROR: self.error
+        ]
+    }
+    
+    private func convertResult() -> Any? {
+        guard let result = self.result else {
+            return nil
+        }
+        
+        if let convertedResult = RNResponseUtils.convertDataToTransfer(self.result) {
+            return convertedResult
+        } else {
+            return result
+        }
+    }
 }
 
-public enum StatusCode: Encodable {
+public enum StatusCode {
     case success
     case failure
     case other(value: Int)
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
 
+    public func toInt() -> Int {
         switch self {
         case .success:
-            try container.encode(200)
+            return 200
         case .failure:
-            try container.encode(500)
+            return 500
         case .other(let value):
-            try container.encode(value)
+            return value
         }
     }
 }
