@@ -177,6 +177,7 @@
 		BC4044E6251AE2840073FE7C /* DemoReactBridgeModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4044E5251AE2840073FE7C /* DemoReactBridgeModuleFactory.swift */; };
 		BC4044E8251AE8870073FE7C /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4044E7251AE8870073FE7C /* EventEmitter.swift */; };
 		BC4044EA251B20B30073FE7C /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4044E9251B20B30073FE7C /* Errors.swift */; };
+		BC4E057C25539A44003A4517 /* RNResponseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4E057B25539A44003A4517 /* RNResponseUtils.swift */; };
 		BCA443D7251B47A2005386EB /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA443D6251B47A2005386EB /* Date+.swift */; };
 		BCA443D9251B4F7B005386EB /* BundleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA443D8251B4F7B005386EB /* BundleConfig.swift */; };
 		BCA443DB251B522E005386EB /* LocalAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA443DA251B522E005386EB /* LocalAppManager.swift */; };
@@ -541,6 +542,7 @@
 		BC4044E5251AE2840073FE7C /* DemoReactBridgeModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoReactBridgeModuleFactory.swift; sourceTree = "<group>"; };
 		BC4044E7251AE8870073FE7C /* EventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
 		BC4044E9251B20B30073FE7C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		BC4E057B25539A44003A4517 /* RNResponseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNResponseUtils.swift; sourceTree = "<group>"; };
 		BCA443D6251B47A2005386EB /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		BCA443D8251B4F7B005386EB /* BundleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleConfig.swift; sourceTree = "<group>"; };
 		BCA443DA251B522E005386EB /* LocalAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAppManager.swift; sourceTree = "<group>"; };
@@ -1088,6 +1090,7 @@
 			isa = PBXGroup;
 			children = (
 				BC157FE22515C2D900195991 /* FileUtils.swift */,
+				BC4E057B25539A44003A4517 /* RNResponseUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -2105,6 +2108,7 @@
 				BCBC26D5251A4B4500B59067 /* BaseReactBridgeModule.swift in Sources */,
 				BCBC26E0251A518300B59067 /* RNRequest.swift in Sources */,
 				BC1580312515C60500195991 /* AvailableAsset.swift in Sources */,
+				BC4E057C25539A44003A4517 /* RNResponseUtils.swift in Sources */,
 				BCBC26D9251A4F1000B59067 /* BaseReactBridgeModuleFactory.swift in Sources */,
 				BC15803825161B3900195991 /* HestiaReactNativeApplication.swift in Sources */,
 				BCBC26CC251A07E800B59067 /* HestiaModule.m in Sources */,

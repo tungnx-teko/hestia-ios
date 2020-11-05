@@ -17,7 +17,7 @@ class EventEmitter {
         self.reactEventEmitter = reactEventEmitter
     }
 
-    func sendSuccessEvent<T: Encodable>(for moduleName: String, to subscriberId: String, result: T?) {
+    func sendSuccessEvent(for moduleName: String, to subscriberId: String, result: Any?) {
         let responseData = ResponseData(
             statusCode: .success,
             result: result,
@@ -28,7 +28,7 @@ class EventEmitter {
     }
     
     func sendErrorResponse(for moduleName: String, to subscriberId: String, error: String) {
-        let responseData = ResponseData<String>(
+        let responseData = ResponseData(
             statusCode: .failure,
             result: nil,
             error: error
@@ -38,7 +38,7 @@ class EventEmitter {
     }
     
     func sendTerminateResponse(for moduleName: String, to subscriberId: String, error: String) {
-        let responseData = ResponseData<[String: String]>(
+        let responseData = ResponseData(
            statusCode: .success,
            result: ["event": STREAM_TERMINATED_EVENT],
            error: nil
@@ -47,7 +47,7 @@ class EventEmitter {
         sendResponseResult(for: moduleName, to: subscriberId, with: responseData)
     }
     
-    func sendResponseResult<T: Encodable>(for moduleName: String, to subscriberId: String, with response: ResponseData<T>) {
+    func sendResponseResult(for moduleName: String, to subscriberId: String, with response: ResponseData) {
         reactEventEmitter.sendEvent(
             withName: moduleName,
             body: RNResponse(subscriberId: subscriberId, data: response).toDictionary()
